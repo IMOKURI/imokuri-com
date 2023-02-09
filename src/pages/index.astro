@@ -1,15 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
 import ToggleTheme from "../components/ToggleTheme.astro";
 import Wallpaper from "../components/Wallpaper.astro";
 import { SITE_TITLE } from "../config";
 ---
 
 <BaseLayout>
+    <NavBar />
     <Wallpaper>
         <ToggleTheme />
         <h1 class="mb-5 text-5xl font-bold">{SITE_TITLE}</h1>
-        <p class="mb-5">
+        <p class="mb-10">
             杉山禎夫です。日本ヒューレット・パッカードでインフラ/機械学習エンジニアをしています。
             小さい頃からさつまいもとくりが好きです。なので IMOKURI Blog。
         </p>

@@ -1,0 +1,40 @@
+---
+import { SITE_TITLE } from "../config";
+---
+
+<div class="navbar bg-base-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </label>
+            <ul
+                tabindex="0"
+                class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+                <li><a><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a><i class="fa-solid fa-pencil"></i>Blog</a></li>
+                <li><a><i class="fa-solid fa-code"></i>Project</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-ghost normal-case text-xl">{SITE_TITLE}</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a><i class="fa-solid fa-user"></i>About</a></li>
+            <li><a><i class="fa-solid fa-pencil"></i>Blog</a></li>
+            <li><a><i class="fa-solid fa-code"></i>Project</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a class="btn btn-ghost btn-square text-lg"
+            ><i class="fa-brands fa-github"></i></a
+        >
+        <a class="btn btn-ghost btn-square text-lg"
+            ><i class="fa-brands fa-twitter"></i></a
+        >
+        <a class="btn btn-ghost btn-square text-lg"
+            ><i class="fa-brands fa-kaggle"></i></a
+        >
+    </div>
+</div>
