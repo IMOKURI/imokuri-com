@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ToggleTheme from "../components/ToggleTheme.astro";
+import Wallpaper from "../components/Wallpaper.astro";
+---
+
+<BaseLayout>
+    <Wallpaper>
+        <ToggleTheme />
+        <h1 class="mb-5 text-4xl font-bold">404 Not Found</h1>
+        <p class="mb-2">
+            お探しのページは見つかりませんでした。。
+        </p>
+        <button class="btn btn-ghost text-lg"
+            ><a href="/"><i class="fa-solid fa-house"></i></a></button
+        >
+    </Wallpaper>
+</BaseLayout>
