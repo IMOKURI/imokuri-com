@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header.astro";
+import ToggleTheme from "../components/ToggleTheme.astro";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+const {
+    image,
+    title = SITE_TITLE,
+    description = SITE_DESCRIPTION,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <Header title={title} description={description} image={image} />
+    </head>
+    <body>
+        <ToggleTheme />
+        <slot />
+    </body>
+</html>
