@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
 import Footer from "../../components/Footer.astro";
 import NavBar from "../../components/NavBar.astro";
 import ToggleTheme from "../../components/ToggleTheme.astro";
@@ -20,42 +21,7 @@ const { page } = Astro.props;
     <main class="container mx-auto w-2/3">
         <h1 class="my-5 text-4xl font-bold">Blog</h1>
 
-        {
-            page.data.map((post) => (
-                <a
-                    href={`/blog/${post.data.date.getFullYear()}/${(
-                        post.data.date.getMonth() + 1
-                    )
-                        .toString()
-                        .padStart(2, "0")}/${post.slug}/`}
-                >
-                    <div class="card card-bordered shadow-xl m-10">
-                        <div class="card-body">
-                            <h2 class="card-title">{post.data.title}</h2>
-                            <p class="text-sm">
-                                Posted on {post.data.date.toLocaleDateString()}
-                            </p>
-                            {post.data.updated > post.data.date ? (
-                                <p class="text-sm">
-                                    Updated on{" "}
-                                    {post.data.updated.toLocaleDateString()}
-                                </p>
-                            ) : null}
-                            {post.data.tags ? (
-                                <div class="inline">
-                                    {post.data.tags.map((tag) => (
-                                        <div class="badge badge-accent badge-outline mr-2">
-                                            {tag}
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : null}
-                            <p>{post.data.description}</p>
-                        </div>
-                    </div>
-                </a>
-            ))
-        }
+        {page.data.map((post) => <BlogPost post={post} />)}
 
         <div class="btn-group flex justify-center m-5">
             <a href="/blog">
