@@ -11,7 +11,9 @@ import ToggleTheme from "../components/ToggleTheme.astro";
     <main class="container mx-auto w-2/3">
         <h1 class="my-5 text-4xl font-bold">About Me</h1>
         <div class="avatar my-5">
-            <div class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+            <div
+                class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"
+            >
                 <img src="/author.jpg" />
             </div>
         </div>
@@ -26,20 +28,31 @@ import ToggleTheme from "../components/ToggleTheme.astro";
             <br />
             小さい頃からさつまいもとくりが好きです。なので、IMOKURI。
         </div>
+
         <h2 class="my-5 text-2xl font-bold">Focus</h2>
-        <ul class="list-disc list-inside mt-5 mb-10">
-            <li>Data Management</li>
-            <li>Machine Learning, Deep Learning</li>
-            <li>Kubernetes, OpenShift</li>
-            <li>Ansible</li>
-            <li>Neovim</li>
+        <ul class="steps steps-vertical text-lg">
+            <li data-content="●" class="step step-neutral">Data Management</li>
+            <li data-content="●" class="step step-neutral">
+                Machine Learning, Deep Learning
+            </li>
+            <li data-content="●" class="step step-neutral">
+                Kubernetes, OpenShift
+            </li>
+            <li data-content="●" class="step step-neutral">Ansible</li>
+            <li data-content="●" class="step step-neutral">Neovim</li>
         </ul>
+
         <h2 class="my-5 text-2xl font-bold">Hobby</h2>
-        <ul class="list-disc list-inside mt-5 mb-10">
-            <li>Ski</li>
-            <li>Shogi (Japanese famous board game like chess)</li>
-            <li>Bon Odori (Japanese traditional dance in festival)</li>
+        <ul class="steps steps-vertical text-lg">
+            <li data-content="●" class="step step-neutral">Ski</li>
+            <li data-content="●" class="step step-neutral">
+                Shogi (Japanese famous board game like chess)
+            </li>
+            <li data-content="●" class="step step-neutral">
+                Bon Odori (Japanese traditional dance in festival)
+            </li>
         </ul>
+
         <h2 class="my-5 text-2xl font-bold">Contact</h2>
         <img src="/mail.png" alt="email" />
     </main>
