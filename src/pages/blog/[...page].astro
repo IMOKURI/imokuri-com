@@ -20,15 +20,25 @@ const { page } = Astro.props;
     <main class="container mx-auto w-2/3">
         <h1 class="my-5 text-4xl font-bold">Blog</h1>
 
-        <ul class="list-disc list-inside mt-5 mb-10">
-            {
-                page.data.map((post) => (
-                    <li>
-                        {post.data.title} - {post.data.date}
-                    </li>
-                ))
-            }
-        </ul>
+        {
+            page.data.map((post) => (
+                <div class="card card-bordered shadow-xl m-5">
+                    <div class="card-body">
+                        <h2 class="card-title">{post.data.title}</h2>
+                        <p class="text-sm">
+                            Posted on {post.data.date.toLocaleDateString()}
+                        </p>
+                        {post.data.updated > post.data.date ? (
+                            <p class="text-sm">
+                                Updated on{" "}
+                                {post.data.updated.toLocaleDateString()}
+                            </p>
+                        ) : null}
+                        <p>{post.data.description}</p>
+                    </div>
+                </div>
+            ))
+        }
 
         <div class="btn-group flex justify-center m-5">
             {
