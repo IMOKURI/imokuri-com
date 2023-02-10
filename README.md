@@ -7,3 +7,4 @@
 - [Tailwind CSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Catppuccin](https://github.com/catppuccin)
+- [Font Awesome](https://fontawesome.com/)
