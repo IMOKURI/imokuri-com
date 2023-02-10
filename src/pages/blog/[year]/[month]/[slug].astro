@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
 const { Content } = await post.render();
-const { title, date, updated, cover_image } = post.data;
+const { title, date, updated, tags, cover_image } = post.data;
 ---
 
 <BaseLayout>
@@ -27,11 +27,7 @@ const { title, date, updated, cover_image } = post.data;
     <ToggleTheme />
     <main class="container mx-auto w-2/3">
         <article class="prose max-w-none">
-            {
-                cover_image && (
-                    <img src={cover_image} alt="" />
-                )
-            }
+            {cover_image && <img src={cover_image} alt="" />}
             <h1>{title}</h1>
             {
                 date && (
@@ -46,6 +42,17 @@ const { title, date, updated, cover_image } = post.data;
                         Updated on <time>{updated.toLocaleDateString()}</time>
                     </div>
                 )
+            }
+            {
+                tags ? (
+                    <div class="inline">
+                        {tags.map((tag) => (
+                            <div class="badge badge-primary badge-outline mr-2">
+                                {tag}
+                            </div>
+                        ))}
+                    </div>
+                ) : null
             }
             <hr />
             <Content />

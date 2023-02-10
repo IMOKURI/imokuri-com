@@ -29,7 +29,7 @@ const { page } = Astro.props;
                         .toString()
                         .padStart(2, "0")}/${post.slug}/`}
                 >
-                    <div class="card card-bordered shadow-xl m-5">
+                    <div class="card card-bordered shadow-xl m-10">
                         <div class="card-body">
                             <h2 class="card-title">{post.data.title}</h2>
                             <p class="text-sm">
@@ -40,6 +40,15 @@ const { page } = Astro.props;
                                     Updated on{" "}
                                     {post.data.updated.toLocaleDateString()}
                                 </p>
+                            ) : null}
+                            {post.data.tags ? (
+                                <div class="inline">
+                                    {post.data.tags.map((tag) => (
+                                        <div class="badge badge-primary badge-outline mr-2">
+                                            {tag}
+                                        </div>
+                                    ))}
+                                </div>
                             ) : null}
                             <p>{post.data.description}</p>
                         </div>
@@ -52,14 +61,14 @@ const { page } = Astro.props;
             {
                 page.url.prev ? (
                     <a href={page.url.prev}>
-                        <button class="btn">Prev</button>
+                        <button class="btn btn-outline mx-2">Prev</button>
                     </a>
                 ) : null
             }
             {
                 page.url.next ? (
                     <a href={page.url.next}>
-                        <button class="btn">Next</button>
+                        <button class="btn btn-outline mx-2">Next</button>
                     </a>
                 ) : null
             }
