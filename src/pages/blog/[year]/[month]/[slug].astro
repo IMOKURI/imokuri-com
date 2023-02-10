@@ -20,6 +20,10 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props;
 const { Content } = await post.render();
 const { title, date, updated, tags, cover_image } = post.data;
+
+const today = new Date().getTime();
+const updated_date = updated > date ? updated.getTime() : date.getTime()
+const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
 ---
 
 <BaseLayout>
@@ -37,22 +41,48 @@ const { title, date, updated, tags, cover_image } = post.data;
                 )
             }
             {
-                updated && (
+                updated > date && (
                     <div>
                         Updated on <time>{updated.toLocaleDateString()}</time>
                     </div>
                 )
             }
             {
-                tags ? (
+                tags && (
                     <div class="inline">
                         {tags.map((tag) => (
-                            <div class="badge badge-primary badge-outline mr-2">
+                            <div class="badge badge-accent badge-outline mr-2">
                                 {tag}
                             </div>
                         ))}
                     </div>
-                ) : null
+                )
+            }
+            {
+                pass_year > 0 && (
+                    <div class="alert alert-warning shadow-lg my-4">
+                        <div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="stroke-current flex-shrink-0 h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                                />
+                            </svg>
+                            <span>
+                                この記事は、最終更新日から {pass_year}{" "}
+                                年以上経過しています。
+                                情報が古い可能性があります。
+                            </span>
+                        </div>
+                    </div>
+                )
             }
             <hr />
             <Content />

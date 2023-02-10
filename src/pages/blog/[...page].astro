@@ -44,7 +44,7 @@ const { page } = Astro.props;
                             {post.data.tags ? (
                                 <div class="inline">
                                     {post.data.tags.map((tag) => (
-                                        <div class="badge badge-primary badge-outline mr-2">
+                                        <div class="badge badge-accent badge-outline mr-2">
                                             {tag}
                                         </div>
                                     ))}
@@ -58,20 +58,26 @@ const { page } = Astro.props;
         }
 
         <div class="btn-group flex justify-center m-5">
+            <a href="/blog">
+                <button class="btn btn-outline mx-2">First</button>
+            </a>
             {
-                page.url.prev ? (
+                page.url.prev && (
                     <a href={page.url.prev}>
                         <button class="btn btn-outline mx-2">Prev</button>
                     </a>
-                ) : null
+                )
             }
             {
-                page.url.next ? (
+                page.url.next && (
                     <a href={page.url.next}>
                         <button class="btn btn-outline mx-2">Next</button>
                     </a>
-                ) : null
+                )
             }
+            <a href={`/blog/${page.lastPage}`}>
+                <button class="btn btn-outline mx-2">Last</button>
+            </a>
         </div>
     </main>
     <Footer />
