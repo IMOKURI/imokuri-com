@@ -25,11 +25,11 @@ const { title, date, updated, cover_image } = post.data;
 <BaseLayout>
     <NavBar />
     <ToggleTheme />
-    <main class="container mx-auto">
-        <article class="prose">
+    <main class="container mx-auto w-2/3">
+        <article class="prose max-w-none">
             {
                 cover_image && (
-                    <img width={720} height={360} src={cover_image} alt="" />
+                    <img src={cover_image} alt="" />
                 )
             }
             <h1>{title}</h1>
