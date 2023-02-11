@@ -1,4 +1,5 @@
 ---
+import AllTags from "../../components/AllTags.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import Footer from "../../components/Footer.astro";
@@ -18,7 +19,8 @@ const { page } = Astro.props;
 <BaseLayout>
     <NavBar />
     <ToggleTheme />
-    <main class="container mx-auto w-2/3">
+    <main class="container mx-auto w-5/6 lg:w-2/3">
+        <AllTags/>
         <h1 class="my-5 text-4xl font-bold">Blog</h1>
 
         {page.data.map((post) => <BlogPost post={post} />)}

@@ -1,5 +1,5 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
 
 export interface Props {
     post: CollectionEntry<"blog">;
@@ -32,9 +32,11 @@ const { post } = Astro.props;
                 post.data.tags ? (
                     <div class="inline">
                         {post.data.tags.map((tag) => (
-                            <div class="badge badge-accent badge-outline mr-2">
-                                {tag}
-                            </div>
+                            <a href={`/tag/${tag}`}>
+                                <div class="badge badge-accent badge-outline mr-2">
+                                    {tag}
+                                </div>
+                            </a>
                         ))}
                     </div>
                 ) : null

@@ -22,14 +22,14 @@ const { Content } = await post.render();
 const { title, date, updated, tags, cover_image } = post.data;
 
 const today = new Date().getTime();
-const updated_date = updated > date ? updated.getTime() : date.getTime()
+const updated_date = updated > date ? updated.getTime() : date.getTime();
 const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
 ---
 
 <BaseLayout>
     <NavBar />
     <ToggleTheme />
-    <main class="container mx-auto w-2/3">
+    <main class="container mx-auto w-5/6 lg:w-2/3">
         <article class="prose max-w-none">
             {cover_image && <img src={cover_image} alt="" />}
             <h1>{title}</h1>
@@ -52,7 +52,12 @@ const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
                     <div class="inline">
                         {tags.map((tag) => (
                             <div class="badge badge-accent badge-outline mr-2">
-                                {tag}
+                                <a
+                                    href={`/tag/${tag}`}
+                                    class="link link-accent link-hover"
+                                >
+                                    {tag}
+                                </a>
                             </div>
                         ))}
                     </div>
