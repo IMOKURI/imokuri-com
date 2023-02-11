@@ -14,21 +14,24 @@ import { SITE_TITLE } from "../config";
                 Hi, I'm SUGIYAMA Yoshio who is an infrastructure / ML engineer
                 at HPE. I like IMO and KURI.
             </p>
-            <button class="btn btn-ghost text-lg"
-                ><a href="/about" aria-label="About Me" title="About Me"
-                    ><i class="fa-solid fa-user"></i></a
-                ></button
-            >
-            <button class="btn btn-ghost text-lg"
-                ><a href="/blog" aria-label="Blog" title="Blog"
-                    ><i class="fa-solid fa-pencil"></i></a
-                ></button
-            >
-            <button class="btn btn-ghost text-lg"
-                ><a href="/project" aria-label="Project" title="Project"
-                    ><i class="fa-solid fa-code"></i></a
-                ></button
-            >
+            <div class="tooltip tooltip-bottom" data-tip="About Me">
+                <button class="btn btn-ghost text-lg"
+                    ><a href="/about"><i class="fa-solid fa-user"></i></a
+                    ></button
+                >
+            </div>
+            <div class="tooltip tooltip-bottom" data-tip="Blog">
+                <button class="btn btn-ghost text-lg"
+                    ><a href="/blog"><i class="fa-solid fa-pencil"></i></a
+                    ></button
+                >
+            </div>
+            <div class="tooltip tooltip-bottom" data-tip="Project">
+                <button class="btn btn-ghost text-lg"
+                    ><a href="/project"><i class="fa-solid fa-code"></i></a
+                    ></button
+                >
+            </div>
         </main>
     </Wallpaper>
 </BaseLayout>
