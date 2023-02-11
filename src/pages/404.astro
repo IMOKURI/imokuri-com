@@ -9,10 +9,12 @@ import Wallpaper from "../components/Wallpaper.astro";
         <ToggleTheme />
         <h1 class="mb-5 text-4xl font-bold">404 Not Found</h1>
         <p class="mb-2">お探しのページは見つかりませんでした。。</p>
-        <button class="btn btn-ghost text-lg"
-            ><a href="/" aria-label="Home" title="Home"
-                ><i class="fa-solid fa-house"></i></a
-            ></button
-        >
+        <div class="tooltip tooltip-bottom" data-tip="Home">
+            <a href="/">
+                <button class="btn btn-ghost text-lg">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+            </a>
+        </div>
     </Wallpaper>
 </BaseLayout>
