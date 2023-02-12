@@ -1,17 +1,8 @@
 ---
-title: 機械学習コンペ参加履歴
-slug: competition-history
-date: 2021-09-14
-updated: 2022-11-16
-tags:
-    - Compete
-    - Deep Learning
-    - Kaggle
-    - Machine Learning
+title: 機械学習コンペ参加記録
+slug: competition
 description: "コンペの資産を残す場所です。"
 ---
-
-このページはこれまで参加した機械学習コンペの資産を残す場所です。
 
 ## 2022年
 
