@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeWallpaper from "../components/HomeWallpaper.astro";
 import ToggleTheme from "../components/ToggleTheme.astro";
-import Wallpaper from "../components/Wallpaper.astro";
 import { SITE_TITLE } from "../config";
 ---
 
 <BaseLayout>
-    <Wallpaper>
+    <HomeWallpaper>
         <ToggleTheme />
         <main>
             <h1 class="mb-5 text-4xl font-bold">{SITE_TITLE}</h1>
@@ -36,5 +36,5 @@ import { SITE_TITLE } from "../config";
                 </a>
             </div>
         </main>
-    </Wallpaper>
+    </HomeWallpaper>
 </BaseLayout>

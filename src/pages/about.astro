@@ -1,60 +1,66 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseWallpaper from "../components/BaseWallpaper.astro";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
 import ToggleTheme from "../components/ToggleTheme.astro";
 ---
 
 <BaseLayout>
-    <NavBar />
-    <ToggleTheme />
-    <main class="container mx-auto w-5/6 lg:w-2/3">
-        <h1 class="my-5 text-4xl font-bold">About Me</h1>
-        <div class="avatar my-5">
-            <div
-                class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"
-            >
-                <img src="/author.jpg" />
+    <BaseWallpaper>
+        <NavBar />
+        <ToggleTheme />
+        <main class="container mx-auto w-5/6 lg:w-2/3">
+            <h1 class="my-5 text-4xl font-bold">About Me</h1>
+            <div class="avatar my-5">
+                <div
+                    class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"
+                >
+                    <img src="/author.jpg" />
+                </div>
             </div>
-        </div>
-        <h2 class="my-5 text-2xl">SUGIYAMA Yoshio - 杉山 禎夫</h2>
-        <div class="my-10 text-justify">
-            日本ヒューレット・パッカードでインフラ/機械学習エンジニアをしています。
-            <br />
-            <br />
-            手を動かして、いろいろ検証することが好きで、いろいろな技術をかじっています。
-            世の中の変化を汲み取り、技術を正しくキャッチアップし、 活用する、 社会に届けることができるエンジニアでありたいです。
-            <br />
-            <br />
-            小さい頃からさつまいもとくりが好きです。なので、IMOKURI。
-        </div>
+            <h2 class="my-5 text-2xl">SUGIYAMA Yoshio - 杉山 禎夫</h2>
+            <div class="my-10 text-justify">
+                日本ヒューレット・パッカードでインフラ/機械学習エンジニアをしています。
+                <br />
+                <br />
+                手を動かして、いろいろ検証することが好きで、いろいろな技術をかじっています。
+                世の中の変化を汲み取り、技術を正しくキャッチアップし、 活用する、
+                社会に届けることができるエンジニアでありたいです。
+                <br />
+                <br />
+                小さい頃からさつまいもとくりが好きです。なので、IMOKURI。
+            </div>
 
-        <h2 class="my-5 text-2xl font-bold">Focus</h2>
-        <ul class="steps steps-vertical text-lg">
-            <li data-content="●" class="step step-neutral">Data Management</li>
-            <li data-content="●" class="step step-neutral">
-                Machine Learning, Deep Learning
-            </li>
-            <li data-content="●" class="step step-neutral">
-                Kubernetes, OpenShift
-            </li>
-            <li data-content="●" class="step step-neutral">Ansible</li>
-            <li data-content="●" class="step step-neutral">Neovim</li>
-        </ul>
+            <h2 class="my-5 text-2xl font-bold">Focus</h2>
+            <ul class="steps steps-vertical text-lg">
+                <li data-content="●" class="step step-neutral">
+                    Data Management
+                </li>
+                <li data-content="●" class="step step-neutral">
+                    Machine Learning, Deep Learning
+                </li>
+                <li data-content="●" class="step step-neutral">
+                    Kubernetes, OpenShift
+                </li>
+                <li data-content="●" class="step step-neutral">Ansible</li>
+                <li data-content="●" class="step step-neutral">Neovim</li>
+            </ul>
 
-        <h2 class="my-5 text-2xl font-bold">Hobby</h2>
-        <ul class="steps steps-vertical text-lg">
-            <li data-content="●" class="step step-neutral">Ski</li>
-            <li data-content="●" class="step step-neutral">
-                Shogi (Japanese famous board game like chess)
-            </li>
-            <li data-content="●" class="step step-neutral">
-                Bon Odori (Japanese traditional dance in festival)
-            </li>
-        </ul>
+            <h2 class="my-5 text-2xl font-bold">Hobby</h2>
+            <ul class="steps steps-vertical text-lg">
+                <li data-content="●" class="step step-neutral">Ski</li>
+                <li data-content="●" class="step step-neutral">
+                    Shogi (Japanese famous board game like chess)
+                </li>
+                <li data-content="●" class="step step-neutral">
+                    Bon Odori (Japanese traditional dance in festival)
+                </li>
+            </ul>
 
-        <h2 class="my-5 text-2xl font-bold">Contact</h2>
-        <img src="/mail.png" alt="email" />
-    </main>
-    <Footer />
+            <h2 class="my-5 text-2xl font-bold">Contact</h2>
+            <img src="/mail.png" alt="email" />
+        </main>
+        <Footer />
+    </BaseWallpaper>
 </BaseLayout>

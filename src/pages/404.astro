@@ -1,11 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeWallpaper from "../components/HomeWallpaper.astro";
 import ToggleTheme from "../components/ToggleTheme.astro";
-import Wallpaper from "../components/Wallpaper.astro";
 ---
 
 <BaseLayout>
-    <Wallpaper>
+    <HomeWallpaper>
         <ToggleTheme />
         <h1 class="mb-5 text-4xl font-bold">404 Not Found</h1>
         <p class="mb-2">お探しのページは見つかりませんでした。。</p>
@@ -16,5 +16,5 @@ import Wallpaper from "../components/Wallpaper.astro";
                 </button>
             </a>
         </div>
-    </Wallpaper>
+    </HomeWallpaper>
 </BaseLayout>

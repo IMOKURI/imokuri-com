@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseWallpaper from "../../components/BaseWallpaper.astro";
 import Footer from "../../components/Footer.astro";
 import NavBar from "../../components/NavBar.astro";
 import ProjectPost from "../../components/ProjectPost.astro";
@@ -7,26 +8,28 @@ import ToggleTheme from "../../components/ToggleTheme.astro";
 ---
 
 <BaseLayout>
-    <NavBar />
-    <ToggleTheme />
-    <main class="container mx-auto w-5/6 lg:w-2/3">
-        <h1 class="my-5 text-4xl font-bold">Project</h1>
+    <BaseWallpaper>
+        <NavBar />
+        <ToggleTheme />
+        <main class="container mx-auto w-5/6 lg:w-2/3">
+            <h1 class="my-5 text-4xl font-bold">Project</h1>
 
-        <ProjectPost
-            title="担当プロジェクト公開事例"
-            link="project"
-            description="業務での担当プロジェクトの公開事例です。"
-        />
-        <ProjectPost
-            title="機械学習コンペ参加記録"
-            link="competition"
-            description="Kaggle などの機械学習コンペの参加記録です。"
-        />
-        <ProjectPost
-            title="Neovim 関連"
-            link="neovim"
-            description="私の好きなエディタ Neovim 関連の活動です。"
-        />
-    </main>
-    <Footer />
+            <ProjectPost
+                title="担当プロジェクト公開事例"
+                link="project"
+                description="業務での担当プロジェクトの公開事例です。"
+            />
+            <ProjectPost
+                title="機械学習コンペ参加記録"
+                link="competition"
+                description="Kaggle などの機械学習コンペの参加記録です。"
+            />
+            <ProjectPost
+                title="Neovim 関連"
+                link="neovim"
+                description="私の好きなエディタ Neovim 関連の活動です。"
+            />
+        </main>
+        <Footer />
+    </BaseWallpaper>
 </BaseLayout>
