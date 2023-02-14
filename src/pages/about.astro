@@ -33,44 +33,98 @@ import ToggleTheme from "../components/ToggleTheme.astro";
                 小さい頃からさつまいもとくりが好きです。なので、IMOKURI。
             </div>
 
-            <h2 class="my-5 text-2xl font-bold">Focus</h2>
-            <div class="time-line-container">
-                <TimeLine title="Data Management" />
-                <TimeLine title="Machine Learning, Deep Learning" />
-                <TimeLine title="Kubernetes, OpenShift" />
-                <TimeLine title="Ansible" />
-                <TimeLine title="Neovim" />
-            </div>
-
-            <h2 class="my-5 text-2xl font-bold">Certification</h2>
-            <div class="time-line-container">
-                <TimeLine
-                    title="Informatica Certified Professional - Cloud Data and Application Integration"
-                    subtitle="2023/2"
-                />
-                <TimeLine
-                    title="Kaggle Competitions Master"
-                    subtitle="2022/11"
-                />
-                <TimeLine
-                    title="Microsoft Certified Azure Administrator Associate (AZ-104)"
-                    subtitle="2021/6"
-                />
-                <TimeLine
-                    title="AWS Certified Solutions Architect - Associate (AWS SAA)"
-                    subtitle="2020/12"
-                />
-            </div>
-
-            <h2 class="my-5 text-2xl font-bold">Hobby</h2>
-            <div class="time-line-container">
-                <TimeLine title="Ski" />
-                <TimeLine title="Shogi - 将棋" />
-                <TimeLine title="Bon Odori - 盆踊り" />
-            </div>
-
             <h2 class="my-5 text-2xl font-bold">Contact</h2>
             <img src="/mail.png" alt="email" />
+
+            <div class="card card-bordered shadow-lg my-10 bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title text-2xl mb-3">Focus</h2>
+                    <div class="time-line-container">
+                        <TimeLine title="Data Management" />
+                        <TimeLine title="Machine Learning, Deep Learning" />
+                        <TimeLine title="Kubernetes, OpenShift" />
+                        <TimeLine title="Ansible" />
+                        <TimeLine title="Neovim" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-bordered shadow-lg my-10 bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title text-2xl mb-3">Hobby</h2>
+                    <div class="time-line-container">
+                        <TimeLine title="Ski" />
+                        <TimeLine title="Kaggle" />
+                        <TimeLine title="Shogi - 将棋" />
+                        <TimeLine title="Bon Odori - 盆踊り" />
+                        <TimeLine title="Project Euler" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-bordered shadow-lg my-10 bg-base-100">
+                <div class="card-body">
+                    <h2 class="card-title text-2xl mb-3">Recent Activity</h2>
+                    <div class="time-line-container">
+                        <TimeLine
+                            title="Informatica Certified Professional - Cloud Data and Application Integration"
+                            date="2023/2"
+                        />
+                        <TimeLine
+                            title="Kaggle Competitions Master"
+                            date="2022/11"
+                        />
+                        <TimeLine
+                            title="Kaggle Multimodal Single-Cell Integration 🥈"
+                            date="2022/11"
+                            link_title="Private 41st Solution summary"
+                            link_url="https://www.kaggle.com/competitions/open-problems-multimodal/discussion/366372"
+                        />
+                        <TimeLine
+                            title="ML Study #6「ディープラーニングで実現するイノベーション」 LT 登壇"
+                            date="2022/7"
+                            link_title="非中央集権の連合学習について"
+                            link_url="https://speakerdeck.com/imokuri/decentralized-federated-learning-with-blockchain"
+                        />
+                        <TimeLine
+                            title="担当プロジェクト 公開事例"
+                            date="2022/4"
+                            link_title="群馬大学 - AI人材育成とAI研究を加速、文理融合の新学部が挑むDX"
+                            link_url="https://www.hpe.com/jp/ja/customer-case-studies/services-gunma-u.html"
+                        />
+                        <TimeLine
+                            title="Kaggle Competitions Expert"
+                            date="2021/8"
+                        />
+                        <TimeLine
+                            title="Kaggle Hungry Geese 🥇"
+                            date="2021/8"
+                            link_title="4th place solution"
+                            link_url="https://www.kaggle.com/c/hungry-geese/discussion/263690"
+                        />
+                        <TimeLine
+                            title="Kaggle Hungry Geese"
+                            date="2021/6"
+                            link_title="Congratulations to our Month 5 Winners - Goose luck!"
+                            link_url="https://www.kaggle.com/c/hungry-geese/discussion/248986"
+                        />
+                        <TimeLine
+                            title="Microsoft Certified Azure Administrator Associate (AZ-104)"
+                            date="2021/6"
+                        />
+                        <TimeLine
+                            title="Kaggle Cassava Leaf Disease Classification 🥈"
+                            date="2021/2"
+                            link_title="Private 28th, Public 8th, Thank you all, my first medal!"
+                            link_url="https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/220599"
+                        />
+                        <TimeLine
+                            title="AWS Certified Solutions Architect - Associate (AWS SAA)"
+                            date="2020/12"
+                        />
+                    </div>
+                </div>
+            </div>
         </main>
         <Footer />
     </BaseWallpaper>
