@@ -9,29 +9,29 @@ description: "コンペの資産を残す場所です。"
 - Kaggle [Ubiquant Market Prediction](https://www.kaggle.com/competitions/ubiquant-market-prediction)
     - テーブルデータ、時系列データ、回帰、ピアソン相関係数
     - [GitHub](https://github.com/IMOKURI/ubiquant-market-prediction)
-- Kaggle [Open Problems - Multimodal Single-Cell Integration](https://www.kaggle.com/competitions/open-problems-multimodal)
+- Kaggle [Open Problems - Multimodal Single-Cell Integration](https://www.kaggle.com/competitions/open-problems-multimodal) 🥈
     - テーブルデータ、回帰、マルチラベル、ピアソン相関係数
     - [GitHub](https://github.com/IMOKURI/kaggle-multimodal-single-cell-integration)
 
 ## 2021年
 
-- Kaggle [Cassava Leaf Disease Classification](https://www.kaggle.com/c/cassava-leaf-disease-classification)
+- Kaggle [Cassava Leaf Disease Classification](https://www.kaggle.com/c/cassava-leaf-disease-classification) 🥈
     - 画像データ、分類、正解率
     - [GitHub](https://github.com/IMOKURI/Cassava-Leaf-Disease-Classification)
     - [Solution](https://www.kaggle.com/c/cassava-leaf-disease-classification/discussion/220599)
 - atmaCup [#11 [初心者歓迎! / 画像編] atmaCup](https://www.guruguru.science/competitions/17)
     - 画像データ、分類、RMSE
     - [GitHub](https://github.com/IMOKURI/atmacup11)
-- Kaggle [Hungry Geese](https://www.kaggle.com/c/hungry-geese)
+- Kaggle [Hungry Geese](https://www.kaggle.com/c/hungry-geese) 🥇
     - 強化学習
     - [GitHub](https://github.com/IMOKURI/Hungry-Geese)
 - SIGNATE [医学論文の自動仕分けチャレンジ](https://signate.jp/competitions/471)
     - 自然言語処理、分類、F Beta Score
     - [GitHub](https://github.com/IMOKURI/signate-471)
-- Kaggle [chaii - Hindi and Tamil Question Answering](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering)
+- Kaggle [chaii - Hindi and Tamil Question Answering](https://www.kaggle.com/c/chaii-hindi-and-tamil-question-answering) 🥉
     - 自然言語処理、QA、Jaccard score
     - [GitHub](https://github.com/IMOKURI/chaii-Hindi-and-Tamil-QA)
-- Kaggle [PetFinder.my - Pawpularity Contest](https://www.kaggle.com/c/petfinder-pawpularity-score)
+- Kaggle [PetFinder.my - Pawpularity Contest](https://www.kaggle.com/c/petfinder-pawpularity-score) 🥉
     - 画像スコアリング、回帰、RMSE
     - [GitHub](https://github.com/IMOKURI/petfinder-pawpularity-score)
 
