@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BaseWallpaper from "../components/BaseWallpaper.astro";
 import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
+import TimeLine from "../components/TimeLine.astro";
 import ToggleTheme from "../components/ToggleTheme.astro";
 ---
 
@@ -33,46 +34,40 @@ import ToggleTheme from "../components/ToggleTheme.astro";
             </div>
 
             <h2 class="my-5 text-2xl font-bold">Focus</h2>
-            <ul class="steps steps-vertical text-lg">
-                <li data-content="●" class="step step-neutral">
-                    Data Management
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    Machine Learning, Deep Learning
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    Kubernetes, OpenShift
-                </li>
-                <li data-content="●" class="step step-neutral">Ansible</li>
-                <li data-content="●" class="step step-neutral">Neovim</li>
-            </ul>
+            <div class="time-line-container">
+                <TimeLine title="Data Management" />
+                <TimeLine title="Machine Learning, Deep Learning" />
+                <TimeLine title="Kubernetes, OpenShift" />
+                <TimeLine title="Ansible" />
+                <TimeLine title="Neovim" />
+            </div>
 
             <h2 class="my-5 text-2xl font-bold">Certification</h2>
-            <ul class="steps steps-vertical text-lg">
-                <li data-content="●" class="step step-neutral">
-                    2023/2: Informatica Certified Professional - Cloud Data and Application Integration
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    2022/11: Kaggle Competitions Master
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    2021/6: Microsoft Certified Azure Administrator Associate (AZ-104)
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    2020/12: AWS Certified Solutions Architect - Associate (AWS SAA)
-                </li>
-            </ul>
+            <div class="time-line-container">
+                <TimeLine
+                    title="Informatica Certified Professional - Cloud Data and Application Integration"
+                    subtitle="2023/2"
+                />
+                <TimeLine
+                    title="Kaggle Competitions Master"
+                    subtitle="2022/11"
+                />
+                <TimeLine
+                    title="Microsoft Certified Azure Administrator Associate (AZ-104)"
+                    subtitle="2021/6"
+                />
+                <TimeLine
+                    title="AWS Certified Solutions Architect - Associate (AWS SAA)"
+                    subtitle="2020/12"
+                />
+            </div>
 
             <h2 class="my-5 text-2xl font-bold">Hobby</h2>
-            <ul class="steps steps-vertical text-lg">
-                <li data-content="●" class="step step-neutral">Ski</li>
-                <li data-content="●" class="step step-neutral">
-                    Shogi (Japanese famous board game like chess)
-                </li>
-                <li data-content="●" class="step step-neutral">
-                    Bon Odori (Japanese traditional dance in festival)
-                </li>
-            </ul>
+            <div class="time-line-container">
+                <TimeLine title="Ski" />
+                <TimeLine title="Shogi - 将棋" />
+                <TimeLine title="Bon Odori - 盆踊り" />
+            </div>
 
             <h2 class="my-5 text-2xl font-bold">Contact</h2>
             <img src="/mail.png" alt="email" />
