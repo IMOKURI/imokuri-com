@@ -25,6 +25,7 @@ description: "コンペの資産を残す場所です。"
 - Kaggle [Hungry Geese](https://www.kaggle.com/c/hungry-geese) 🥇
     - 強化学習
     - [GitHub](https://github.com/IMOKURI/Hungry-Geese)
+    - [Solution](https://www.kaggle.com/c/hungry-geese/discussion/263690)
 - SIGNATE [医学論文の自動仕分けチャレンジ](https://signate.jp/competitions/471)
     - 自然言語処理、分類、F Beta Score
     - [GitHub](https://github.com/IMOKURI/signate-471)
@@ -40,11 +41,11 @@ description: "コンペの資産を残す場所です。"
 - SIGNATE [【第1回 Beginner限定コンペ】銀行の顧客ターゲティング](https://signate.jp/competitions/292)
     - テーブルデータ、回帰、AUC
     - [GitHub](https://github.com/IMOKURI/signate-292)
-    - [Solution](https://imokuri123.com/blog/2020/09/signate-292/)
+    - [Solution](/blog/2020/09/signate-292/)
 - Kaggle [Mechanisms of Action (MoA) Prediction](https://www.kaggle.com/c/lish-moa)
     - テーブルデータ、分類、マルチラベル、Log Loss
     - [GitHub](https://github.com/IMOKURI/kaggle-lish-moa)
-    - [Solution](https://imokuri123.com/blog/2020/12/kaggle-lish-moa/)
+    - [Solution](/blog/2020/12/kaggle-lish-moa/)
 
 ## 今後やってみたいコンペ
 

@@ -11,7 +11,7 @@ description: ""
 
 operator-sdkでkuebrnetesのoperatorを開発するときのTipsです。
 
-[こちら](https://imokuri123.com/blog/2019/12/kubernetes-ansible-operator-tips/)の記事の続編的な感じです。
+[こちら](/blog/2019/12/kubernetes-ansible-operator-tips/)の記事の続編的な感じです。
 
 ---
 
