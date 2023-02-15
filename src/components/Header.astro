@@ -6,7 +6,11 @@ export interface Props {
     description: string;
     image?: string;
 }
-const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props;
+const {
+    title,
+    description,
+    image = "/blog/new-imokuri-blog.png",
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -52,3 +56,7 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
     import { themeChange } from "theme-change";
     themeChange();
 </script>
+
+<!-- Twitter -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+></script>
