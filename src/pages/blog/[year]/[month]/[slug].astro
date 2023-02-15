@@ -3,6 +3,7 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import Footer from "../../../../components/Footer.astro";
 import NavBar from "../../../../components/NavBar.astro";
 import ToggleTheme from "../../../../components/ToggleTheme.astro";
+import Utterances from "../../../../components/Utterances.astro";
 import { CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -92,6 +93,7 @@ const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
             <hr />
             <Content />
         </article>
+        <Utterances />
     </main>
     <Footer />
 </BaseLayout>
