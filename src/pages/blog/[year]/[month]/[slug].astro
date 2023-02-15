@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Disclaimer from "../../../../components/Disclaimer.astro";
 import Footer from "../../../../components/Footer.astro";
 import NavBar from "../../../../components/NavBar.astro";
 import ToggleTheme from "../../../../components/ToggleTheme.astro";
@@ -95,5 +96,6 @@ const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
         </article>
         <Utterances />
     </main>
+    <Disclaimer />
     <Footer />
 </BaseLayout>
