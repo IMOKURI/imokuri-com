@@ -4,7 +4,6 @@ slug: snmp-will-be-replaced-by-yang-netconf
 date: 2015-04-28
 updated:
 tags:
-    - YANG
     - NETCONF
     - SNMP
     - MIB

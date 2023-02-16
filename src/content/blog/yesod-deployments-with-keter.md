@@ -5,8 +5,6 @@ date: 2015-09-25
 updated:
 tags:
     - Haskell
-    - Yesod
-    - Keter
     - Nginx
 description: "KeterとNginxを使って、Yesodをdaemonとして起動してみたので、まとめです。"
 ---
