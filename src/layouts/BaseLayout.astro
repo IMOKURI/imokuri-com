@@ -6,6 +6,7 @@ const {
     image,
     title = SITE_TITLE,
     description = SITE_DESCRIPTION,
+    twitter = false,
 } = Astro.props;
 ---
 
@@ -13,6 +14,15 @@ const {
 <html lang="ja" data-theme="latte">
     <head>
         <Header title={title} description={description} image={image} />
+        {
+            twitter && (
+                <script
+                    async
+                    src="https://platform.twitter.com/widgets.js"
+                    charset="utf-8"
+                />
+            )
+        }
     </head>
     <body>
         <slot />
