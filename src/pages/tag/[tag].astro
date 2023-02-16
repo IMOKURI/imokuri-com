@@ -38,7 +38,12 @@ const { posts } = Astro.props;
         <ToggleTheme />
         <main class="container mx-auto w-5/6 lg:w-2/3">
             <AllTags />
-            <h1 class="my-5 text-4xl font-bold"><a href="/blog">Blog</a></h1>
+            <h1 class="my-5 text-4xl font-bold">
+                <a href="/blog">Blog</a>
+                <a href="/rss.xml"
+                    ><i class="fa-solid fa-rss mx-2 text-xl"></i></a
+                >
+            </h1>
             <h1 class="my-5 text-2xl font-bold">{tag} の記事</h1>
 
             {posts.map((post) => <BlogPost post={post} />)}
