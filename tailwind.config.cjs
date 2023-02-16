@@ -14,6 +14,8 @@ module.exports = {
           accent: "#179299", // Teal
           neutral: "#4c4f69", // Text
           "base-100": "#eff1f5", // Base
+          "base-200": "#e6e9ef", // Mantle
+          "base-300": "#dce0e8", // Crust
           info: "#04a5e5", // Sky
           success: "#40a02b", // Green
           warning: "#df8e1d", // Yellow
@@ -25,6 +27,8 @@ module.exports = {
           accent: "#81c8be", // Teal
           neutral: "#c6d0f5", // Text
           "base-100": "#303446", // Base
+          "base-200": "#292c3c", // Mantle
+          "base-300": "#232634", // Crust
           info: "#99d1db", // Sky
           success: "#a6d189", // Green
           warning: "#e5c890", // Yellow
