@@ -5,6 +5,11 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://imokuri.com",
-  integrations: [tailwind(), sitemap(), mdx()]
+    site: "https://imokuri.com",
+    integrations: [tailwind(), sitemap(), mdx()],
+    markdown: {
+        shikiConfig: {
+            theme: "nord",
+        },
+    },
 });
