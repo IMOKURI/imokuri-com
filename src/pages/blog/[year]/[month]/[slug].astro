@@ -7,6 +7,7 @@ import ToggleTheme from "../../../../components/ToggleTheme.astro";
 import Tweet from "../../../../components/Tweet.astro";
 import Utterances from "../../../../components/Utterances.astro";
 import { CollectionEntry, getCollection } from "astro:content";
+import { SITE_TITLE } from "../../../../config";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -27,9 +28,10 @@ const { title, date, updated, tags, cover_image } = post.data;
 const today = new Date().getTime();
 const updated_date = updated > date ? updated.getTime() : date.getTime();
 const pass_year = Math.floor((today - updated_date) / 86400000 / 365);
+const tab_title = `${title} - ${SITE_TITLE}`
 ---
 
-<BaseLayout twitter=true>
+<BaseLayout twitter=true title={tab_title}>
     <NavBar />
     <ToggleTheme />
     <main class="container mx-auto w-5/6 lg:w-2/3">
