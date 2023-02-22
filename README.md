@@ -1,4 +1,10 @@
+<div align="center">
+
 # IMOKURI Blog
+
+![Blog top page](https://github.com/IMOKURI/imokuri-com/blob/main/public/blog/new-imokuri-blog.png?raw=true)
+
+</div>
 
 ## Technology stack
 
