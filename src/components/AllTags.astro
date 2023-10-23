@@ -7,14 +7,9 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())].sort(
 );
 ---
 
-<div class="dropdown dropdown-end float-right">
-    <label tabindex="0" class="btn btn-ghost text-lg m-1"
-        >Tag 一覧はこちら</label
-    >
-    <ul
-        tabindex="0"
-        class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-52"
-    >
+<details class="dropdown dropdown-end float-right">
+    <summary class="btn btn-ghost text-lg m-1">Tag 一覧はこちら</summary>
+    <ul class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-52">
         {
             tags.map((tag) => (
                 <li>
@@ -23,4 +18,4 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())].sort(
             ))
         }
     </ul>
-</div>
+</details>
