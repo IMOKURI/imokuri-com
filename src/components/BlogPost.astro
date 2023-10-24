@@ -15,7 +15,7 @@ const { post } = Astro.props;
         .toString()
         .padStart(2, "0")}/${post.slug}/`}
 >
-    <div class="card card-bordered hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100">
+    <div class="card card-bordered hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100 z-20">
         <div class="card-body">
             <h2 class="card-title">{post.data.title}</h2>
             <p class="text-sm">

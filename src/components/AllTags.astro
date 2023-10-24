@@ -7,7 +7,7 @@ const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())].sort(
 );
 ---
 
-<details class="dropdown dropdown-end float-right">
+<details class="dropdown dropdown-end float-right z-40">
     <summary class="btn btn-ghost text-lg m-1">Tag 一覧はこちら</summary>
     <ul class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-52">
         {
