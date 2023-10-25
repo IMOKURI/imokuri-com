@@ -2,13 +2,25 @@
 title: HPE Swarm Learning 使い方
 slug: hpe-swarm-learning-how-to-use
 date: 2022-06-15
-updated: 2022-06-20
+updated: 2023-10-25
 tags:
     - Blockchain
     - Deep Learning
     - Federated Learning
     - HPE Swarm Learning
 description: "HPE Swarm Learning の使い方です。"
+---
+
+**2023/10/25 更新:**
+
+Swarm Learning は 現在 v2.1 がリリースされており、
+
+- SLM-UI という管理GUIからタスクを実行できるようになったり、
+- モデルマージ手法が追加されたり、
+
+しており、以下の手順のとおりにいかない可能性があるので、公式のドキュメントを参照いただくか、
+HPE Japanのメンバーへのコンタクトを希望する旨、ご連絡いただければと思います。
+
 ---
 
 [前回](../hpe-swarm-learning-install/) に引き続き、Swarm Learning の使い方をご紹介します。

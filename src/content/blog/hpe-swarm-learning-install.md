@@ -2,13 +2,25 @@
 title: HPE Swarm Learning インストール
 slug: hpe-swarm-learning-install
 date: 2022-06-14
-updated:
+updated: 2023-10-25
 tags:
     - Blockchain
     - Deep Learning
     - Federated Learning
     - HPE Swarm Learning
 description: "HPE Swarm Learning のインストール方法のご紹介です。"
+---
+
+**2023/10/25 更新:**
+
+Swarm Learning は 現在 v2.1 がリリースされており、
+
+- APLSがコンテナで起動できるようになったり、
+- SLM-UI という管理GUIが利用できるようになったり、
+
+しており、以下の手順は、あまり参考にならないので、公式のドキュメントを参照いただくか、
+HPE Japanのメンバーへのコンタクトを希望する旨、ご連絡いただければと思います。
+
 ---
 
 [前回](../hpe-swarm-learning-intro/) に引き続き、Swarm Learning のインストール方法をご紹介します。
