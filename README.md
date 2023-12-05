@@ -13,4 +13,3 @@
 - [Catppuccin](https://github.com/catppuccin)
 - [Font Awesome](https://fontawesome.com/)
 - [GitHub Repository Card for every web site](https://gh-card.dev/)
-- [Snow Falling](https://codepen.io/alphardex/pen/dyPorwJ)
