@@ -1,27 +1,39 @@
 {
-	"name": "imokuri-com",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^1.1.2",
-		"@astrojs/rss": "^3.0.0",
-		"@astrojs/sitemap": "^3.0.2",
-		"@astrojs/tailwind": "^5.0.2",
-		"astro": "^3.6.4",
-		"daisyui": "^4.4.19",
-		"tailwindcss": "^3.3.6",
-		"theme-change": "^2.5.0"
-	},
-	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.10",
-		"prettier": "^3.1.0",
-		"prettier-plugin-astro": "^0.12.2"
-	}
+    "name": "imokuri-com",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^1.1.2",
+        "@astrojs/rss": "^3.0.0",
+        "@astrojs/sitemap": "^3.0.2",
+        "@astrojs/tailwind": "^5.0.2",
+        "astro": "^3.6.4",
+        "daisyui": "^4.4.19",
+        "tailwindcss": "^3.3.6",
+        "theme-change": "^2.5.0"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.10",
+        "prettier": "^3.1.0",
+        "prettier-plugin-astro": "^0.12.2"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": false,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "arrowParens": "avoid",
+        "proseWrap": "preserve",
+        "endOfLine": "lf"
+    }
 }
