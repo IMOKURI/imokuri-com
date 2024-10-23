@@ -3,6 +3,10 @@
 export
 NOW = $(shell date '+%Y%m%d-%H%M%S')
 
+.PHONY: install
+install: ## install packages
+	yarn install
+
 .PHONY: upgrade
 upgrade: ## upgrade
 	yarn dlx @astrojs/upgrade
