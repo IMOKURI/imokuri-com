@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import Footer from "../../components/Footer.astro"
+import NavBar from "../../components/NavBar.astro"
+import ToggleTheme from "../../components/ToggleTheme.astro"
+import { getCollection, render } from "astro:content"
+import type { CollectionEntry } from "astro:content"
+
+export async function getStaticPaths() {
+    const posts = await getCollection("project")
+    return posts.map(post => ({
+        params: { id: post.id },
+        props: { post }
+    }))
+}
+
+interface Props {
+    post: CollectionEntry<"project">
+}
+const { post } = Astro.props
+
+const { Content } = await render(post)
+const { title } = post.data
+---
+
+<BaseLayout>
+    <NavBar />
+    <ToggleTheme />
+    <main class="container mx-auto w-5/6 lg:w-2/3">
+        <article class="prose max-w-none">
+            <h1>{title}</h1>
+            <hr />
+            <Content />
+        </article>
+    </main>
+    <Footer />
+</BaseLayout>

@@ -1,20 +1,19 @@
 ---
-import AllTags from "../../components/AllTags.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BaseWallpaper from "../../components/BaseWallpaper.astro";
-import BlogPost from "../../components/BlogPost.astro";
-import Footer from "../../components/Footer.astro";
-import NavBar from "../../components/NavBar.astro";
-import ToggleTheme from "../../components/ToggleTheme.astro";
-import { getCollection } from "astro:content";
+import AllTags from "../../components/AllTags.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import BaseWallpaper from "../../components/BaseWallpaper.astro"
+import BlogPost from "../../components/BlogPost.astro"
+import Footer from "../../components/Footer.astro"
+import NavBar from "../../components/NavBar.astro"
+import ToggleTheme from "../../components/ToggleTheme.astro"
+import { getCollection } from "astro:content"
+import type { GetStaticPathsOptions } from "astro"
 
-export async function getStaticPaths({ paginate }) {
-    const posts = (await getCollection("blog")).sort(
-        (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-    );
-    return paginate(posts, { pageSize: 10 });
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    return paginate(posts, { pageSize: 10 })
 }
-const { page } = Astro.props;
+const { page } = Astro.props
 ---
 
 <BaseLayout>
@@ -25,12 +24,10 @@ const { page } = Astro.props;
             <AllTags />
             <h1 class="my-5 text-4xl font-bold">
                 <a href="/blog">Blog</a>
-                <a href="/rss.xml"
-                    ><i class="fa-solid fa-rss mx-2 text-xl"></i></a
-                >
+                <a href="/rss.xml"><i class="fa-solid fa-rss mx-2 text-xl"></i></a>
             </h1>
 
-            {page.data.map((post) => <BlogPost post={post} />)}
+            {page.data.map(post => <BlogPost post={post} />)}
 
             <div class="btn-group flex justify-center m-5">
                 <a href="/blog">

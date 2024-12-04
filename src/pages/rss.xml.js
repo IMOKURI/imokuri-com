@@ -18,7 +18,7 @@ export async function GET() {
         post.data.date.getMonth() + 1
       )
         .toString()
-        .padStart(2, "0")}/${post.slug}/`,
+        .padStart(2, "0")}/${post.id}/`,
     })),
   });
 }

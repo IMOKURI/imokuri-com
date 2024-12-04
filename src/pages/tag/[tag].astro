@@ -1,35 +1,29 @@
 ---
-import AllTags from "../../components/AllTags.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BaseWallpaper from "../../components/BaseWallpaper.astro";
-import BlogPost from "../../components/BlogPost.astro";
-import Footer from "../../components/Footer.astro";
-import NavBar from "../../components/NavBar.astro";
-import ToggleTheme from "../../components/ToggleTheme.astro";
-import { getCollection } from "astro:content";
+import AllTags from "../../components/AllTags.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import BaseWallpaper from "../../components/BaseWallpaper.astro"
+import BlogPost from "../../components/BlogPost.astro"
+import Footer from "../../components/Footer.astro"
+import NavBar from "../../components/NavBar.astro"
+import ToggleTheme from "../../components/ToggleTheme.astro"
+import { getCollection } from "astro:content"
 
 export async function getStaticPaths() {
-    const allPosts = (await getCollection("blog")).sort(
-        (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-    );
+    const allPosts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 
-    const uniqueTags = [
-        ...new Set(allPosts.map((post) => post.data.tags).flat()),
-    ];
+    const uniqueTags = [...new Set(allPosts.map(post => post.data.tags).flat())]
 
-    return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts.filter((post) =>
-            post.data.tags.includes(tag)
-        );
+    return uniqueTags.map(tag => {
+        const filteredPosts = allPosts.filter(post => post.data.tags.includes(tag))
         return {
             params: { tag },
-            props: { posts: filteredPosts },
-        };
-    });
+            props: { posts: filteredPosts }
+        }
+    })
 }
 
-const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { tag } = Astro.params
+const { posts } = Astro.props
 ---
 
 <BaseLayout>
@@ -40,13 +34,11 @@ const { posts } = Astro.props;
             <AllTags />
             <h1 class="my-5 text-4xl font-bold">
                 <a href="/blog">Blog</a>
-                <a href="/rss.xml"
-                    ><i class="fa-solid fa-rss mx-2 text-xl"></i></a
-                >
+                <a href="/rss.xml"><i class="fa-solid fa-rss mx-2 text-xl"></i></a>
             </h1>
             <h1 class="my-5 text-2xl font-bold">{tag} の記事</h1>
 
-            {posts.map((post) => <BlogPost post={post} />)}
+            {posts.map(post => <BlogPost post={post} />)}
         </main>
         <Footer />
     </BaseWallpaper>
