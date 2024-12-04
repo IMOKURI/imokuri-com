@@ -20,11 +20,11 @@ export type BlogSchema = z.infer<typeof blogSchema>
 export type ProjectSchema = z.infer<typeof projectSchema>
 
 const blogCollection = defineCollection({
-    loader: glob({ pattern: "[^_]*.md", base: "./src/content/blog" }),
+    loader: glob({ pattern: "[^_]*", base: "./src/content/blog" }),
     schema: blogSchema
 })
 const projectCollection = defineCollection({
-    loader: glob({ pattern: "[^_]*.mdx", base: "./src/content/project" }),
+    loader: glob({ pattern: "[^_]*", base: "./src/content/project" }),
     schema: projectSchema
 })
 

@@ -1,16 +1,12 @@
 ---
-import "../styles/global.css";
+import "../styles/global.css"
 
 export interface Props {
-    title: string;
-    description: string;
-    image?: string;
+    title: string
+    description: string
+    image?: string
 }
-const {
-    title,
-    description,
-    image = "/blog/new-imokuri-blog.png",
-} = Astro.props;
+const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 ---
 
 <!-- Global Metadata -->
@@ -40,33 +36,27 @@ const {
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPK72YV3NB"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPK72YV3NB"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || []
     function gtag() {
-        dataLayer.push(arguments);
+        dataLayer.push(arguments)
     }
-    gtag("js", new Date());
+    gtag("js", new Date())
 
-    gtag("config", "G-KPK72YV3NB");
+    gtag("config", "G-KPK72YV3NB")
 </script>
 
 <!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/ffdf4e680a.js" crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/ffdf4e680a.js" crossorigin="anonymous"></script>
 
 <!-- Toggle Theme -->
 <script is:inline>
     if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "latte");
-    } else
-        document.documentElement.setAttribute(
-            "data-theme",
-            localStorage.getItem("theme")
-        );
+        document.documentElement.setAttribute("data-theme", "latte")
+    } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
 </script>
 <script>
-    import { themeChange } from "theme-change";
-    themeChange();
+    import { themeChange } from "theme-change"
+    themeChange()
 </script>
