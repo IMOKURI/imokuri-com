@@ -9,7 +9,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="card card-sm w-full bg-base-100 shadow-lg">
+<div class="card card-border w-full bg-base-200 shadow-lg">
     <figure>
         <img src={image} alt={title} />
     </figure>
@@ -21,7 +21,7 @@ const {
                 compe_url && (
                     <a href={compe_url}>
                         <button
-                            class="btn btn-ghost"
+                            class="btn btn-primary"
                             aria-label=`${title} - Competition`
                         >
                             Competition
@@ -33,7 +33,7 @@ const {
                 solution_url && (
                     <a href={solution_url}>
                         <button
-                            class="btn btn-ghost"
+                            class="btn btn-primary"
                             aria-label=`${title} - Solution`
                         >
                             Solution
@@ -45,7 +45,7 @@ const {
                 github_url && (
                     <a href={github_url}>
                         <button
-                            class="btn btn-ghost"
+                            class="btn btn-primary"
                             aria-label=`${title} - GitHub`
                         >
                             <i class="fa-brands fa-github text-lg"></i>

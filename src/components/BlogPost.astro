@@ -13,7 +13,7 @@ const { post } = Astro.props
         .toString()
         .padStart(2, "0")}/${post.id}/`}
 >
-    <div class="card card-border hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100 z-20">
+    <div class="card card-border hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100/80 z-20">
         <div class="card-body">
             <h2 class="card-title">{post.data.title}</h2>
             <p class="text-sm">
@@ -29,7 +29,7 @@ const { post } = Astro.props
                     <div class="inline">
                         {post.data.tags.map(tag => (
                             <a href={`/tag/${tag}`}>
-                                <div class="badge badge-accent badge-outline mr-2">{tag}</div>
+                                <div class="badge badge-accent badge-soft mr-2">{tag}</div>
                             </a>
                         ))}
                     </div>
