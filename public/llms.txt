@@ -1,0 +1,15 @@
+# IMOKURING
+
+> Personal website by Yoshio Sugiyama who is an infrastructure / ML engineer
+
+## About Me
+
+- [About Me](/about)
+
+## Blog
+
+- [Blog](/blog)
+
+## Project
+
+- [Project](/project)
