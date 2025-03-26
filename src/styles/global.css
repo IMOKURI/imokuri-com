@@ -1,3 +1,77 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "latte";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: hsl(220, 23%, 95%);
+  --color-base-200: hsl(220, 22%, 92%);
+  --color-base-300: hsl(220, 21%, 89%);
+  --color-base-content: hsl(234, 16%, 35%);
+  --color-primary: hsl(231, 97%, 72%);
+  --color-primary-content: hsl(220, 23%, 95%);
+  --color-secondary: hsl(316, 73%, 69%);
+  --color-secondary-content: hsl(220, 23%, 95%);
+  --color-accent: hsl(189, 70%, 42%);
+  --color-accent-content: hsl(220, 23%, 95%);
+  --color-neutral: hsl(233, 10%, 47%);
+  --color-neutral-content: hsl(220, 23%, 95%);
+  --color-info: hsl(220, 91%, 54%);
+  --color-info-content: hsl(220, 23%, 95%);
+  --color-success: hsl(109, 58%, 40%);
+  --color-success-content: hsl(220, 23%, 95%);
+  --color-warning: hsl(35, 77%, 49%);
+  --color-warning-content: hsl(220, 23%, 95%);
+  --color-error: hsl(347, 87%, 44%);
+  --color-error-content: hsl(220, 23%, 95%);
+  --radius-selector: 0.5rem;
+  --radius-field: 1rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
+@plugin "daisyui/theme" {
+  name: "frappe";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: hsl(229, 19%, 23%);
+  --color-base-200: hsl(231, 19%, 20%);
+  --color-base-300: hsl(229, 20%, 17%);
+  --color-base-content: hsl(227, 70%, 87%);
+  --color-primary: hsl(239, 66%, 84%);
+  --color-primary-content: hsl(229, 19%, 23%);
+  --color-secondary: hsl(316, 73%, 84%);
+  --color-secondary-content: hsl(229, 19%, 23%);
+  --color-accent: hsl(199, 55%, 69%);
+  --color-accent-content: hsl(229, 19%, 23%);
+  --color-neutral: hsl(228, 29%, 73%);
+  --color-neutral-content: hsl(229, 19%, 23%);
+  --color-info: hsl(222, 74%, 74%);
+  --color-info-content: hsl(229, 19%, 23%);
+  --color-success: hsl(96, 44%, 68%);
+  --color-success-content: hsl(229, 19%, 23%);
+  --color-warning: hsl(40, 62%, 73%);
+  --color-warning-content: hsl(229, 19%, 23%);
+  --color-error: hsl(359, 68%, 71%);
+  --color-error-content: hsl(229, 19%, 23%);
+  --radius-selector: 0.5rem;
+  --radius-field: 1rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 1;
+}
+
 .time-line-container > div:last-child .education__time > .education__line {
-    display: none;
+  display: none;
 }
