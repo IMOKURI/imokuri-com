@@ -13,7 +13,6 @@
         "@astrojs/mdx": "4.2.1",
         "@astrojs/rss": "4.0.11",
         "@astrojs/sitemap": "3.3.0",
-        "@astrojs/tailwind": "6.0.1",
         "astro": "5.5.4",
         "daisyui": "^4.12.10",
         "sass": "^1.77.8",
