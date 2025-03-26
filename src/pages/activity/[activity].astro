@@ -8,15 +8,15 @@ import { getCollection, render } from "astro:content"
 import type { CollectionEntry } from "astro:content"
 
 export async function getStaticPaths() {
-    const posts = await getCollection("project")
+    const posts = await getCollection("activity")
     return posts.map(post => ({
-        params: { project: post.id },
+        params: { activity: post.id },
         props: { post }
     }))
 }
 
 interface Props {
-    post: CollectionEntry<"project">
+    post: CollectionEntry<"activity">
 }
 const { post } = Astro.props
 

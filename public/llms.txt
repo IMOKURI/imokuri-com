@@ -10,6 +10,6 @@
 
 - [Blog](/blog)
 
-## Project
+## Activity
 
-- [Project](/project)
+- [Activity](/activity)

@@ -11,24 +11,25 @@ const blogSchema = z.object({
     tags: z.string().array()
 })
 
-const projectSchema = z.object({
+const activitySchema = z.object({
     title: z.string(),
+    slug: z.string(),
     description: z.string()
 })
 
 export type BlogSchema = z.infer<typeof blogSchema>
-export type ProjectSchema = z.infer<typeof projectSchema>
+export type ActivitySchema = z.infer<typeof activitySchema>
 
 const blogCollection = defineCollection({
     loader: glob({ pattern: "[^_]*", base: "./src/content/blog" }),
     schema: blogSchema
 })
-const projectCollection = defineCollection({
-    loader: glob({ pattern: "[^_]*", base: "./src/content/project" }),
-    schema: projectSchema
+const activityCollection = defineCollection({
+    loader: glob({ pattern: "[^_]*", base: "./src/content/activity" }),
+    schema: activitySchema
 })
 
 export const collections = {
     blog: blogCollection,
-    project: projectCollection
+    activity: activityCollection
 }
