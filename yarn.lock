@@ -55,9 +55,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.2.3":
-  version: 4.2.3
-  resolution: "@astrojs/mdx@npm:4.2.3"
+"@astrojs/mdx@npm:4.2.4":
+  version: 4.2.4
+  resolution: "@astrojs/mdx@npm:4.2.4"
   dependencies:
     "@astrojs/markdown-remark": "npm:6.3.1"
     "@mdx-js/mdx": "npm:^3.1.0"
@@ -74,7 +74,7 @@ __metadata:
     vfile: "npm:^6.0.3"
   peerDependencies:
     astro: ^5.0.0
-  checksum: 10c0/ae1c85e68954348e2688711b4c0aa270d9afc56082865cf2bdc96477478f19d8bef138c3708e22bea65047683250d4310ff92562c9b6277043d812d41ebbfb3a
+  checksum: 10c0/b2dedb989f0501a149fa4ad74dbf9a7d2b0438f96752760e1fbc47e08bdb573d4abac99f35850a89b43b42923fe702d029f7ea0728ae5cd638c143bd0e4dca15
   languageName: node
   linkType: hard
 
@@ -1256,9 +1256,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.6.1":
-  version: 5.6.1
-  resolution: "astro@npm:5.6.1"
+"astro@npm:5.6.2":
+  version: 5.6.2
+  resolution: "astro@npm:5.6.2"
   dependencies:
     "@astrojs/compiler": "npm:^2.11.0"
     "@astrojs/internal-helpers": "npm:0.6.1"
@@ -1310,7 +1310,7 @@ __metadata:
     unist-util-visit: "npm:^5.0.0"
     unstorage: "npm:^1.15.0"
     vfile: "npm:^6.0.3"
-    vite: "npm:^6.2.4"
+    vite: "npm:^6.2.6"
     vitefu: "npm:^1.0.6"
     xxhash-wasm: "npm:^1.1.0"
     yargs-parser: "npm:^21.1.1"
@@ -1323,7 +1323,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/e8adf227d2db6b7422f1b2b6bdc19e17801d0de5c5ec042d6f51c6aa19bd5507e901b07cbf9baf8c39e518ad81a049a5557a7b1932cceebd63af2bcdff9ee91b
+  checksum: 10c0/028433394fa3ee4730caea029ca1b89e5a919014699bb0e575d4dd3fd2fdc5493b5b75f04dd1e74110860796faa1be2175ccd85b8488b51c077e740406df26de
   languageName: node
   linkType: hard
 
@@ -2484,12 +2484,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "imokuri-com@workspace:."
   dependencies:
-    "@astrojs/mdx": "npm:4.2.3"
+    "@astrojs/mdx": "npm:4.2.4"
     "@astrojs/rss": "npm:4.0.11"
     "@astrojs/sitemap": "npm:3.3.0"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.0.16"
-    astro: "npm:5.6.1"
+    astro: "npm:5.6.2"
     daisyui: "npm:^5.0.9"
     prettier: "npm:^3.3.3"
     prettier-plugin-astro: "npm:^0.14.1"
@@ -5233,7 +5233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.2.4":
+"vite@npm:^6.2.6":
   version: 6.2.6
   resolution: "vite@npm:6.2.6"
   dependencies:
