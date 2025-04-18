@@ -24,7 +24,7 @@ export default defineConfig({
       {
         provider: fontProviders.google(),
         name: "M PLUS 2",
-        cssVariable: "--font-mplus2",
+        cssVariable: "--font-mplus2"
       }
     ]
   }
