@@ -74,6 +74,8 @@
 
 @theme {
     --font-sans: var(--font-mplus2);
+    --font-serif: var(--font-mplus2);
+    --font-mono: var(--font-monaspace-argon);
 }
 
 .time-line-container > div:last-child .education__time > .education__line {
