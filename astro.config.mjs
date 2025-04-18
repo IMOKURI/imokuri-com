@@ -1,8 +1,8 @@
-import { defineConfig } from "astro/config"
+import { defineConfig, fontProviders } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import mdx from "@astrojs/mdx"
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,5 +17,15 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()]
+  },
+
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: "M PLUS 2",
+        cssVariable: "--font-mplus2",
+      }
+    ]
   }
 })
