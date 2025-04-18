@@ -6,40 +6,38 @@ import { SITE_TITLE } from "../config"
 ---
 
 <style>
-    body {
-        overflow: hidden;
-    }
+  body {
+    overflow: hidden;
+  }
 </style>
 
 <BaseLayout>
-    <HomeWallpaper>
-        <ToggleTheme />
-        <main>
-            <h1 class="mb-5 text-4xl font-bold">{SITE_TITLE}</h1>
-            <p class="mb-2 text-lg">
-                Hi, I'm Yoshio Sugiyama who is an infrastructure / ML engineer at HPE Japan.
-            </p>
-            <div class="tooltip tooltip-bottom" data-tip="About Me">
-                <a href="/about">
-                    <button class="btn btn-ghost text-lg" aria-label="About Me">
-                        <i class="fa-solid fa-user"></i>
-                    </button>
-                </a>
-            </div>
-            <div class="tooltip tooltip-bottom" data-tip="Blog">
-                <a href="/blog">
-                    <button class="btn btn-ghost text-lg" aria-label="Blog">
-                        <i class="fa-solid fa-pencil"></i>
-                    </button>
-                </a>
-            </div>
-            <div class="tooltip tooltip-bottom" data-tip="Activity">
-                <a href="/activity">
-                    <button class="btn btn-ghost text-lg" aria-label="Activity">
-                        <i class="fa-solid fa-code"></i>
-                    </button>
-                </a>
-            </div>
-        </main>
-    </HomeWallpaper>
+  <HomeWallpaper>
+    <ToggleTheme />
+    <main>
+      <h1 class="mb-5 text-4xl font-bold">{SITE_TITLE}</h1>
+      <p class="mb-2 text-lg">Hi, I'm Yoshio Sugiyama who is an infrastructure / ML engineer at HPE Japan.</p>
+      <div class="tooltip tooltip-bottom" data-tip="About Me">
+        <a href="/about">
+          <button class="btn btn-ghost text-lg" aria-label="About Me">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </a>
+      </div>
+      <div class="tooltip tooltip-bottom" data-tip="Blog">
+        <a href="/blog">
+          <button class="btn btn-ghost text-lg" aria-label="Blog">
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+        </a>
+      </div>
+      <div class="tooltip tooltip-bottom" data-tip="Activity">
+        <a href="/activity">
+          <button class="btn btn-ghost text-lg" aria-label="Activity">
+            <i class="fa-solid fa-code"></i>
+          </button>
+        </a>
+      </div>
+    </main>
+  </HomeWallpaper>
 </BaseLayout>

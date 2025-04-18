@@ -1,8 +1,9 @@
 ---
+import { Font } from "astro:assets"
 export interface Props {
-    title: string
-    description: string
-    image?: string
+  title: string
+  description: string
+  image?: string
 }
 const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 ---
@@ -37,13 +38,13 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KPK72YV3NB"></script>
 <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-        dataLayer.push(arguments)
-    }
-    gtag("js", new Date())
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag("js", new Date())
 
-    gtag("config", "G-KPK72YV3NB")
+  gtag("config", "G-KPK72YV3NB")
 </script>
 
 <!-- Font Awesome -->
@@ -51,11 +52,15 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 
 <!-- Toggle Theme -->
 <script is:inline>
-    if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "latte")
-    } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", "latte")
+  } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
 </script>
 <script>
-    import { themeChange } from "theme-change"
-    themeChange()
+  import { themeChange } from "theme-change"
+  themeChange()
 </script>
+
+<!-- Font -->
+<Font cssVariable="--font-mplus2" preload />
+<Font cssVariable="--font-monaspace-argon" preload />
