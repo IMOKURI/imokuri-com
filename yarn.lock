@@ -170,6 +170,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@catppuccin/daisyui@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@catppuccin/daisyui@npm:2.0.0"
+  dependencies:
+    "@catppuccin/palette": "npm:^1.7.1"
+  peerDependencies:
+    tailwindcss: ^4.0.17
+  checksum: 10c0/5c59a77e7ed8fb6beb72635233d534f41f98ab107dcb0d7c43bba22d3b3880955097e4332339342b1d5859b921e44ff67e9515355fe41a8874a329e8d8a88194
+  languageName: node
+  linkType: hard
+
+"@catppuccin/palette@npm:^1.7.1":
+  version: 1.7.1
+  resolution: "@catppuccin/palette@npm:1.7.1"
+  checksum: 10c0/b4577ad742310ccfd3394791be96ef8787fc6c3e90c7b9ca6dfbe12fb5e63ad8c7d1627846df4744b8edaee19ed98a2c34a292dc5e4ae8a3e877c5afafcc62d2
+  languageName: node
+  linkType: hard
+
 "@emnapi/runtime@npm:^1.1.1":
   version: 1.2.0
   resolution: "@emnapi/runtime@npm:1.2.0"
@@ -2589,6 +2607,7 @@ __metadata:
     "@astrojs/mdx": "npm:4.2.4"
     "@astrojs/rss": "npm:4.0.11"
     "@astrojs/sitemap": "npm:3.3.0"
+    "@catppuccin/daisyui": "npm:^2.0.0"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.0.16"
     astro: "npm:5.7.3"
