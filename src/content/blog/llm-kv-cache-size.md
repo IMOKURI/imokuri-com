@@ -40,17 +40,17 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 
 ## KV Cache サイズの試算
 
-![KV Cache 計算式](/blog/ML-15932-image003-1.jpg)
+**KV<sub>size</sub>(bytes) = 2 × B × bytes/param × n<sub>layers</sub> × n<sub>kv_attention_heads</sub> × d<sub>attention_heads</sub> x context_length**
 
 | 記号                           | 意味                  | たとえば Qwen 2.5 32B の場合 | 備考                                                 |
 |--------------------------------|-----------------------|------------------------------|------------------------------------------------------|
 | 2                              | key と value で 2     | 2                            |                                                      |
 | B                              | バッチサイズ          | 1 (とする)                   |                                                      |
-| N                              | 入力トークン長        | 32k (とする)                 | モデルは 128k をサポートしているがメモリ量削減のため |
-| bytes / param                  | KV Cache のデータ型   | 2 (16 bit)                   | KV Cache は量子化すると精度がガクッと落ちるので      |
+| bytes/param                    | KV Cache のデータ型   | 2 (16 bit)                   | KV Cache は量子化すると精度がガクッと落ちるので      |
 | n<sub>layers</sub>             | レイヤー数            | 64                           | 論文などに情報がある                                 |
 | n<sub>kv_attention_heads</sub> | KV Attention Head 数  | 8                            | モデルコンフィグにも情報がある (num_key_value_heads) |
 | d<sub>attention_heads</sub>    | Attention Head サイズ | 5120 // 40 = 128             | hidden_size // num_attention_heads                   |
+| context_length                 | 入力トークン長        | 32k (とする)                 | モデルは 128k をサポートしているがメモリ量削減のため |
 | 合計                           |                       | 8000MB (7.8GB)               |                                                      |
 
 
@@ -73,3 +73,4 @@ LLM が利用可能なGPUメモリ量から 1. を引いて、 KV Cache サイ�
 - [LLM Inference Series: 2. The two-phase process behind LLMs’ responses](https://medium.com/@plienhar/llm-inference-series-2-the-two-phase-process-behind-llms-responses-1ff1ff021cd5)
 - [Benchmark and optimize endpoint deployment in Amazon SageMaker JumpStart](https://aws.amazon.com/blogs/machine-learning/benchmark-and-optimize-endpoint-deployment-in-amazon-sagemaker-jumpstart/)
 - [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/)
+- [LLMの効率化を支えるアルゴリズム](https://speakerdeck.com/taturabe/llmnoxiao-lu-hua-wozhi-eruarugorizumu)
