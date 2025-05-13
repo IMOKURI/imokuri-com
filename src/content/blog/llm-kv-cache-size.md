@@ -2,7 +2,7 @@
 title: LLM KV Cache Size
 slug: llm-kv-cache-size
 date: 2025-05-13
-updated:
+updated: 2025-05-14
 tags:
     - LLM
     - Deep Learning
@@ -42,16 +42,29 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 
 **KV<sub>size</sub>(bytes) = 2 × B × bytes/param × n<sub>layers</sub> × n<sub>kv_attention_heads</sub> × d<sub>attention_heads</sub> x context_length**
 
-| 記号                           | 意味                  | たとえば Qwen 2.5 32B の場合 | 備考                                                 |
-|--------------------------------|-----------------------|------------------------------|------------------------------------------------------|
-| 2                              | key と value で 2     | 2                            |                                                      |
-| B                              | バッチサイズ          | 1 (とする)                   |                                                      |
-| bytes/param                    | KV Cache のデータ型   | 2 (16 bit)                   | KV Cache は量子化すると精度がガクッと落ちるので      |
-| n<sub>layers</sub>             | レイヤー数            | 64                           | 論文などに情報がある                                 |
-| n<sub>kv_attention_heads</sub> | KV Attention Head 数  | 8                            | モデルコンフィグにも情報がある (num_key_value_heads) |
-| d<sub>attention_heads</sub>    | Attention Head サイズ | 5120 // 40 = 128             | hidden_size // num_attention_heads                   |
-| context_length                 | 入力トークン長        | 32k (とする)                 | モデルは 128k をサポートしているがメモリ量削減のため |
-| 合計                           |                       | 8000MB (7.8GB)               |                                                      |
+| 記号                           | 意味                  |
+|--------------------------------|-----------------------|
+| 2                              | key と value で 2     |
+| B                              | バッチサイズ          |
+| bytes/param                    | KV Cache のデータ型   |
+| n<sub>layers</sub>             | レイヤー数            |
+| n<sub>kv_attention_heads</sub> | KV Attention Head 数  |
+| d<sub>attention_heads</sub>    | Attention Head サイズ |
+| context_length                 | 入力トークン長        |
+
+
+たとえば Qwen 2.5 32B の場合は、以下のように計算できます。
+
+| 記号                           | 値               | 備考                                                 |
+|--------------------------------|------------------|------------------------------------------------------|
+| 2                              | 2                |                                                      |
+| B                              | 1 (とする)       |                                                      |
+| bytes/param                    | 2 (16 bit)       | KV Cache は量子化すると精度がガクッと落ちる          |
+| n<sub>layers</sub>             | 64               | 論文などに情報がある                                 |
+| n<sub>kv_attention_heads</sub> | 8                | モデルコンフィグにも情報がある (num_key_value_heads) |
+| d<sub>attention_heads</sub>    | 5120 // 40 = 128 | hidden_size // num_attention_heads                   |
+| context_length                 | 32k (とする)     | モデルは 128k をサポートしているがメモリ量削減のため |
+| 合計                           | 8000MB (7.8GB)   |                                                      |
 
 
 - [Qwen2.5 Technical Report](https://arxiv.org/pdf/2412.15115)
