@@ -27,9 +27,9 @@ export default defineConfig({
         cssVariable: "--font-mplus2"
       },
       {
-        provider: fontProviders.fontsource(),
-        name: "Monaspace Argon",
-        cssVariable: "--font-monaspace-argon"
+        provider: fontProviders.google(),
+        name: "M PLUS 1 Code",
+        cssVariable: "--font-mplus1-code"
       }
     ]
   }

@@ -10,7 +10,7 @@
 @theme {
   --font-sans: var(--font-mplus2);
   --font-serif: var(--font-mplus2);
-  --font-mono: var(--font-monaspace-argon);
+  --font-mono: var(--font-mplus1-code);
 }
 
 .body {
