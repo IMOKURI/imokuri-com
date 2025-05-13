@@ -9,127 +9,121 @@ import TwitterFollow from "../components/TwitterFollow.astro"
 ---
 
 <BaseLayout twitter="true">
-    <BaseWallpaper>
-        <NavBar />
-        <ToggleTheme />
-        <main class="container mx-auto w-5/6 lg:w-2/3">
-            <h1 class="my-5 text-4xl font-bold">About Me</h1>
-            <div class="avatar my-5">
-                <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                    <img src="/author.jpg" alt="author" />
-                </div>
-            </div>
-            <h2 class="my-5 text-2xl">Yoshio Sugiyama - 杉山 禎夫</h2>
-            <div class="my-10 text-justify">
-                日本ヒューレット・パッカードでインフラ/機械学習エンジニアをしています。
-                <br />
-                <br />
-                 さつまいもとくりが好きです。
-            </div>
+  <BaseWallpaper>
+    <NavBar />
+    <ToggleTheme />
+    <main class="container mx-auto w-5/6 lg:w-2/3">
+      <h1 class="my-5 text-4xl font-bold">About Me</h1>
+      <div class="avatar my-5">
+        <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="/author.jpg" alt="author" />
+        </div>
+      </div>
+      <h2 class="my-5 text-2xl">Yoshio Sugiyama - 杉山 禎夫</h2>
+      <div class="my-10 text-justify">
+        日本ヒューレット・パッカードでインフラ/AIエンジニアをしています。
+      </div>
 
-            <h2 class="my-5 text-2xl font-bold">Contact</h2>
-            <img src="/mail.png" alt="email" />
-            <TwitterFollow />
+      <h2 class="my-5 text-2xl font-bold">Contact</h2>
+      <img src="/mail.png" alt="email" />
+      <TwitterFollow />
 
-            <div class="card card-border shadow-lg my-10 bg-base-100/80">
-                <div class="card-body">
-                    <h2 class="card-title text-2xl mb-3">Skill</h2>
-                    <div class="time-line-container">
-                        <TimeLine title="Machine Learning, Deep Learning" />
-                        <TimeLine title="Data Management" />
-                        <TimeLine title="Kubernetes, OpenShift" />
-                        <TimeLine title="Ansible" />
-                        <TimeLine title="Python" />
-                        <TimeLine title="Neovim" />
-                    </div>
-                </div>
-            </div>
+      <div class="card card-border shadow-lg my-10 bg-base-100/80">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-3">Skill</h2>
+          <div class="time-line-container">
+            <TimeLine title="Machine Learning, Deep Learning" />
+            <TimeLine title="Data Management" />
+            <TimeLine title="Kubernetes, OpenShift" />
+            <TimeLine title="Ansible" />
+            <TimeLine title="Python" />
+            <TimeLine title="Neovim" />
+          </div>
+        </div>
+      </div>
 
-            <div class="card card-border shadow-lg my-10 bg-base-100/80">
-                <div class="card-body">
-                    <h2 class="card-title text-2xl mb-3">Hobby</h2>
-                    <div class="time-line-container">
-                        <TimeLine title="Ski" />
-                        <TimeLine title="Futsal" />
-                        <TimeLine title="Final Fantasy VII" />
-                        <TimeLine title="Quiz" />
-                        <TimeLine title="F1" />
-                        <TimeLine title="Rugby" />
-                    </div>
-                </div>
-            </div>
+      <div class="card card-border shadow-lg my-10 bg-base-100/80">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-3">Hobby</h2>
+          <div class="time-line-container">
+            <TimeLine title="Ski" />
+            <TimeLine title="Futsal" />
+            <TimeLine title="Final Fantasy VII" />
+            <TimeLine title="Quiz" />
+            <TimeLine title="F1" />
+            <TimeLine title="Rugby" />
+          </div>
+        </div>
+      </div>
 
-            <div class="card card-border shadow-lg my-10 bg-base-100/80">
-                <div class="card-body">
-                    <h2 class="card-title text-2xl mb-3">Recent Activity</h2>
-                    <div class="time-line-container">
-                        <TimeLine
-                            title="イベント登壇 - HPE Discover More AI 東京 2025"
-                            date="2025/1"
-                            link_title="AIの本格活用を加速させるPrivate LLM"
-                            link_url="http://www.hpe.com/jp/discover"
-                        />
-                        <TimeLine
-                            title="HPE Product Certified - AI and Machine Learning"
-                            date="2024/10"
-                        />
-                        <TimeLine
-                            title="メディア取材 - キャリア紹介"
-                            date="2024/8"
-                            link_title="データ&AIスペシャリストの道を切り開く──最先端技術の追求を支えるHPEの魅力"
-                            link_url="https://www.talent-book.jp/hpe/stories/55214"
-                        />
-                        <TimeLine
-                            title="メディア取材 - ソリューション紹介"
-                            date="2024/3"
-                            link_title="知っておきたい「AIモデル開発」の裏側　専門家が考える“成功への近道”とは？"
-                            link_url="https://techtarget.itmedia.co.jp/tt/news/2403/07/news02.html"
-                        />
-                        <TimeLine
-                            title="イベント登壇 - HPE Discover More 東京 2023"
-                            date="2023/11"
-                            link_title="AIデータ分析プロジェクトの進め方とLLMカスタマイズの実践"
-                            link_url="https://www.hpe.com/jp/ja/events/discover-more-tokyo.html"
-                        />
-                        <TimeLine
-                            title="イベント登壇 - HPE HPC & AI フォーラム 2023 オンライン"
-                            date="2023/9"
-                            link_title="大規模言語モデル最前線！- HPE MLDEでLLMトレーニングをしてみた -"
-                            link_url="https://h50146.www5.hpe.com/events/seminars/info/hpcai2023.html"
-                        />
-                        <TimeLine
-                            title="メディア取材 - ソリューション紹介"
-                            date="2023/5"
-                            link_title="Kaggle Masterのエンジニアと考える、企業におけるAI開発の“真の”課題と解決策"
-                            link_url="https://atmarkit.itmedia.co.jp/ait/articles/2305/19/news004.html"
-                        />
-                        <TimeLine
-                            title="Informatica Certified Professional - Cloud Data and Application Integration"
-                            date="2023/2"
-                        />
-                        <TimeLine title="Kaggle Competitions Master" date="2022/11" />
-                        <TimeLine
-                            title="Kaggle Multimodal Single-Cell Integration 🥈"
-                            date="2022/11"
-                            link_title="Private 41st Solution summary"
-                            link_url="https://www.kaggle.com/competitions/open-problems-multimodal/discussion/366372"
-                        />
-                        <TimeLine
-                            title="ML Study #6「ディープラーニングで実現するイノベーション」 LT 登壇"
-                            date="2022/7"
-                            link_title="非中央集権の連合学習について"
-                            link_url="https://speakerdeck.com/imokuri/decentralized-federated-learning-with-blockchain"
-                        />
-                        <TimeLine
-                            title="担当プロジェクト 公開事例"
-                            date="2022/4"
-                            link_title="群馬大学 - AI人材育成とAI研究を加速、文理融合の新学部が挑むDX"
-                            link_url="https://www.hpe.com/jp/ja/customer-case-studies/services-gunma-u.html"
-                        />
-                    </div>
-                </div>
-            </div>
-        </main>
-        <Footer />
-    </BaseWallpaper>
+      <div class="card card-border shadow-lg my-10 bg-base-100/80">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-3">Recent Activity</h2>
+          <div class="time-line-container">
+            <TimeLine
+              title="イベント登壇 - HPE Discover More AI 東京 2025"
+              date="2025/1"
+              link_title="AIの本格活用を加速させるPrivate LLM"
+              link_url="http://www.hpe.com/jp/discover"
+            />
+            <TimeLine title="HPE Product Certified - AI and Machine Learning" date="2024/10" />
+            <TimeLine
+              title="メディア取材 - キャリア紹介"
+              date="2024/8"
+              link_title="データ&AIスペシャリストの道を切り開く──最先端技術の追求を支えるHPEの魅力"
+              link_url="https://www.talent-book.jp/hpe/stories/55214"
+            />
+            <TimeLine
+              title="メディア取材 - ソリューション紹介"
+              date="2024/3"
+              link_title="知っておきたい「AIモデル開発」の裏側　専門家が考える“成功への近道”とは？"
+              link_url="https://techtarget.itmedia.co.jp/tt/news/2403/07/news02.html"
+            />
+            <TimeLine
+              title="イベント登壇 - HPE Discover More 東京 2023"
+              date="2023/11"
+              link_title="AIデータ分析プロジェクトの進め方とLLMカスタマイズの実践"
+              link_url="https://www.hpe.com/jp/ja/events/discover-more-tokyo.html"
+            />
+            <TimeLine
+              title="イベント登壇 - HPE HPC & AI フォーラム 2023 オンライン"
+              date="2023/9"
+              link_title="大規模言語モデル最前線！- HPE MLDEでLLMトレーニングをしてみた -"
+              link_url="https://h50146.www5.hpe.com/events/seminars/info/hpcai2023.html"
+            />
+            <TimeLine
+              title="メディア取材 - ソリューション紹介"
+              date="2023/5"
+              link_title="Kaggle Masterのエンジニアと考える、企業におけるAI開発の“真の”課題と解決策"
+              link_url="https://atmarkit.itmedia.co.jp/ait/articles/2305/19/news004.html"
+            />
+            <TimeLine
+              title="Informatica Certified Professional - Cloud Data and Application Integration"
+              date="2023/2"
+            />
+            <TimeLine title="Kaggle Competitions Master" date="2022/11" />
+            <TimeLine
+              title="Kaggle Multimodal Single-Cell Integration 🥈"
+              date="2022/11"
+              link_title="Private 41st Solution summary"
+              link_url="https://www.kaggle.com/competitions/open-problems-multimodal/discussion/366372"
+            />
+            <TimeLine
+              title="ML Study #6「ディープラーニングで実現するイノベーション」 LT 登壇"
+              date="2022/7"
+              link_title="非中央集権の連合学習について"
+              link_url="https://speakerdeck.com/imokuri/decentralized-federated-learning-with-blockchain"
+            />
+            <TimeLine
+              title="担当プロジェクト 公開事例"
+              date="2022/4"
+              link_title="群馬大学 - AI人材育成とAI研究を加速、文理融合の新学部が挑むDX"
+              link_url="https://www.hpe.com/jp/ja/customer-case-studies/services-gunma-u.html"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </BaseWallpaper>
 </BaseLayout>
