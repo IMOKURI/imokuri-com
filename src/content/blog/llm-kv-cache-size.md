@@ -51,7 +51,7 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 | n<sub>layers</sub>             | レイヤー数            | 64                           | 論文などに情報がある                                 |
 | n<sub>kv_attention_heads</sub> | KV Attention Head 数  | 8                            | モデルコンフィグにも情報がある (num_key_value_heads) |
 | d<sub>attention_heads</sub>    | Attention Head サイズ | 5120 // 40 = 128             | hidden_size // num_attention_heads                   |
-| 合計                           |                       | 5000MB (5GB)                 |                                                      |
+| 合計                           |                       | 8000MB (7.8GB)               |                                                      |
 
 
 - [Qwen2.5 Technical Report](https://arxiv.org/pdf/2412.15115)
