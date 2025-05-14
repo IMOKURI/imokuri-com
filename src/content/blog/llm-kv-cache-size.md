@@ -1,12 +1,12 @@
 ---
-title: LLM KV Cache Size
+title: LLM KV Cache Size と同時処理数
 slug: llm-kv-cache-size
 date: 2025-05-13
 updated: 2025-05-14
 tags:
     - LLM
     - Deep Learning
-description: "LLM推論時のKV Cacheのサイズを試算する方法です。"
+description: "LLM推論時のKV Cacheのサイズと同時処理数を試算する方法です。"
 ---
 
 
@@ -71,14 +71,46 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 - [Qwen2.5-32B-Instruct (config.json)](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct/blob/main/config.json)
 
 
+## PyTorch Acitivation Peak Memory
+
+推論実行時に前のレイヤーの出力を保存するために、GPUメモリを使用します。
+
+**pytorch_activation_peak_memory = context_length * (batch_size=1) * (18 * hidden_size + 4 * intermediate_size)**
+
+計算式の根拠は、「[How Much GPU Memory Do You Really Need for Efficient LLM Serving?](https://medium.com/@kimdoil1211/how-much-gpu-memory-do-you-really-need-for-efficient-llm-serving-4d26d5b8b95b)」を参照ください。
+
+
+たとえば Qwen 2.5 32B の場合は、以下のように計算できます。
+
+| 記号              | 値           | 途中計算     |
+|-------------------|--------------|--------------|
+| hidden_size       | 5120         | x 18 = 92160 |
+| intermediate_size | 27648        | x 4 = 110592 |
+| context_length    | 32k (とする) |              |
+| 合計              | 6GB          |              |
+
+
 ## 同時処理数の試算
 
 GPUメモリは以下の用途で使われます。
 
-1. モデルのパラメータのロード
-1. KV Cache
+1. モデルのパラメータのロード。モデルパラメータ数 x データ型 (Model Weight)
+1. PyTorch に無関係なオーバーヘッド。GPU型番やGPU数に依存するが、1GB程度。 (Non-Torch Memory)
+1. 推論実行時の前のレイヤーの出力の保存用。16bitで保存。 (PyTorch Acitivation Peak Memory)
+1. KV Cache。
 
-LLM が利用可能なGPUメモリ量から 1. を引いて、 KV Cache サイズで割ることで、同時処理数を試算できます。
+LLM が利用可能なGPUメモリ量から 1. ~ 3. を引いて、 KV Cache サイズで割ることで、同時処理数を試算できます。
+
+例えば、H100 96GB の場合は、以下のように計算できます。
+
+1. 利用上限を 90% とします。
+   - 96GB x 0.9 = 86.4GB
+1. 必要な領域を減算します。
+    - 86.4GB - 32GB (Model Weight) - 1GB (Non-Torch Memory) - 6GB (PyTorch Acitivation Peak Memory) = 47.4GB
+1. KV Cache サイズで割ります。
+    - 47.4GB / 7.8GB = 6.1
+
+したがって、同時処理数は 6 となります。
 
 
 ## 参考文献
