@@ -60,8 +60,8 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 | 2                              | 2                |                                                      |
 | B                              | 1 (とする)       |                                                      |
 | bytes/param                    | 2 (16 bit)       | KV Cache は量子化すると精度がガクッと落ちる          |
-| n<sub>layers</sub>             | 64               | 論文などに情報がある                                 |
-| n<sub>kv_attention_heads</sub> | 8                | モデルコンフィグにも情報がある (num_key_value_heads) |
+| n<sub>layers</sub>             | 64               | num_hidden_layers                                    |
+| n<sub>kv_attention_heads</sub> | 8                | num_key_value_heads                                  |
 | d<sub>attention_heads</sub>    | 5120 // 40 = 128 | hidden_size // num_attention_heads                   |
 | context_length                 | 32k (とする)     | モデルは 128k をサポートしているがメモリ量削減のため |
 | 合計                           | 8000MB (7.8GB)   |                                                      |
