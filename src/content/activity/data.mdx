@@ -8,10 +8,10 @@ description: "調べたり、集めたりしたデータです。"
 
 ## LLM KV Cache Sizing
 
-updated: 2025-05-14
+updated: 2025-05-15
 
 
-[この記事](/blog/2025/05/llm-kv-cache-size/)に従って、LLMのKV CacheのサイズとActivation Peak Memoryを試算しました。
+[この記事](/blog/2025/05/llm-kv-cache-size/)に従って、LLMのKV Cacheのサイズを試算しました。
 あくまで机上の計算なので、実際のサイズとは異なる場合があります。
 
 
@@ -27,13 +27,6 @@ updated: 2025-05-14
 | d<sub>attention_heads</sub>    | 3840 // 16 = 240 |
 | context_length                 | 32k (とする)     |
 | KV Cache サイズ                | 11GB             |
-
-| 記号                   | 値           | 途中計算     |
-|------------------------|--------------|--------------|
-| hidden_size            | 3840         | x 18 = 69120 |
-| intermediate_size      | 15360        | x 4 = 61440  |
-| context_length         | 32k (とする) |              |
-| Activation Peak Memory | 3.9GB        |              |
 
 [google/gemma-3-12b-it (config.json)](https://huggingface.co/google/gemma-3-12b-it/blob/main/config.json)
 
@@ -51,13 +44,6 @@ updated: 2025-05-14
 | context_length                 | 32k (とする)     |
 | KV Cache サイズ                | 19.9GB           |
 
-| 記号                   | 値           | 途中計算     |
-|------------------------|--------------|--------------|
-| hidden_size            | 5376         | x 18 = 96768 |
-| intermediate_size      | 21504        | x 4 = 86016  |
-| context_length         | 32k (とする) |              |
-| Activation Peak Memory | 5.4GB        |              |
-
 [google/gemma-3-27b-it (config.json)](https://huggingface.co/google/gemma-3-27b-it/blob/main/config.json)
 
 
@@ -74,13 +60,6 @@ updated: 2025-05-14
 | context_length                 | 32k (とする)    |
 | KV Cache サイズ                | 4.9GB           |
 
-| 記号                   | 値           | 途中計算     |
-|------------------------|--------------|--------------|
-| hidden_size            | 5120         | x 18 = 92160 |
-| intermediate_size      | 25600        | x 4 = 102400 |
-| context_length         | 32k (とする) |              |
-| Activation Peak Memory | 5.8GB        |              |
-
 [Qwen/Qwen3-32B (config.json)](https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json)
 
 
@@ -96,12 +75,5 @@ updated: 2025-05-14
 | d<sub>attention_heads</sub>    | 5120 // 40 = 128 |
 | context_length                 | 32k (とする)     |
 | KV Cache サイズ                | 5.9GB            |
-
-| 記号                   | 値           | 途中計算     |
-|------------------------|--------------|--------------|
-| hidden_size            | 5120         | x 18 = 92160 |
-| intermediate_size      | 16384        | x 4 = 65536  |
-| context_length         | 32k (とする) |              |
-| Activation Peak Memory | 4.7GB        |              |
 
 [meta-llama/Llama-4-Scout-17B-16E-Instruct (config.json)](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct/blob/main/config.json)
