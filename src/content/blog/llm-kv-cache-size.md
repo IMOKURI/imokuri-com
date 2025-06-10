@@ -62,7 +62,7 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 | bytes/param                    | 2 (16 bit)       | KV Cache は量子化すると精度がガクッと落ちる          |
 | n<sub>layers</sub>             | 64               | num_hidden_layers                                    |
 | n<sub>kv_attention_heads</sub> | 8                | num_key_value_heads                                  |
-| d<sub>attention_heads</sub>    | 5120 // 40 = 128 | hidden_size // num_attention_heads                   |
+| d<sub>attention_heads</sub>    | 5120 // 40 = 128 | hidden_size // num_attention_heads = head_size       |
 | context_length                 | 32k (とする)     | モデルは 128k をサポートしているがメモリ量削減のため |
 | 合計                           | 8000MB (7.8GB)   |                                                      |
 
@@ -90,3 +90,4 @@ LLM が利用可能なGPUメモリ量から 1. ~ 3. を引いて、 KV Cache サ
 - [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/)
 - [LLMの効率化を支えるアルゴリズム](https://speakerdeck.com/taturabe/llmnoxiao-lu-hua-wozhi-eruarugorizumu)
 - [How Much GPU Memory Do You Really Need for Efficient LLM Serving?](https://medium.com/@kimdoil1211/how-much-gpu-memory-do-you-really-need-for-efficient-llm-serving-4d26d5b8b95b)
+- [LLM Inference Economics from First Principles](https://www.tensoreconomics.com/p/llm-inference-economics-from-first)
