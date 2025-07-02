@@ -2,7 +2,7 @@
 title: VLLM on Kubernetes
 slug: vllm-on-kubernetes
 date: 2025-06-24
-updated: 2025-06-25
+updated: 2025-07-02
 tags:
     - Deep Learning
     - Kubernetes
@@ -25,6 +25,8 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
     - [Introducing NVIDIA Dynamo, A Low-Latency Distributed Inference Framework for Scaling Reasoning AI Models - Mar 18, 2025](https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/)
 
 
+## ソフトウェア概要
+
 それぞれいくつかの観点で比較してみます。(それぞれの情報は、執筆時点のものです。)
 
 | 項目           | AIBrix    | Production Stack | llm-d           | LeaderWorkerSet | Dynamo   |
@@ -35,7 +37,7 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 | デプロイ方法   | Manifest  | Helm             | Installer (.sh) | Helm            | Operator |
 
 
-次は、性能に関する機能です。
+## 気になる機能
 
 | 項目                   | AIBrix | Production Stack | llm-d | LeaderWorkerSet | Dynamo |
 | ---                    | ---    | ---              | ---   | ---             | ---    |
@@ -45,7 +47,17 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 
 (うんぬん)
 
-次は、アーキテクチャです。
+### Prefill/Decoding 分離
+
+- llm-d
+    - [Disaggregated Prefill/Decode Inference Serving in llm-d](https://llm-d.ai/docs/architecture/Components/disagg_prefill-decode)
+    - [Deep Dive into llm-d and Distributed Inference](https://www.solo.io/blog/deep-dive-into-llm-d-and-distributed-inference)
+- Dynamo
+    - [Dynamo Disaggregation: Separating Prefill and Decode for Enhanced Performance](https://docs.nvidia.com/dynamo/latest/architecture/disagg_serving.html)
+    - [Bringing State-Of-The-Art PD Speed to vLLM v1 with LMCache](https://blog.lmcache.ai/2025-04-29-pdbench/)
+
+
+## アーキテクチャ
 
 - AIBrix
   ![AIBrix Architecture](/blog/aibrix-architecture-v1.jpeg)
