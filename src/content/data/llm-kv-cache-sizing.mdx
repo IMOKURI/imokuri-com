@@ -1,12 +1,8 @@
 ---
-title: Data
-slug: data
-description: "調べたり、集めたりしたデータです。"
+title: LLM KV Cache Sizing
+slug: llm-kv-cache-sizing
+description: "私がよく使うモデルのKV Cacheのサイズを試算しました。"
 ---
-
-調べたり、集めたりしたデータです。
-
-## LLM KV Cache Sizing
 
 updated: 2025-05-15
 
@@ -25,8 +21,8 @@ updated: 2025-05-15
 | n<sub>layers</sub>             | 48               |
 | n<sub>kv_attention_heads</sub> | 8                |
 | d<sub>attention_heads</sub>    | 3840 // 16 = 240 |
-| context_length                 | 32k (とする)     |
-| KV Cache サイズ                | 11GB             |
+| context_length                 | 8k (とする)      |
+| KV Cache サイズ                | 2.8GB            |
 
 [google/gemma-3-12b-it (config.json)](https://huggingface.co/google/gemma-3-12b-it/blob/main/config.json)
 
@@ -41,8 +37,8 @@ updated: 2025-05-15
 | n<sub>layers</sub>             | 62               |
 | n<sub>kv_attention_heads</sub> | 16               |
 | d<sub>attention_heads</sub>    | 5376 // 32 = 168 |
-| context_length                 | 32k (とする)     |
-| KV Cache サイズ                | 19.9GB           |
+| context_length                 | 8k (とする)      |
+| KV Cache サイズ                | 5.1GB            |
 
 [google/gemma-3-27b-it (config.json)](https://huggingface.co/google/gemma-3-27b-it/blob/main/config.json)
 
@@ -57,23 +53,7 @@ updated: 2025-05-15
 | n<sub>layers</sub>             | 64              |
 | n<sub>kv_attention_heads</sub> | 8               |
 | d<sub>attention_heads</sub>    | 5120 // 64 = 80 |
-| context_length                 | 32k (とする)    |
-| KV Cache サイズ                | 4.9GB           |
+| context_length                 | 8k (とする)     |
+| KV Cache サイズ                | 1.25GB          |
 
 [Qwen/Qwen3-32B (config.json)](https://huggingface.co/Qwen/Qwen3-32B/blob/main/config.json)
-
-
-### meta-llama/Llama-4-Scout-17B-16E-Instruct
-
-| 記号                           | 値               |
-|--------------------------------|------------------|
-| 2                              | 2                |
-| B                              | 1 (とする)       |
-| bytes/param                    | 2 (16 bit)       |
-| n<sub>layers</sub>             | 48               |
-| n<sub>kv_attention_heads</sub> | 8                |
-| d<sub>attention_heads</sub>    | 5120 // 40 = 128 |
-| context_length                 | 32k (とする)     |
-| KV Cache サイズ                | 5.9GB            |
-
-[meta-llama/Llama-4-Scout-17B-16E-Instruct (config.json)](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct/blob/main/config.json)

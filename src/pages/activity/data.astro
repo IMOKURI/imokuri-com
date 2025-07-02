@@ -1,0 +1,25 @@
+---
+import DataPost from "../../components/DataPost.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import BaseWallpaper from "../../components/BaseWallpaper.astro"
+import Footer from "../../components/Footer.astro"
+import NavBar from "../../components/NavBar.astro"
+import ToggleTheme from "../../components/ToggleTheme.astro"
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("data");
+---
+
+<BaseLayout>
+    <BaseWallpaper>
+        <NavBar />
+        <ToggleTheme />
+        <main class="container mx-auto w-5/6 lg:w-2/3">
+            <h1 class="my-5 text-4xl font-bold">Data</h1>
+
+            {posts.map(post => <DataPost post={post} />)}
+
+        </main>
+        <Footer />
+    </BaseWallpaper>
+</BaseLayout>

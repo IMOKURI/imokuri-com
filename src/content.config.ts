@@ -17,8 +17,15 @@ const activitySchema = z.object({
     description: z.string()
 })
 
+const dataSchema = z.object({
+    title: z.string(),
+    slug: z.string(),
+    description: z.string()
+})
+
 export type BlogSchema = z.infer<typeof blogSchema>
 export type ActivitySchema = z.infer<typeof activitySchema>
+export type DataSchema = z.infer<typeof dataSchema>
 
 const blogCollection = defineCollection({
     loader: glob({ pattern: "[^_]*", base: "./src/content/blog" }),
@@ -28,8 +35,13 @@ const activityCollection = defineCollection({
     loader: glob({ pattern: "[^_]*", base: "./src/content/activity" }),
     schema: activitySchema
 })
+const dataCollection = defineCollection({
+    loader: glob({ pattern: "[^_]*", base: "./src/content/data" }),
+    schema: dataSchema
+})
 
 export const collections = {
     blog: blogCollection,
-    activity: activityCollection
+    activity: activityCollection,
+    data: dataCollection
 }
