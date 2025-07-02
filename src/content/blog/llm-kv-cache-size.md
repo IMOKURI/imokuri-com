@@ -40,36 +40,37 @@ LLMへの同時リクエスト数を増やしていくと、レイテンシー�
 
 ## KV Cache サイズの試算
 
-**KV<sub>size</sub>(bytes) = 2 × B × bytes/param × n<sub>layers</sub> × n<sub>kv_attention_heads</sub> × d<sub>attention_heads</sub> x context_length**
+**KV Cache サイズ(bytes) = 2 × B × bytes/param × num_hidden_layers × num_key_value_heads × head_size x context_length**
 
-| 記号                           | 意味                  |
-|--------------------------------|-----------------------|
-| 2                              | key と value で 2     |
-| B                              | バッチサイズ          |
-| bytes/param                    | KV Cache のデータ型   |
-| n<sub>layers</sub>             | レイヤー数            |
-| n<sub>kv_attention_heads</sub> | KV Attention Head 数  |
-| d<sub>attention_heads</sub>    | Attention Head サイズ |
-| context_length                 | 入力トークン長 (*1)   |
+| 記号                | 意味                      |
+|---------------------|---------------------------|
+| 2                   | key と value で 2         |
+| B                   | バッチサイズ              |
+| bytes/param         | KV Cache のデータ型       |
+| num_hidden_layers   | レイヤー数                |
+| num_key_value_heads | KV Attention Head 数      |
+| head_size           | Attention Head サイズ(*1) |
+| context_length      | 入力トークン長 (*2)       |
 
-(*1): Chunked Prefill を使う場合は、1チャンクの長さで計算します。
-
+(*1): hidden_size // num_attention_heads  
+(*2): Chunked Prefill を使う場合は、1チャンクの長さで計算します。
 
 たとえば Qwen 2.5 32B の場合は、以下のように計算できます。
 
-| 記号                           | 値               | 備考                                           |
-|--------------------------------|------------------|------------------------------------------------|
-| 2                              | 2                |                                                |
-| B                              | 1 (とする)       |                                                |
-| bytes/param                    | 2 (16 bit)       | KV Cache は量子化すると精度がガクッと落ちる    |
-| n<sub>layers</sub>             | 64               | num_hidden_layers                              |
-| n<sub>kv_attention_heads</sub> | 8                | num_key_value_heads                            |
-| d<sub>attention_heads</sub>    | 5120 // 40 = 128 | hidden_size // num_attention_heads = head_size |
-| context_length                 | 8k (とする)      | Chunked Prefill で 8k に分けて処理             |
-| 合計                           | 2GB              |                                                |
+| 記号                | 値               |
+|---------------------|------------------|
+| 2                   | 2                |
+| B                   | 1 (とする)       |
+| bytes/param         | 2 (16 bit) (*3)  |
+| num_hidden_layers   | 64               |
+| num_key_value_heads | 8                |
+| head_size           | 5120 // 40 = 128 |
+| context_length      | 8k (とする) (*4) |
+| KV Cache サイズ     | 2GB              |
 
+(*3): KV Cache は量子化すると精度がガクッと落ちる印象があります。  
+(*4): Chunked Prefill で 8k に分けて処理するものとします。
 
-- [Qwen2.5 Technical Report](https://arxiv.org/pdf/2412.15115)
 - [Qwen2.5-32B-Instruct (config.json)](https://huggingface.co/Qwen/Qwen2.5-32B-Instruct/blob/main/config.json)
 
 
