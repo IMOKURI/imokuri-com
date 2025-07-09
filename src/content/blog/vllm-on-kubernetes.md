@@ -1,5 +1,5 @@
 ---
-title: VLLM on Kubernetes
+title: vLLM on Kubernetes
 slug: vllm-on-kubernetes
 date: 2025-06-24
 updated: 2025-07-02
