@@ -2,7 +2,7 @@
 title: vLLM on Kubernetes
 slug: vllm-on-kubernetes
 date: 2025-06-24
-updated: 2025-07-02
+updated: 2025-07-10
 tags:
     - Deep Learning
     - Kubernetes
@@ -37,17 +37,19 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 | デプロイ方法   | Manifest  | Helm             | Installer (.sh) | Helm            | Operator |
 
 
-## 気になる機能
+## 気になるサービス機能
 
 | 項目                   | AIBrix | Production Stack | llm-d | LeaderWorkerSet | Dynamo |
 | ---                    | ---    | ---              | ---   | ---             | ---    |
-| Prefill/Decoding 分離  |        |                  |       |                 |        |
+| Prefill/Decode Disag.  |        |                  |       |                 |        |
 | KV Cache Offloading    |        |                  |       |                 |        |
 | KV Cache Aware Routing |        |                  |       |                 |        |
+| Multi LoRA Serving     |        |                  |       |                 |        |
+| Benchmarking           |        |                  |       |                 |        |
 
 (うんぬん)
 
-### Prefill/Decoding 分離
+### Prefill/Decode Disaggregation
 
 - llm-d
     - [Disaggregated Prefill/Decode Inference Serving in llm-d](https://llm-d.ai/docs/architecture/Components/disagg_prefill-decode)
@@ -55,6 +57,16 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 - Dynamo
     - [Dynamo Disaggregation: Separating Prefill and Decode for Enhanced Performance](https://docs.nvidia.com/dynamo/latest/architecture/disagg_serving.html)
     - [Bringing State-Of-The-Art PD Speed to vLLM v1 with LMCache](https://blog.lmcache.ai/2025-04-29-pdbench/)
+
+
+## 気になる管理機能
+
+| 項目                   | AIBrix | Production Stack | llm-d | LeaderWorkerSet | Dynamo |
+| ---                    | ---    | ---              | ---   | ---             | ---    |
+| Security Consideration |        |                  |       |                 |        |
+| Observability          |        |                  |       |                 |        |
+
+(うんぬん)
 
 
 ## アーキテクチャ
