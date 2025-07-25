@@ -14,6 +14,7 @@ upgrade: ## upgrade
 .PHONY: upgrade-tailwind
 upgrade-tailwind: ## upgrade-tailwind
 	yarn dlx @tailwindcss/upgrade
+	yarn up daisyui
 
 .PHONY: dev
 dev: ## dev
