@@ -11,6 +11,10 @@ install: ## install packages
 upgrade: ## upgrade
 	yarn dlx @astrojs/upgrade
 
+.PHONY: upgrade-tailwind
+upgrade-tailwind: ## upgrade-tailwind
+	yarn dlx @tailwindcss/upgrade
+
 .PHONY: dev
 dev: ## dev
 	yarn dev
