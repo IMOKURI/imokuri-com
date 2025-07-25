@@ -16,7 +16,7 @@
         "@tailwindcss/vite": "^4.1.11",
         "astro": "5.12.3",
         "daisyui": "^5.0.46",
-        "sass": "^1.77.8",
+        "sass": "^1.89.2",
         "tailwindcss": "^4.1.11",
         "theme-change": "^2.5.0",
         "typescript": "^5.5.4",

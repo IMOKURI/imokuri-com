@@ -16,6 +16,10 @@ upgrade-tailwind: ## upgrade-tailwind
 	yarn dlx @tailwindcss/upgrade
 	yarn up daisyui
 
+.PHONY: upgrade-sass
+upgrade-sass: ## upgrade-sass
+	yarn up sass
+
 .PHONY: dev
 dev: ## dev
 	yarn dev
