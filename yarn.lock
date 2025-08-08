@@ -29,18 +29,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@astrojs/internal-helpers@npm:0.6.1"
-  checksum: 10c0/2f03ea5d8a673f74f153ea4fb3ec3e50399093f4bea0e2aaebf6ef3ae336be3f7dfb13abfdffe1953814b5b870d59d641937d271822881778600fe47d99e7ef3
+"@astrojs/internal-helpers@npm:0.7.1":
+  version: 0.7.1
+  resolution: "@astrojs/internal-helpers@npm:0.7.1"
+  checksum: 10c0/f14fa470d16b04d968f3d63826b158ed981befdb899d296f62e1d3d2b5d3ab164bfa60ceea97c072beb39ff5c7df5e054234d1a3af9a0f42df10780d50655f95
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:6.3.3":
-  version: 6.3.3
-  resolution: "@astrojs/markdown-remark@npm:6.3.3"
+"@astrojs/markdown-remark@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@astrojs/markdown-remark@npm:6.3.5"
   dependencies:
-    "@astrojs/internal-helpers": "npm:0.6.1"
+    "@astrojs/internal-helpers": "npm:0.7.1"
     "@astrojs/prism": "npm:3.3.0"
     github-slugger: "npm:^2.0.0"
     hast-util-from-html: "npm:^2.0.3"
@@ -61,15 +61,15 @@ __metadata:
     unist-util-visit: "npm:^5.0.0"
     unist-util-visit-parents: "npm:^6.0.1"
     vfile: "npm:^6.0.3"
-  checksum: 10c0/0df9cabe2da0547d9aec0267339b5ecbcb64f95f4a2d365484d2262eda0e140bf8229f9d65e4bdcb5607a8d20c91f81583bba657733c0e1c1257ee58bbcc51cd
+  checksum: 10c0/ab559b3d13068ad0aeacf04cdfe8c76544dd3d5a857252406c20c541bb9288e5351f146cf4884b471101b52492947b8559525f8b9502b607714cd191b83325cf
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.3.1":
-  version: 4.3.1
-  resolution: "@astrojs/mdx@npm:4.3.1"
+"@astrojs/mdx@npm:4.3.3":
+  version: 4.3.3
+  resolution: "@astrojs/mdx@npm:4.3.3"
   dependencies:
-    "@astrojs/markdown-remark": "npm:6.3.3"
+    "@astrojs/markdown-remark": "npm:6.3.5"
     "@mdx-js/mdx": "npm:^3.1.0"
     acorn: "npm:^8.14.1"
     es-module-lexer: "npm:^1.6.0"
@@ -84,7 +84,7 @@ __metadata:
     vfile: "npm:^6.0.3"
   peerDependencies:
     astro: ^5.0.0
-  checksum: 10c0/0a7e4a33605d00414aa86ac8dc0b2ac79b20b40353097903d1ee25a35d5977ee0bc2c1be6dc61ef21a50362d01772a4bf4fa1b7960d4670bb282c59b802ac3b3
+  checksum: 10c0/6ad26d85344637d5c06db89628e370032d5954ffc15387aad3339ce4b9645b485b7a22bd349daaf8e16c2c9168e3fe5a5f4db1cf65f4bc91cf10bd27ff5e33be
   languageName: node
   linkType: hard
 
@@ -107,14 +107,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:3.4.1":
-  version: 3.4.1
-  resolution: "@astrojs/sitemap@npm:3.4.1"
+"@astrojs/sitemap@npm:3.4.2":
+  version: 3.4.2
+  resolution: "@astrojs/sitemap@npm:3.4.2"
   dependencies:
     sitemap: "npm:^8.0.0"
     stream-replace-string: "npm:^2.0.0"
-    zod: "npm:^3.24.2"
-  checksum: 10c0/d36ba848c753f1abcc9cc603d38be8cb355ed86c8481168b8405d822fbc07d2eb6b971fd25f2e8cb98b889e7d1c2bafb736808ab3f6ad25d6b2da46dd5173b7e
+    zod: "npm:^3.24.4"
+  checksum: 10c0/1a7234a0182dc2d2dde12a5f6f8ba7c8b3cc23b55671a026338dd27dc913a9741f42e07b2266218b7612904a2be591ed4e0232e8ed211e993cdabcfe32ca6dd8
   languageName: node
   linkType: hard
 
@@ -1579,13 +1579,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.12.3":
-  version: 5.12.3
-  resolution: "astro@npm:5.12.3"
+"astro@npm:5.12.8":
+  version: 5.12.8
+  resolution: "astro@npm:5.12.8"
   dependencies:
     "@astrojs/compiler": "npm:^2.12.2"
-    "@astrojs/internal-helpers": "npm:0.6.1"
-    "@astrojs/markdown-remark": "npm:6.3.3"
+    "@astrojs/internal-helpers": "npm:0.7.1"
+    "@astrojs/markdown-remark": "npm:6.3.5"
     "@astrojs/telemetry": "npm:3.3.0"
     "@capsizecss/unpack": "npm:^2.4.0"
     "@oslojs/encoding": "npm:^1.1.0"
@@ -1643,7 +1643,7 @@ __metadata:
     xxhash-wasm: "npm:^1.1.0"
     yargs-parser: "npm:^21.1.1"
     yocto-spinner: "npm:^0.2.1"
-    zod: "npm:^3.24.2"
+    zod: "npm:^3.24.4"
     zod-to-json-schema: "npm:^3.24.5"
     zod-to-ts: "npm:^1.2.0"
   dependenciesMeta:
@@ -1651,7 +1651,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/b2757ca719d11a14ff9a0310e2406e7be3cea1e40edd9921e54eef4c19c35fdae2f9ed24773a2bbab42c921d74e5c0efefe10db41df4e8389078d695234f6f90
+  checksum: 10c0/dd1f01fc3effc4574d8c3de05edf4a6d57cf5a073b30423a80d80ca3cdb96be8fc82d3808e99983d839d0fd1bc607dbaedd38e4fd56fca4dd9e981451c284096
   languageName: node
   linkType: hard
 
@@ -2883,13 +2883,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "imokuri-com@workspace:."
   dependencies:
-    "@astrojs/mdx": "npm:4.3.1"
+    "@astrojs/mdx": "npm:4.3.3"
     "@astrojs/rss": "npm:4.0.12"
-    "@astrojs/sitemap": "npm:3.4.1"
+    "@astrojs/sitemap": "npm:3.4.2"
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.11"
-    astro: "npm:5.12.3"
+    astro: "npm:5.12.8"
     daisyui: "npm:^5.0.46"
     prettier: "npm:^3.5.3"
     prettier-plugin-astro: "npm:^0.14.1"
@@ -6021,10 +6021,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.24.2":
-  version: 3.24.2
-  resolution: "zod@npm:3.24.2"
-  checksum: 10c0/c638c7220150847f13ad90635b3e7d0321b36cce36f3fc6050ed960689594c949c326dfe2c6fa87c14b126ee5d370ccdebd6efb304f41ef5557a4aaca2824565
+"zod@npm:^3.24.4":
+  version: 3.25.76
+  resolution: "zod@npm:3.25.76"
+  checksum: 10c0/5718ec35e3c40b600316c5b4c5e4976f7fee68151bc8f8d90ec18a469be9571f072e1bbaace10f1e85cf8892ea12d90821b200e980ab46916a6166a4260a983c
   languageName: node
   linkType: hard
 
