@@ -1986,10 +1986,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.0.46":
-  version: 5.0.46
-  resolution: "daisyui@npm:5.0.46"
-  checksum: 10c0/90531631b79e261b24cf8e275e87aeabbb594b890fa68b5c0bac18c78ea88e46735e30a7991d98b445cdc38e1e81f019cf1b031308ce8bec01b1285d59e902b5
+"daisyui@npm:^5.0.54":
+  version: 5.0.54
+  resolution: "daisyui@npm:5.0.54"
+  checksum: 10c0/dfd9d645bb83947579984041f47cbd2d3f3eb392ede677fb33cb93a376cf8660e1be88d526a3ddcdb02ecdd201ae07e83e1a76ba3f16f89dd6ef41cfb3a5deba
   languageName: node
   linkType: hard
 
@@ -2890,7 +2890,7 @@ __metadata:
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.11"
     astro: "npm:5.13.4"
-    daisyui: "npm:^5.0.46"
+    daisyui: "npm:^5.0.54"
     prettier: "npm:^3.5.3"
     prettier-plugin-astro: "npm:^0.14.1"
     sass: "npm:^1.89.2"
