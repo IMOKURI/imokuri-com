@@ -107,14 +107,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/sitemap@npm:3.5.0":
-  version: 3.5.0
-  resolution: "@astrojs/sitemap@npm:3.5.0"
+"@astrojs/sitemap@npm:3.5.1":
+  version: 3.5.1
+  resolution: "@astrojs/sitemap@npm:3.5.1"
   dependencies:
     sitemap: "npm:^8.0.0"
     stream-replace-string: "npm:^2.0.0"
     zod: "npm:^3.24.4"
-  checksum: 10c0/754fedddfa3b468e42a34aeace30345538799205fc7fad0097cf6d7fb11a13b6d9ebd68ca27efea685326104644ebfce16d7354651159c154449fb2e42864f89
+  checksum: 10c0/cd6b2226c459d352679bd04fb6a95d168091ff2ac21825c162092b1decaac41dd2dc2e4800f57850e583ec0b6b21569774f24fb7b1bb6444ac5af66259d5e43e
   languageName: node
   linkType: hard
 
@@ -1579,9 +1579,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.13.2":
-  version: 5.13.2
-  resolution: "astro@npm:5.13.2"
+"astro@npm:5.13.4":
+  version: 5.13.4
+  resolution: "astro@npm:5.13.4"
   dependencies:
     "@astrojs/compiler": "npm:^2.12.2"
     "@astrojs/internal-helpers": "npm:0.7.2"
@@ -1651,7 +1651,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/b5b8df9e55bd4e6d564c69e4cac51fd101968480c5fb24447c6a16c3183c780f17f87271b3ff721963d08d0133b22b0c61b8dded8d5117b24f2a1adae89780c0
+  checksum: 10c0/d26a903bba5df0163779af8bb81eb7e413213c17353ec3c617230ef56f29646828292e8222b5bfc9760bb93f8f98ecd81c44fd2a27072f0c7f6d8089156e1511
   languageName: node
   linkType: hard
 
@@ -2885,11 +2885,11 @@ __metadata:
   dependencies:
     "@astrojs/mdx": "npm:4.3.4"
     "@astrojs/rss": "npm:4.0.12"
-    "@astrojs/sitemap": "npm:3.5.0"
+    "@astrojs/sitemap": "npm:3.5.1"
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.11"
-    astro: "npm:5.13.2"
+    astro: "npm:5.13.4"
     daisyui: "npm:^5.0.46"
     prettier: "npm:^3.5.3"
     prettier-plugin-astro: "npm:^0.14.1"
