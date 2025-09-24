@@ -1,6 +1,6 @@
 # IMOKURING
 
-> Personal website by Yoshio Sugiyama who is an infrastructure / ML engineer
+> Personal website by Yoshio Sugiyama who is Applied AI Engineer / AI Platform Engineer
 
 ## About Me
 
