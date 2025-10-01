@@ -3,62 +3,62 @@ import { SITE_TITLE } from "../config"
 ---
 
 <header class="navbar bg-base-100">
-    <div class="navbar-start">
-        <div class="dropdown">
-            <label tabindex="0" class="btn btn-ghost lg:hidden">
-                <i class="fa-solid fa-bars text-lg"></i>
-            </label>
-            <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li>
-                    <a href="/about"><i class="fa-solid fa-user"></i>About</a>
-                </li>
-                <li>
-                    <a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a>
-                </li>
-                <li>
-                    <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
-                </li>
-            </ul>
-        </div>
-        <a href="/" class="btn btn-ghost normal-case text-xl">{SITE_TITLE}</a>
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </label>
+      <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li>
+          <a href="/about"><i class="fa-solid fa-user"></i>About</a>
+        </li>
+        <li>
+          <a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a>
+        </li>
+        <li>
+          <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
+        </li>
+      </ul>
     </div>
-    <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-            <li><a href="/about"><i class="fa-solid fa-user"></i>About</a></li>
-            <li><a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a></li>
-            <li>
-                <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
-            </li>
-        </ul>
-    </div>
-    <div class="navbar-end">
-        <a
-            href="https://github.com/IMOKURI"
-            target="_blank"
-            class="btn btn-ghost btn-square text-lg"
-            aria-label="GitHub"
-            title="GitHub"><i class="fa-brands fa-github"></i></a
-        >
-        <a
-            href="https://bsky.app/profile/imokuri.com"
-            target="_blank"
-            class="btn btn-ghost btn-square text-lg"
-            aria-label="Bluesky"
-            title="Bluesky"><i class="fa-brands fa-bluesky"></i></a
-        >
-        <a
-            href="https://twitter.com/imokurity"
-            target="_blank"
-            class="btn btn-ghost btn-square text-lg"
-            aria-label="X (旧Twitter)"
-            title="X (旧Twitter)"><i class="fa-brands fa-x-twitter"></i></a
-        >
-        <a
-            href="https://kaggle.com/imokuri"
-            target="_blank"
-            class="btn btn-ghost btn-square text-lg"
-            aria-label="Kaggle"
-            title="Kaggle"><i class="fa-brands fa-kaggle"></i></a
-        >
-    </div>
+    <a href="/" class="btn btn-ghost normal-case text-xl">{SITE_TITLE}</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/about"><i class="fa-solid fa-user"></i>About</a></li>
+      <li><a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a></li>
+      <li>
+        <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a
+      href="https://github.com/IMOKURI"
+      target="_blank"
+      class="btn btn-ghost btn-square text-lg"
+      aria-label="GitHub"
+      title="GitHub"><i class="fa-brands fa-github"></i></a
+    >
+    <a
+      href="https://bsky.app/profile/imokuri.com"
+      target="_blank"
+      class="btn btn-ghost btn-square text-lg"
+      aria-label="Bluesky"
+      title="Bluesky"><i class="fa-brands fa-bluesky"></i></a
+    >
+    <a
+      href="https://twitter.com/imokurity"
+      target="_blank"
+      class="btn btn-ghost btn-square text-lg"
+      aria-label="X (旧Twitter)"
+      title="X (旧Twitter)"><i class="fa-brands fa-x-twitter"></i></a
+    >
+    <a
+      href="https://kaggle.com/imokuri"
+      target="_blank"
+      class="btn btn-ghost btn-square text-lg"
+      aria-label="Kaggle"
+      title="Kaggle"><i class="fa-brands fa-kaggle"></i></a
+    >
+  </div>
 </header>

@@ -10,48 +10,48 @@ import { getCollection } from "astro:content"
 import type { GetStaticPathsOptions } from "astro"
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-    const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-    return paginate(posts, { pageSize: 10 })
+  const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  return paginate(posts, { pageSize: 10 })
 }
 const { page } = Astro.props
 ---
 
 <BaseLayout>
-    <BaseWallpaper>
-        <NavBar />
-        <ToggleTheme />
-        <main class="container mx-auto w-5/6 lg:w-2/3">
-            <AllTags />
-            <h1 class="my-5 text-4xl font-bold">
-                <a href="/blog">Blog</a>
-                <a href="/rss.xml"><i class="fa-solid fa-rss mx-2 text-xl"></i></a>
-            </h1>
+  <BaseWallpaper>
+    <NavBar />
+    <ToggleTheme />
+    <main class="container mx-auto w-5/6 lg:w-2/3">
+      <AllTags />
+      <h1 class="my-5 text-4xl font-bold">
+        <a href="/blog">Blog</a>
+        <a href="/rss.xml"><i class="fa-solid fa-rss mx-2 text-xl"></i></a>
+      </h1>
 
-            {page.data.map(post => <BlogPost post={post} />)}
+      {page.data.map(post => <BlogPost post={post} />)}
 
-            <div class="btn-group flex justify-center m-5">
-                <a href="/blog">
-                    <button class="btn btn-outline mx-2">First</button>
-                </a>
-                {
-                    page.url.prev && (
-                        <a href={page.url.prev}>
-                            <button class="btn btn-outline mx-2">Prev</button>
-                        </a>
-                    )
-                }
-                {
-                    page.url.next && (
-                        <a href={page.url.next}>
-                            <button class="btn btn-outline mx-2">Next</button>
-                        </a>
-                    )
-                }
-                <a href={`/blog/${page.lastPage}`}>
-                    <button class="btn btn-outline mx-2">Last</button>
-                </a>
-            </div>
-        </main>
-        <Footer />
-    </BaseWallpaper>
+      <div class="btn-group flex justify-center m-5">
+        <a href="/blog">
+          <button class="btn btn-outline mx-2">First</button>
+        </a>
+        {
+          page.url.prev && (
+            <a href={page.url.prev}>
+              <button class="btn btn-outline mx-2">Prev</button>
+            </a>
+          )
+        }
+        {
+          page.url.next && (
+            <a href={page.url.next}>
+              <button class="btn btn-outline mx-2">Next</button>
+            </a>
+          )
+        }
+        <a href={`/blog/${page.lastPage}`}>
+          <button class="btn btn-outline mx-2">Last</button>
+        </a>
+      </div>
+    </main>
+    <Footer />
+  </BaseWallpaper>
 </BaseLayout>

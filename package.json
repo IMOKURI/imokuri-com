@@ -1,45 +1,45 @@
 {
-    "name": "imokuri-com",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
-        "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro"
-    },
-    "dependencies": {
-        "@astrojs/mdx": "4.3.6",
-        "@astrojs/rss": "4.0.12",
-        "@astrojs/sitemap": "3.6.0",
-        "@tailwindcss/vite": "^4.1.13",
-        "astro": "5.14.1",
-        "daisyui": "^5.1.26",
-        "sass": "^1.93.2",
-        "tailwindcss": "^4.1.13",
-        "theme-change": "^2.5.0",
-        "typescript": "^5.9.3",
-        "zod": "^3.23.8",
-        "zod-to-ts": "^1.2.0"
-    },
-    "devDependencies": {
-        "@catppuccin/daisyui": "^2.1.1",
-        "@tailwindcss/typography": "^0.5.16",
-        "prettier": "^3.5.3",
-        "prettier-plugin-astro": "^0.14.1"
-    },
-    "prettier": {
-        "printWidth": 120,
-        "tabWidth": 2,
-        "useTabs": false,
-        "semi": false,
-        "singleQuote": false,
-        "trailingComma": "none",
-        "bracketSpacing": true,
-        "arrowParens": "avoid",
-        "proseWrap": "preserve",
-        "endOfLine": "lf"
-    },
-    "packageManager": "yarn@4.4.0"
+  "name": "imokuri-com",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "4.3.6",
+    "@astrojs/rss": "4.0.12",
+    "@astrojs/sitemap": "3.6.0",
+    "@tailwindcss/vite": "^4.1.13",
+    "astro": "5.14.1",
+    "daisyui": "^5.1.26",
+    "sass": "^1.93.2",
+    "tailwindcss": "^4.1.13",
+    "theme-change": "^2.5.0",
+    "typescript": "^5.9.3",
+    "zod": "^3.23.8",
+    "zod-to-ts": "^1.2.0"
+  },
+  "devDependencies": {
+    "@catppuccin/daisyui": "^2.1.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "proseWrap": "preserve",
+    "endOfLine": "lf"
+  },
+  "packageManager": "yarn@4.4.0"
 }

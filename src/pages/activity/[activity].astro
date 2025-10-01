@@ -8,15 +8,15 @@ import { getCollection, render } from "astro:content"
 import type { CollectionEntry } from "astro:content"
 
 export async function getStaticPaths() {
-    const posts = await getCollection("activity")
-    return posts.map(post => ({
-        params: { activity: post.id },
-        props: { post }
-    }))
+  const posts = await getCollection("activity")
+  return posts.map(post => ({
+    params: { activity: post.id },
+    props: { post }
+  }))
 }
 
 interface Props {
-    post: CollectionEntry<"activity">
+  post: CollectionEntry<"activity">
 }
 const { post } = Astro.props
 
@@ -25,16 +25,16 @@ const { title } = post.data
 ---
 
 <BaseLayout>
-    <DimWallpaper>
-        <NavBar />
-        <ToggleTheme />
-        <main class="container mx-auto w-5/6 lg:w-2/3">
-            <article class="prose max-w-none">
-                <h1>{title}</h1>
-                <hr />
-                <Content />
-            </article>
-        </main>
-        <Footer />
-    </DimWallpaper>
+  <DimWallpaper>
+    <NavBar />
+    <ToggleTheme />
+    <main class="container mx-auto w-5/6 lg:w-2/3">
+      <article class="prose max-w-none">
+        <h1>{title}</h1>
+        <hr />
+        <Content />
+      </article>
+    </main>
+    <Footer />
+  </DimWallpaper>
 </BaseLayout>

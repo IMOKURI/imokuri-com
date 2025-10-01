@@ -2,40 +2,40 @@
 import type { CollectionEntry } from "astro:content"
 
 export interface Props {
-    post: CollectionEntry<"blog">
+  post: CollectionEntry<"blog">
 }
 
 const { post } = Astro.props
 ---
 
 <a
-    href={`/blog/${post.data.date.getFullYear()}/${(post.data.date.getMonth() + 1)
-        .toString()
-        .padStart(2, "0")}/${post.id}/`}
+  href={`/blog/${post.data.date.getFullYear()}/${(post.data.date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}/${post.id}/`}
 >
-    <div class="card card-border hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100/80 z-20">
-        <div class="card-body">
-            <h2 class="card-title">{post.data.title}</h2>
-            <p class="text-sm">
-                Posted on {post.data.date.toLocaleDateString()}
-            </p>
-            {
-                post.data.updated > post.data.date ? (
-                    <p class="text-sm">Updated on {post.data.updated.toLocaleDateString()}</p>
-                ) : null
-            }
-            {
-                post.data.tags ? (
-                    <div class="inline">
-                        {post.data.tags.map(tag => (
-                            <a href={`/tag/${tag}`}>
-                                <div class="badge badge-accent badge-soft mr-2">{tag}</div>
-                            </a>
-                        ))}
-                    </div>
-                ) : null
-            }
-            <p>{post.data.description}</p>
-        </div>
+  <div class="card card-border hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100/80 z-20">
+    <div class="card-body">
+      <h2 class="card-title">{post.data.title}</h2>
+      <p class="text-sm">
+        Posted on {post.data.date.toLocaleDateString()}
+      </p>
+      {
+        post.data.updated > post.data.date ? (
+          <p class="text-sm">Updated on {post.data.updated.toLocaleDateString()}</p>
+        ) : null
+      }
+      {
+        post.data.tags ? (
+          <div class="inline">
+            {post.data.tags.map(tag => (
+              <a href={`/tag/${tag}`}>
+                <div class="badge badge-accent badge-soft mr-2">{tag}</div>
+              </a>
+            ))}
+          </div>
+        ) : null
+      }
+      <p>{post.data.description}</p>
     </div>
+  </div>
 </a>
