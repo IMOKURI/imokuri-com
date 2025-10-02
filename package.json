@@ -18,10 +18,7 @@
     "daisyui": "^5.1.26",
     "sass": "^1.93.2",
     "tailwindcss": "^4.1.13",
-    "theme-change": "^2.5.0",
-    "typescript": "^5.9.3",
-    "zod": "^4.1.11",
-    "zod-to-ts": "^1.2.0"
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
     "@catppuccin/daisyui": "^2.1.1",

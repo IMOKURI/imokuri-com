@@ -20,10 +20,6 @@ upgrade-tailwind: ## upgrade-tailwind
 upgrade-sass: ## upgrade-sass
 	yarn up sass
 
-.PHONY: upgrade-typescript
-upgrade-typescript: ## upgrade-typescript
-	yarn up typescript
-
 .PHONY: dev
 dev: ## dev
 	yarn dev
