@@ -7,8 +7,8 @@ NOW = $(shell date '+%Y%m%d-%H%M%S')
 install: ## install packages
 	yarn install
 
-.PHONY: upgrade
-upgrade: ## upgrade
+.PHONY: upgrade-astro
+upgrade-astro: ## upgrade-astro
 	yarn dlx @astrojs/upgrade
 
 .PHONY: upgrade-tailwind
@@ -27,4 +27,4 @@ dev: ## dev
 .PHONY: help
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / \
-		{printf "\033[38;2;98;209;150m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+		{printf "\033[38;2;98;209;150m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
