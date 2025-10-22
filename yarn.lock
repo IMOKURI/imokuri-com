@@ -1557,9 +1557,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.14.6":
-  version: 5.14.6
-  resolution: "astro@npm:5.14.6"
+"astro@npm:5.14.8":
+  version: 5.14.8
+  resolution: "astro@npm:5.14.8"
   dependencies:
     "@astrojs/compiler": "npm:^2.12.2"
     "@astrojs/internal-helpers": "npm:0.7.4"
@@ -1629,7 +1629,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/dc3359bc8c25867011469b3f34b806491ae033919410a37c17b815de5c2bb4a869ba203891d640a4da4a4b8b6a39e18902b91f8e896618cb2cfc30262b815953
+  checksum: 10c0/d495d363e6a22ecdb6787654363684ce090f7cdf54179a6d6b1bf743bc240ea99869a2094d8f3d84c57fa134f2ceb0fe307c491342086c1c90867a3dcdaea629
   languageName: node
   linkType: hard
 
@@ -2739,7 +2739,7 @@ __metadata:
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.14"
-    astro: "npm:5.14.6"
+    astro: "npm:5.14.8"
     daisyui: "npm:^5.3.0"
     prettier: "npm:^3.6.2"
     prettier-plugin-astro: "npm:^0.14.1"
