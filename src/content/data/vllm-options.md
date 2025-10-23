@@ -4,7 +4,7 @@ slug: vllm-options
 description: "私がよく使うvLLMのオプション設定をまとめました。"
 ---
 
-updated: 2025-10-22
+updated: 2025-10-23
 
 
 vLLMは高性能なLLM推論エンジンで、多くのオプションを提供しています。以下に、私がよく使うオプション設定をまとめたいと思います。
@@ -34,13 +34,6 @@ up-vllm: ## Start vllm.
 		--gpu-memory-utilization 0.9 \
 		--disable-uvicorn-access-log \
 		--host 0.0.0.0 --port 8000
-```
-
-
-## Task
-
-```make
-		--task embedding \
 ```
 
 
