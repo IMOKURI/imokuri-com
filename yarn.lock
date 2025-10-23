@@ -48,9 +48,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.3.7":
-  version: 4.3.7
-  resolution: "@astrojs/mdx@npm:4.3.7"
+"@astrojs/mdx@npm:4.3.8":
+  version: 4.3.8
+  resolution: "@astrojs/mdx@npm:4.3.8"
   dependencies:
     "@astrojs/markdown-remark": "npm:6.3.8"
     "@mdx-js/mdx": "npm:^3.1.1"
@@ -58,7 +58,7 @@ __metadata:
     es-module-lexer: "npm:^1.7.0"
     estree-util-visit: "npm:^2.0.0"
     hast-util-to-html: "npm:^9.0.5"
-    kleur: "npm:^4.1.5"
+    picocolors: "npm:^1.1.1"
     rehype-raw: "npm:^7.0.0"
     remark-gfm: "npm:^4.0.1"
     remark-smartypants: "npm:^3.0.2"
@@ -67,7 +67,7 @@ __metadata:
     vfile: "npm:^6.0.3"
   peerDependencies:
     astro: ^5.0.0
-  checksum: 10c0/f6299b35a627539c403d286c353ddc8c080a07749d73c6123aea41f7a3540a04e23e1dd9e90b594503c2f051f4be7c47aa2101a45fee413b934e15a7059b893f
+  checksum: 10c0/5c0ca849703aed2e9c57e69f87a452085238f22c629fab8573a2ec21fc892931d65a96c5e82dfa49450741027231fcf3816e68e7d70616822304668cd5b71eaa
   languageName: node
   linkType: hard
 
@@ -80,13 +80,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/rss@npm:4.0.12":
-  version: 4.0.12
-  resolution: "@astrojs/rss@npm:4.0.12"
+"@astrojs/rss@npm:4.0.13":
+  version: 4.0.13
+  resolution: "@astrojs/rss@npm:4.0.13"
   dependencies:
-    fast-xml-parser: "npm:^5.2.0"
-    kleur: "npm:^4.1.5"
-  checksum: 10c0/f7541a39adf3572489b87c45569833df111f9bef672b116191f228860e6f410f0bdc899f6124c3d6cf14a51b745cbfa415d4ed4649d7966070e155363019749c
+    fast-xml-parser: "npm:^5.3.0"
+    picocolors: "npm:^1.1.1"
+  checksum: 10c0/ec9b79b1c8e57fa2a6c947a69108f29344e4e33e3b20ba54ce7e62e62b6be8b76fc8156c9e6a62e3e91c2f3533c4a72c622d00d91f02be7f00da36f166fba038
   languageName: node
   linkType: hard
 
@@ -1557,9 +1557,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.14.8":
-  version: 5.14.8
-  resolution: "astro@npm:5.14.8"
+"astro@npm:5.15.1":
+  version: 5.15.1
+  resolution: "astro@npm:5.15.1"
   dependencies:
     "@astrojs/compiler": "npm:^2.12.2"
     "@astrojs/internal-helpers": "npm:0.7.4"
@@ -1593,7 +1593,6 @@ __metadata:
     http-cache-semantics: "npm:^4.2.0"
     import-meta-resolve: "npm:^4.2.0"
     js-yaml: "npm:^4.1.0"
-    kleur: "npm:^4.1.5"
     magic-string: "npm:^0.30.18"
     magicast: "npm:^0.3.5"
     mrmime: "npm:^2.0.1"
@@ -1601,6 +1600,7 @@ __metadata:
     p-limit: "npm:^6.2.0"
     p-queue: "npm:^8.1.0"
     package-manager-detector: "npm:^1.3.0"
+    picocolors: "npm:^1.1.1"
     picomatch: "npm:^4.0.3"
     prompts: "npm:^2.4.2"
     rehype: "npm:^13.0.2"
@@ -1629,7 +1629,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/d495d363e6a22ecdb6787654363684ce090f7cdf54179a6d6b1bf743bc240ea99869a2094d8f3d84c57fa134f2ceb0fe307c491342086c1c90867a3dcdaea629
+  checksum: 10c0/da7148411162dc709df8e0a679a10cc17c25f5d81904a4d439d2a08ed5b2e6295385d27f81046591b639661fbc818e8cd697eb1549d704faea31feb4481f2d03
   languageName: node
   linkType: hard
 
@@ -2330,7 +2330,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^5.2.0":
+"fast-xml-parser@npm:^5.3.0":
   version: 5.3.0
   resolution: "fast-xml-parser@npm:5.3.0"
   dependencies:
@@ -2733,13 +2733,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "imokuri-com@workspace:."
   dependencies:
-    "@astrojs/mdx": "npm:4.3.7"
-    "@astrojs/rss": "npm:4.0.12"
+    "@astrojs/mdx": "npm:4.3.8"
+    "@astrojs/rss": "npm:4.0.13"
     "@astrojs/sitemap": "npm:3.6.0"
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.14"
-    astro: "npm:5.14.8"
+    astro: "npm:5.15.1"
     daisyui: "npm:^5.3.0"
     prettier: "npm:^3.6.2"
     prettier-plugin-astro: "npm:^0.14.1"
@@ -2932,13 +2932,6 @@ __metadata:
   version: 3.0.3
   resolution: "kleur@npm:3.0.3"
   checksum: 10c0/cd3a0b8878e7d6d3799e54340efe3591ca787d9f95f109f28129bdd2915e37807bf8918bb295ab86afb8c82196beec5a1adcaf29042ce3f2bd932b038fe3aa4b
-  languageName: node
-  linkType: hard
-
-"kleur@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "kleur@npm:4.1.5"
-  checksum: 10c0/e9de6cb49657b6fa70ba2d1448fd3d691a5c4370d8f7bbf1c2f64c24d461270f2117e1b0afe8cb3114f13bbd8e51de158c2a224953960331904e636a5e4c0f2a
   languageName: node
   linkType: hard
 
