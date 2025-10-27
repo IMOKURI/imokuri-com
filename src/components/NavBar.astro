@@ -1,5 +1,7 @@
 ---
-import { SITE_TITLE } from "../config"
+import { SITE_TITLE, navBarConfig } from "../config"
+
+const config = navBarConfig
 ---
 
 <header class="navbar bg-base-100">
@@ -9,26 +11,34 @@ import { SITE_TITLE } from "../config"
         <i class="fa-solid fa-bars text-lg"></i>
       </label>
       <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a href="/about"><i class="fa-solid fa-user"></i>About</a>
-        </li>
-        <li>
-          <a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a>
-        </li>
-        <li>
-          <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
-        </li>
+        {
+          config.links.length > 1 &&
+            config.links.map(item => (
+              <li>
+                <a href={item.url}>
+                  <i class={`fa-solid ${item.icon}`} />
+                  {item.name}
+                </a>
+              </li>
+            ))
+        }
       </ul>
     </div>
     <a href="/" class="btn btn-ghost normal-case text-xl">{SITE_TITLE}</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a href="/about"><i class="fa-solid fa-user"></i>About</a></li>
-      <li><a href="/blog"><i class="fa-solid fa-pencil"></i>Blog</a></li>
-      <li>
-        <a href="/activity"><i class="fa-solid fa-code"></i>Activity</a>
-      </li>
+      {
+        config.links.length > 1 &&
+          config.links.map(item => (
+            <li>
+              <a href={item.url}>
+                <i class={`fa-solid ${item.icon}`} />
+                {item.name}
+              </a>
+            </li>
+          ))
+      }
     </ul>
   </div>
   <div class="navbar-end">
