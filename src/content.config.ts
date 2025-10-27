@@ -20,6 +20,7 @@ const activitySchema = z.object({
 const dataSchema = z.object({
     title: z.string(),
     slug: z.string(),
+    updated: z.coerce.date(),
     description: z.string()
 })
 

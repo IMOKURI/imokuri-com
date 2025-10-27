@@ -1,11 +1,9 @@
 ---
 title: vLLM Options
 slug: vllm-options
+updated: 2025-10-23
 description: "私がよく使うvLLMのオプション設定をまとめました。"
 ---
-
-updated: 2025-10-23
-
 
 vLLMは高性能なLLM推論エンジンで、多くのオプションを提供しています。以下に、私がよく使うオプション設定をまとめたいと思います。
 
