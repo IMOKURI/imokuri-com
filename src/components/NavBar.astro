@@ -1,7 +1,8 @@
 ---
-import { SITE_TITLE, navBarConfig } from "../config"
+import { SITE_TITLE, navBarLinks, socialLinks } from "../config"
 
-const config = navBarConfig
+const navs = navBarLinks
+const socials = socialLinks
 ---
 
 <header class="navbar bg-base-100">
@@ -12,12 +13,12 @@ const config = navBarConfig
       </label>
       <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         {
-          config.links.length > 1 &&
-            config.links.map(item => (
+          navs.length > 1 &&
+            navs.map(link => (
               <li>
-                <a href={item.url}>
-                  <i class={`fa-solid ${item.icon}`} />
-                  {item.name}
+                <a href={link.url}>
+                  <i class={`fa-solid ${link.icon}`} />
+                  {link.name}
                 </a>
               </li>
             ))
@@ -29,12 +30,12 @@ const config = navBarConfig
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       {
-        config.links.length > 1 &&
-          config.links.map(item => (
+        navs.length > 1 &&
+          navs.map(link => (
             <li>
-              <a href={item.url}>
-                <i class={`fa-solid ${item.icon}`} />
-                {item.name}
+              <a href={link.url}>
+                <i class={`fa-solid ${link.icon}`} />
+                {link.name}
               </a>
             </li>
           ))
@@ -42,33 +43,19 @@ const config = navBarConfig
     </ul>
   </div>
   <div class="navbar-end">
-    <a
-      href="https://github.com/IMOKURI"
-      target="_blank"
-      class="btn btn-ghost btn-square text-lg"
-      aria-label="GitHub"
-      title="GitHub"><i class="fa-brands fa-github"></i></a
-    >
-    <a
-      href="https://bsky.app/profile/imokuri.com"
-      target="_blank"
-      class="btn btn-ghost btn-square text-lg"
-      aria-label="Bluesky"
-      title="Bluesky"><i class="fa-brands fa-bluesky"></i></a
-    >
-    <a
-      href="https://twitter.com/imokurity"
-      target="_blank"
-      class="btn btn-ghost btn-square text-lg"
-      aria-label="X (旧Twitter)"
-      title="X (旧Twitter)"><i class="fa-brands fa-x-twitter"></i></a
-    >
-    <a
-      href="https://kaggle.com/imokuri"
-      target="_blank"
-      class="btn btn-ghost btn-square text-lg"
-      aria-label="Kaggle"
-      title="Kaggle"><i class="fa-brands fa-kaggle"></i></a
-    >
+    {
+      socials.length > 1 &&
+        socials.map(link => (
+          <a
+            href={link.url}
+            target="_blank"
+            class="btn btn-ghost btn-square text-lg"
+            aria-label={link.name}
+            title={link.name}
+          >
+            <i class={`fa-brands ${link.icon}`} />
+          </a>
+        ))
+    }
   </div>
 </header>

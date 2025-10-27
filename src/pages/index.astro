@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import HomeWallpaper from "../components/HomeWallpaper.astro"
 import ToggleTheme from "../components/ToggleTheme.astro"
-import { SITE_TITLE, navBarConfig } from "../config"
+import { SITE_TITLE, navBarLinks } from "../config"
 
-const config = navBarConfig
+const links = navBarLinks
 ---
 
 <BaseLayout>
@@ -14,12 +14,12 @@ const config = navBarConfig
       <h1 class="mb-5 text-4xl font-bold">{SITE_TITLE}</h1>
       <p class="mb-2 text-lg">Hi, I'm Yoshio Sugiyama.<br />Applied AI Engineer / AI Platform Engineer at HPE Japan.</p>
       {
-        config.links.length > 1 &&
-          config.links.map(item => (
-            <div class="tooltip tooltip-bottom" data-tip={item.name}>
-              <a href={item.url}>
-                <button class="btn btn-ghost text-lg" aria-label={item.name}>
-                  <i class={`fa-solid ${item.icon}`} />
+        links.length > 1 &&
+          links.map(link => (
+            <div class="tooltip tooltip-bottom" data-tip={link.name}>
+              <a href={link.url}>
+                <button class="btn btn-ghost text-lg" aria-label={link.name}>
+                  <i class={`fa-solid ${link.icon}`} />
                 </button>
               </a>
             </div>
