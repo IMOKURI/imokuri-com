@@ -8,6 +8,16 @@ import ToggleTheme from "../../components/ToggleTheme.astro"
 import { getCollection } from "astro:content"
 
 const posts = await getCollection("activity")
+
+posts.push({
+  data: {
+    title: "Data",
+    slug: "data",
+    description: "調べたり、集めたりしたデータです。"
+  }
+})
+
+posts.sort((a, b) => a.data.title.localeCompare(b.data.title))
 ---
 
 <BaseLayout>
@@ -18,9 +28,6 @@ const posts = await getCollection("activity")
       <h1 class="my-5 text-4xl font-bold">Activity</h1>
 
       {posts.map(post => <ActivityPost post={post} />)}
-      <ActivityPost
-        post={{ data: { title: "Data", slug: "data", description: "調べたり、集めたりしたデータです。" } }}
-      />
     </main>
     <Footer />
   </BaseWallpaper>
