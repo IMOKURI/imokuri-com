@@ -32,7 +32,7 @@ const { Content } = await render(post)
 const { title, date, updated, tags, cover_image } = post.data
 
 const today = new Date().getTime()
-const updated_date = updated > date ? updated.getTime() : date.getTime()
+const updated_date = updated && updated > date ? updated.getTime() : date.getTime()
 const pass_year = Math.floor((today - updated_date) / 86400000 / 365)
 const tab_title = `${title} - ${SITE_TITLE}`
 ---
@@ -53,7 +53,7 @@ const tab_title = `${title} - ${SITE_TITLE}`
           )
         }
         {
-          updated > date && (
+          updated && updated > date && (
             <div>
               Updated on <time>{updated.toLocaleDateString()}</time>
             </div>

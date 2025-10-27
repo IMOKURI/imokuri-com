@@ -20,7 +20,7 @@ const { post } = Astro.props
         Posted on {post.data.date.toLocaleDateString()}
       </p>
       {
-        post.data.updated > post.data.date ? (
+        post.data.updated && post.data.updated > post.data.date ? (
           <p class="text-sm">Updated on {post.data.updated.toLocaleDateString()}</p>
         ) : null
       }
