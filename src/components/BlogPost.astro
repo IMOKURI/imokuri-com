@@ -43,8 +43,8 @@ const { remarkPluginFrontmatter } = await render(post)
         post.data.tags ? (
           <div class="inline mb-1">
             {post.data.tags.map(tag => (
-              <a href={`/tag/${tag}`}>
-                <div class="badge badge-accent badge-soft mr-2">{tag}</div>
+              <a href={`/tag/${tag}`} class="badge badge-primary badge-soft mr-2">
+                {tag}
               </a>
             ))}
           </div>

@@ -44,7 +44,7 @@ const { remarkPluginFrontmatter } = await render(post)
     <NavBar />
     <ToggleTheme />
     <main class="container mx-auto w-5/6 lg:w-2/3">
-      <article class="prose max-w-none">
+      <article class="prose max-w-none mb-4">
         {cover_image && <img src={cover_image} alt="" />}
         <h1>{title}</h1>
         {
@@ -72,19 +72,6 @@ const { remarkPluginFrontmatter } = await render(post)
           {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
         </div>
         {
-          tags && (
-            <div class="inline mb-1">
-              {tags.map(tag => (
-                <div class="badge badge-accent badge-soft mr-2">
-                  <a href={`/tag/${tag}`} class="link link-accent link-hover">
-                    {tag}
-                  </a>
-                </div>
-              ))}
-            </div>
-          )
-        }
-        {
           pass_year > 0 && (
             <div class="alert alert-warning shadow-lg my-4">
               <div class="flex">
@@ -110,9 +97,20 @@ const { remarkPluginFrontmatter } = await render(post)
         <hr />
         <Content />
       </article>
+      {
+        tags && (
+          <div class="mt-4 mb-1">
+            {tags.map(tag => (
+              <a href={`/tag/${tag}`} class="badge badge-primary badge-soft mr-2">
+                {tag}
+              </a>
+            ))}
+          </div>
+        )
+      }
       <Utterances />
+      <Disclaimer />
+      <Footer />
     </main>
-    <Disclaimer />
-    <Footer />
   </DimWallpaper>
 </BaseLayout>
