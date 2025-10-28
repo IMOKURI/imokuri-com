@@ -6,7 +6,7 @@ const tags = [...new Set(allPosts.map(post => post.data.tags).flat())].sort((a, 
 ---
 
 <details class="dropdown dropdown-end float-right z-40">
-  <summary class="btn btn-ghost text-lg m-1">Tags</summary>
+  <summary class="btn btn-ghost text-lg m-1"><i class="fa-solid fa-tags"></i>Tags</summary>
   <ul class="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-52">
     {
       tags.map(tag => (
