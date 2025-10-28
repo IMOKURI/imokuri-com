@@ -1,6 +1,7 @@
 import { defineConfig, fontProviders } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import mdx from "@astrojs/mdx"
+import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs"
 
 import tailwindcss from "@tailwindcss/vite"
 
@@ -10,6 +11,7 @@ export default defineConfig({
   integrations: [sitemap(), mdx()],
 
   markdown: {
+    remarkPlugins: [remarkReadingTime],
     shikiConfig: {
       theme: "nord"
     }

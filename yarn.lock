@@ -2741,8 +2741,10 @@ __metadata:
     "@tailwindcss/vite": "npm:^4.1.14"
     astro: "npm:5.15.1"
     daisyui: "npm:^5.3.0"
+    mdast-util-to-string: "npm:^4.0.0"
     prettier: "npm:^3.6.2"
     prettier-plugin-astro: "npm:^0.14.1"
+    reading-time: "npm:^1.5.0"
     sass: "npm:^1.93.2"
     tailwindcss: "npm:^4.1.14"
     theme-change: "npm:^2.5.0"
@@ -4268,6 +4270,13 @@ __metadata:
   version: 4.1.2
   resolution: "readdirp@npm:4.1.2"
   checksum: 10c0/60a14f7619dec48c9c850255cd523e2717001b0e179dc7037cfa0895da7b9e9ab07532d324bfb118d73a710887d1e35f79c495fa91582784493e085d18c72c62
+  languageName: node
+  linkType: hard
+
+"reading-time@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "reading-time@npm:1.5.0"
+  checksum: 10c0/0f730852fd4fb99e5f78c5b0cf36ab8c3fa15db96f87d9563843f6fd07a47864273ade539ebb184b785b728cde81a70283aa2d9b80cba5ca03b81868be03cabc
   languageName: node
   linkType: hard
 

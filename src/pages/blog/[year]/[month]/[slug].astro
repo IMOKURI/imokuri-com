@@ -35,6 +35,8 @@ const today = new Date().getTime()
 const updated_date = updated && updated > date ? updated.getTime() : date.getTime()
 const pass_year = Math.floor((today - updated_date) / 86400000 / 365)
 const tab_title = `${title} - ${SITE_TITLE}`
+
+const { remarkPluginFrontmatter } = await render(post)
 ---
 
 <BaseLayout twitter="true" title={tab_title}>
@@ -59,6 +61,11 @@ const tab_title = `${title} - ${SITE_TITLE}`
             </div>
           )
         }
+        <div>
+          {remarkPluginFrontmatter.words}
+          {remarkPluginFrontmatter.words === 1 ? "word" : "words"}, {remarkPluginFrontmatter.minutes}
+          {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
+        </div>
         {
           tags && (
             <div class="inline">
@@ -75,7 +82,7 @@ const tab_title = `${title} - ${SITE_TITLE}`
         {
           pass_year > 0 && (
             <div class="alert alert-warning shadow-lg my-4">
-              <div>
+              <div class="flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="stroke-current shrink-0 h-6 w-6"
