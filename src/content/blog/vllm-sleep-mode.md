@@ -9,6 +9,10 @@ tags:
 description: "vLLMのsleep modeについて"
 ---
 
+## Contents
+
+## Overview
+
 vLLM は、1インスタンスで1つのモデルを動かします。
 そのモデルのスループットを最大化するため、GPUメモリの殆どの領域をKV Cacheとして利用します。
 
@@ -102,7 +106,7 @@ curl -X POST localhost:8000/wake_up
 ```
 
 
-## 参考
+## References
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pro-tip for vLLM power-users: free ≈ 90 % of your GPU VRAM in seconds—no restarts required🚀<br><br>🚩 Why you’ll want this<br>• Hot-swap new checkpoints on the same card<br>• Rotate multiple LLMs on one GPU (batch jobs, micro-services, A/B tests)<br>• Stage-based pipelines that call… <a href="https://t.co/WAzdiZWL6u">pic.twitter.com/WAzdiZWL6u</a></p>&mdash; EmbeddedLLM (@EmbeddedLLM) <a href="https://twitter.com/EmbeddedLLM/status/1942556855324270610?ref_src=twsrc%5Etfw">July 8, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
