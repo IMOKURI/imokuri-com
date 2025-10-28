@@ -1,4 +1,5 @@
 ---
+import { render } from "astro:content"
 import type { CollectionEntry } from "astro:content"
 
 export interface Props {
@@ -6,6 +7,8 @@ export interface Props {
 }
 
 const { post } = Astro.props
+
+const { remarkPluginFrontmatter } = await render(post)
 ---
 
 <a
@@ -15,18 +18,30 @@ const { post } = Astro.props
 >
   <div class="card card-border hover:shadow-2xl shadow-lg hover:scale-[101%] my-10 bg-base-100/80 z-20">
     <div class="card-body">
-      <h2 class="card-title">{post.data.title}</h2>
-      <p class="text-sm">
+      <h2 class="card-title mb-2">{post.data.title}</h2>
+      <p class="text-sm mb-1">
+        <i class="fa-regular fa-file-lines"></i>
         Posted on {post.data.date.toLocaleDateString()}
       </p>
       {
         post.data.updated && post.data.updated > post.data.date ? (
-          <p class="text-sm">Updated on {post.data.updated.toLocaleDateString()}</p>
+          <p class="text-sm mb-1">
+            <i class="fa-solid fa-file-lines" />
+            Updated on {post.data.updated.toLocaleDateString()}
+          </p>
         ) : null
       }
+      <div class="text-sm mb-1">
+        <i class="fa-solid fa-align-left"></i>
+        {remarkPluginFrontmatter.words}
+        {remarkPluginFrontmatter.words === 1 ? "word" : "words"},
+        <i class="fa-regular fa-clock"></i>
+        {remarkPluginFrontmatter.minutes}
+        {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
+      </div>
       {
         post.data.tags ? (
-          <div class="inline">
+          <div class="inline mb-1">
             {post.data.tags.map(tag => (
               <a href={`/tag/${tag}`}>
                 <div class="badge badge-accent badge-soft mr-2">{tag}</div>

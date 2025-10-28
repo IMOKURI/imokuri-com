@@ -49,26 +49,31 @@ const { remarkPluginFrontmatter } = await render(post)
         <h1>{title}</h1>
         {
           date && (
-            <div>
+            <div class="mb-1">
+              <i class="fa-regular fa-file-lines" />
               Posted on <time>{date.toLocaleDateString()}</time>
             </div>
           )
         }
         {
           updated && updated > date && (
-            <div>
+            <div class="mb-1">
+              <i class="fa-solid fa-file-lines" />
               Updated on <time>{updated.toLocaleDateString()}</time>
             </div>
           )
         }
-        <div>
+        <div class="mb-1">
+          <i class="fa-solid fa-align-left"></i>
           {remarkPluginFrontmatter.words}
-          {remarkPluginFrontmatter.words === 1 ? "word" : "words"}, {remarkPluginFrontmatter.minutes}
+          {remarkPluginFrontmatter.words === 1 ? "word" : "words"},
+          <i class="fa-regular fa-clock"></i>
+          {remarkPluginFrontmatter.minutes}
           {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
         </div>
         {
           tags && (
-            <div class="inline">
+            <div class="inline mb-1">
               {tags.map(tag => (
                 <div class="badge badge-accent badge-soft mr-2">
                   <a href={`/tag/${tag}`} class="link link-accent link-hover">
