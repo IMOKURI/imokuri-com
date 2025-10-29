@@ -40,7 +40,7 @@ curl -X POST localhost:8000/sleep -d '{"level":1}'
 実際に、sleepモードに入ると以下のようなログが出力されます(レベル1の場合)。
 一度 sleepモードに入っていると、二度目からは、非常に高速に sleepモードに入ることがわかります。
 
-```
+```log /It took [0-9\.]+ seconds/
 # 1回目
 (EngineCore_DP0 pid=87) INFO 10-19 19:38:37 [block_pool.py:378] Successfully reset prefix cache
 (Worker pid=125) INFO 10-19 19:39:19 [cumem.py:228] CuMemAllocator: sleep freed 83.04 GiB memory in total, of which 75.16 GiB is backed up in CPU and the rest 7.88 GiB is discarded directly.
@@ -57,15 +57,13 @@ curl -X POST localhost:8000/sleep -d '{"level":1}'
 
 sleepモード前後のメモリ使用量の変化は以下のようになります。sleepモード中でも、GPUメモリ使用量が0にはならないことに注意してください。
 
-```
+```log /[0-9]+MiB/
 # GPUメモリ Before Sleep
 |    0   N/A  N/A         1979459      C   VLLM::Worker                          87496MiB |
 
 # GPUメモリ After Sleep Level 1
 |    0   N/A  N/A         1979459      C   VLLM::Worker                           2066MiB |
-```
 
-```
 # CPUメモリ Before Sleep
                total        used        free      shared  buff/cache   available
 Mem:             125          26           2           0          97          99
@@ -76,8 +74,7 @@ Mem:             125         102          11          77          90          22
 ```
 
 
-> [!warning]
-> sleepモード中に、チャットリクエストを投げてしまうと、以下のエラーが発生し、vLLMが停止してしまいます。。
+sleepモード中に、チャットリクエストを投げてしまうと、以下のエラーが発生し、vLLMが停止してしまいます。。
 
 ```json
 {
@@ -101,7 +98,7 @@ curl -X POST localhost:8000/wake_up
 
 実際に、wake upすると以下のようなログが出力されます。とても高速に復帰することがわかります。
 
-```
+```log /It took [0-9\.]+ seconds/
 (APIServer pid=1) INFO 10-19 19:45:09 [api_server.py:1024] check whether the engine is sleeping
 (APIServer pid=1) INFO 10-19 19:45:40 [api_server.py:1016] wake up the engine with tags: None
 (EngineCore_DP0 pid=87) INFO 10-19 19:45:42 [executor_base.py:205] It took 1.544127 seconds to wake up tags {'kv_cache', 'weights'}.

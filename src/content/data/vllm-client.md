@@ -32,7 +32,7 @@ vLLMをOpenAI互換APIとして使用している場合、curlでリクエスト
 
 ここで、 `prompt.json` は以下のような内容です。
 
-```json
+```json title="prompt.json"
 {
   "model": "Qwen/Qwen3-Next-80B-A3B-Instruct",
   "messages": [
@@ -73,7 +73,7 @@ vLLMをOpenAI互換APIとして使用している場合、curlでリクエスト
 
 ここで、 `prompt.json` は以下のような内容です。
 
-```json
+```json title="prompt.json"
 {
   "model": "microsoft/Phi-4-multimodal-instruct-speech",
   "max_completion_tokens": 4096,
