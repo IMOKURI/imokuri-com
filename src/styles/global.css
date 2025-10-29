@@ -1,11 +1,31 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
 @plugin "daisyui" {
   themes: false;
 }
 
 @plugin "./catppuccinTheme.latte.ts";
 @plugin "./catppuccinTheme.frappe.ts";
+
+@import "rehype-callouts/theme/github";
+
+[data-callout="note"] {
+    --rc-color-light: var(--color-info);
+    --rc-color-dark: var(--color-info-content);
+}
+[data-callout="tip"] {
+    --rc-color-light: var(--color-success);
+    --rc-color-dark: var(--color-success-content);
+}
+[data-callout="warning"] {
+    --rc-color-light: var(--color-warning);
+    --rc-color-dark: var(--color-warning-content);
+}
+[data-callout="caution"] {
+    --rc-color-light: var(--color-error);
+    --rc-color-dark: var(--color-error-content);
+}
 
 @theme {
   --font-sans: var(--font-mplus2);

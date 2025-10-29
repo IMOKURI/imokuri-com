@@ -2666,7 +2666,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hastscript@npm:^9.0.0":
+"hastscript@npm:^9.0.0, hastscript@npm:^9.0.1":
   version: 9.0.1
   resolution: "hastscript@npm:9.0.1"
   dependencies:
@@ -2752,6 +2752,7 @@ __metadata:
     prettier: "npm:^3.6.2"
     prettier-plugin-astro: "npm:^0.14.1"
     reading-time: "npm:^1.5.0"
+    rehype-callouts: "npm:^2.1.2"
     remark-toc: "npm:^9.0.0"
     sass: "npm:^1.93.2"
     tailwindcss: "npm:^4.1.14"
@@ -4375,6 +4376,19 @@ __metadata:
   dependencies:
     regex-utilities: "npm:^2.3.0"
   checksum: 10c0/687b3e063d4ca19b0de7c55c24353f868a0fb9ba21512692470d2fb412e3a410894dd5924c91ea49d8cb8fa865e36ec956e52436ae0a256bdc095ff136c30aba
+  languageName: node
+  linkType: hard
+
+"rehype-callouts@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "rehype-callouts@npm:2.1.2"
+  dependencies:
+    "@types/hast": "npm:^3.0.4"
+    hast-util-from-html: "npm:^2.0.3"
+    hast-util-is-element: "npm:^3.0.0"
+    hastscript: "npm:^9.0.1"
+    unist-util-visit: "npm:^5.0.0"
+  checksum: 10c0/edd84386fbfbe2d3e592659b745758830e52862be14962a3d3d6941c61801ddf6d153a85d4385320dbdccecab0b52c123021274d04fd24b595c3b0dc150e67e5
   languageName: node
   linkType: hard
 
