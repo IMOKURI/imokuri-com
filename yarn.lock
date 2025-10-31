@@ -48,9 +48,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:4.3.8":
-  version: 4.3.8
-  resolution: "@astrojs/mdx@npm:4.3.8"
+"@astrojs/mdx@npm:4.3.9":
+  version: 4.3.9
+  resolution: "@astrojs/mdx@npm:4.3.9"
   dependencies:
     "@astrojs/markdown-remark": "npm:6.3.8"
     "@mdx-js/mdx": "npm:^3.1.1"
@@ -67,7 +67,7 @@ __metadata:
     vfile: "npm:^6.0.3"
   peerDependencies:
     astro: ^5.0.0
-  checksum: 10c0/5c0ca849703aed2e9c57e69f87a452085238f22c629fab8573a2ec21fc892931d65a96c5e82dfa49450741027231fcf3816e68e7d70616822304668cd5b71eaa
+  checksum: 10c0/a45f7bdbe4d2bfc8622da0c80b1b2a35269792087973878784a3c033fad67f0fecf222caf220f035647566189f3a09279bd9adcf4d861645cc247f6f6d5dafdf
   languageName: node
   linkType: hard
 
@@ -1627,9 +1627,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:5.15.1":
-  version: 5.15.1
-  resolution: "astro@npm:5.15.1"
+"astro@npm:5.15.3":
+  version: 5.15.3
+  resolution: "astro@npm:5.15.3"
   dependencies:
     "@astrojs/compiler": "npm:^2.12.2"
     "@astrojs/internal-helpers": "npm:0.7.4"
@@ -1686,7 +1686,7 @@ __metadata:
     unist-util-visit: "npm:^5.0.0"
     unstorage: "npm:^1.17.0"
     vfile: "npm:^6.0.3"
-    vite: "npm:^6.3.6"
+    vite: "npm:^6.4.1"
     vitefu: "npm:^1.1.1"
     xxhash-wasm: "npm:^1.1.0"
     yargs-parser: "npm:^21.1.1"
@@ -1699,7 +1699,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 10c0/da7148411162dc709df8e0a679a10cc17c25f5d81904a4d439d2a08ed5b2e6295385d27f81046591b639661fbc818e8cd697eb1549d704faea31feb4481f2d03
+  checksum: 10c0/7cefee00b53d4ecf5e1b0826bf6a19e70f44f58fac573bdbb0d8fe8d6005ee15973bdb396a78559ecb968db800688e906c1b82bc9ff9de1e288f7d455a164b36
   languageName: node
   linkType: hard
 
@@ -2886,13 +2886,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "imokuri-com@workspace:."
   dependencies:
-    "@astrojs/mdx": "npm:4.3.8"
+    "@astrojs/mdx": "npm:4.3.9"
     "@astrojs/rss": "npm:4.0.13"
     "@astrojs/sitemap": "npm:3.6.0"
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
     "@tailwindcss/vite": "npm:^4.1.14"
-    astro: "npm:5.15.1"
+    astro: "npm:5.15.3"
     astro-expressive-code: "npm:^0.41.3"
     daisyui: "npm:^5.3.0"
     mdast-util-to-string: "npm:^4.0.0"
@@ -5648,7 +5648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.3.6":
+"vite@npm:^6.4.1":
   version: 6.4.1
   resolution: "vite@npm:6.4.1"
   dependencies:
