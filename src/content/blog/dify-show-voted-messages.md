@@ -4,8 +4,8 @@ slug: dify-show-voted-messages
 date: 2025-10-02
 updated:
 tags:
-    - AI Agent
-    - LLM
+  - AI Agent
+  - LLM
 description: "Difyで「いいね」や「よくないね」がついたメッセージを確認する方法です。"
 ---
 
@@ -24,13 +24,11 @@ Dify ではチャットアプリの応答に対して、いいね👍 やよく�
 
 ここでは、Difyのコミュニティ版を docker compose で起動した環境(v1.9.1)で確認しています。
 
-
 ### postgres のコンテナにアクセス
 
 ```bash
 docker exec -it docker-db-1 psql -U postgres -d dify
 ```
-
 
 ### アプリケーションのIDを確認
 
@@ -43,7 +41,6 @@ select id,name from apps;
 (2 rows)
 ```
 
-
 ### フィードバックがついた会話IDを確認
 
 ```sql
@@ -54,7 +51,6 @@ select app_id,conversation_id,rating,content from message_feedbacks;
  daa22851-5382-40d2-85e6-058928f4674f | 7ce98c8b-5fae-47df-a85d-040664320934 | dislike | もっと簡単に
 (2 rows)
 ```
-
 
 ### 会話の内容を確認
 

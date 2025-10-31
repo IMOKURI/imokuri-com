@@ -4,8 +4,8 @@ slug: kubernetes-dual-stack
 date: 2020-01-27
 updated:
 tags:
-    - IPv6
-    - Kubernetes
+  - IPv6
+  - Kubernetes
 description: "KubernetesをIPv4, IPv6の共存環境で動かしてみます。"
 ---
 
@@ -71,13 +71,13 @@ kubeadmでデプロイしていきます。kubeadmは[こちら](https://kuberne
 ```yaml
 apiVersion: kubeadm.k8s.io/v1beta2
 bootstrapTokens:
-- groups:
-  - system:bootstrappers:kubeadm:default-node-token
-  token: abcdef.0123456789abcdef
-  ttl: 24h0m0s
-  usages:
-  - signing
-  - authentication
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    token: abcdef.0123456789abcdef
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
 kind: InitConfiguration
 localAPIEndpoint:
   advertiseAddress: <master node ipv4 address>
@@ -86,8 +86,8 @@ nodeRegistration:
   criSocket: /var/run/dockershim.sock
   name: <master node hostname>
   taints:
-  - effect: NoSchedule
-    key: node-role.kubernetes.io/master
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
 ---
 apiServer:
   timeoutForControlPlane: 4m0s
@@ -136,23 +136,23 @@ mode: ipvs
 - DaemonSetの `calico-node` のコンテナの環境変数で以下のように設定する
 
 ```yaml
-            # Auto-detect the BGP IP address.
-            - name: IP
-              value: "autodetect"
-            - name: IP6
-              value: "autodetect"
+# Auto-detect the BGP IP address.
+- name: IP
+  value: "autodetect"
+- name: IP6
+  value: "autodetect"
 
-            # The default IPv4 pool to create on startup if none exists. Pod IPs will be
-            # chosen from this range. Changing this value after installation will have
-            # no effect. This should fall within `--cluster-cidr`.
-            - name: CALICO_IPV4POOL_CIDR
-              value: "10.244.0.0/16"
-            - name: CALICO_IPV6POOL_CIDR
-              value: "fd00:2::/48"
+# The default IPv4 pool to create on startup if none exists. Pod IPs will be
+# chosen from this range. Changing this value after installation will have
+# no effect. This should fall within `--cluster-cidr`.
+- name: CALICO_IPV4POOL_CIDR
+  value: "10.244.0.0/16"
+- name: CALICO_IPV6POOL_CIDR
+  value: "fd00:2::/48"
 
-            # Enable IPv6 on Kubernetes.
-            - name: FELIX_IPV6SUPPORT
-              value: "true"
+# Enable IPv6 on Kubernetes.
+- name: FELIX_IPV6SUPPORT
+  value: "true"
 ```
 
 ## 動作確認
@@ -195,10 +195,10 @@ MetalLBで `.spec.isFamily` によって IPv4 か IPv6 かを割り当ててほ�
 ## その他
 
 - 既存のIPv4 Onlyのクラスターを設定変更して、Dual Stack対応にするのは現状できないようです。(できるようにするためのエンハンスメントリクエストが[出ているようです](https://github.com/kubernetes/kubeadm/issues/1698))
-    - [やれないことはないけど、サポートはされないのかな・・・](https://github.com/kubernetes/kubeadm/issues/1464#issuecomment-518021984)
+  - [やれないことはないけど、サポートはされないのかな・・・](https://github.com/kubernetes/kubeadm/issues/1464#issuecomment-518021984)
 - IPv6 Only/Dual Stack 環境のサポートは 1.18 で alpha(デフォルト無効) から beta(デフォルト有効) となる見込みです。
-    - [IPv6 support added](https://github.com/kubernetes/enhancements/issues/508#issuecomment-574126795)
-    - [Add IPv4/IPv6 dual-stack support](https://github.com/kubernetes/enhancements/issues/563#issuecomment-570321655)
+  - [IPv6 support added](https://github.com/kubernetes/enhancements/issues/508#issuecomment-574126795)
+  - [Add IPv4/IPv6 dual-stack support](https://github.com/kubernetes/enhancements/issues/563#issuecomment-570321655)
 
 ## 参照
 

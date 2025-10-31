@@ -4,8 +4,8 @@ slug: neovim-plugin-python-auto-import
 date: 2022-05-26
 updated:
 tags:
-    - Neovim
-    - Python
+  - Neovim
+  - Python
 description: "Telescopeを使ってPythonの自動インポートを作ってみました。"
 ---
 
@@ -32,12 +32,9 @@ Neovim で Python の自動インポートを実現するプラグインは実�
 
 そろそろ、Lua でプラグインを書いてみたいと思っていたんだよな。。
 
-
 ということで、このプラグインを fork して、改良することにしました。
 
-
 こちら [IMOKURI/apyrori.nvim](https://github.com/IMOKURI/apyrori.nvim) です。
-
 
 とりあえずの目標として、以下を目指しました。
 
@@ -66,6 +63,5 @@ Telescope の実装は複雑で、いくつかの Extension を見ただけで�
 > [Neovimプラグインで不具合報告するのに便利な再現環境用minimal vimrcの作り方](https://zenn.dev/yutakatay/articles/neovim-minimal-config)
 
 今は、手動で動作確認をしているのですが、テストの自動化が可能かも調べてみたいと思います。
-
 
 さ、これで、Python のコードを書く環境が、また一段と整ったので、そろそろ、Kaggle のコンペにまた挑戦しよう。

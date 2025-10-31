@@ -4,7 +4,7 @@ slug: ansible-callback-type
 date: 2017-07-13
 updated:
 tags:
-    - Ansible
+  - Ansible
 description: "AnsibleのCallbackプラグインを書くときのCALLBACK_TYPEについてです。"
 ---
 
@@ -37,5 +37,3 @@ Playbookの実行結果などを集計したりするプラグインに使われ
 ## まとめ
 
 `stdout`以外は、挙動に影響することはなさそうですので、ぶっちゃけ好きな名前を付けても良いのかなぁとおもいます。
-
-

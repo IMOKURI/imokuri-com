@@ -4,7 +4,7 @@ slug: kubernetes-director-kubedirector
 date: 2019-12-16
 updated:
 tags:
-    - Kubernetes
+  - Kubernetes
 description: "Kubernetes上でStatefulなアプリケーションを管理するためのカスタムコントローラであるKubeDirectorをご紹介します。"
 ---
 

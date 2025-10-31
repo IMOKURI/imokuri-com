@@ -4,7 +4,7 @@ slug: upgrade-to-astro-v5
 date: 2024-12-04
 updated:
 tags:
-    - Poem
+  - Poem
 description: "Astro v5 へのアップグレード"
 ---
 

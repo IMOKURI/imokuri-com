@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -31,18 +30,6 @@
     "remark-toc": "^9.0.0",
     "sass": "^1.93.2",
     "tailwindcss": "^4.1.14"
-  },
-  "prettier": {
-    "printWidth": 120,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": false,
-    "singleQuote": false,
-    "trailingComma": "none",
-    "bracketSpacing": true,
-    "arrowParens": "avoid",
-    "proseWrap": "preserve",
-    "endOfLine": "lf"
   },
   "packageManager": "yarn@4.4.0"
 }

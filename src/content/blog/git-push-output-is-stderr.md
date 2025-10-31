@@ -4,9 +4,9 @@ slug: git-push-output-is-stderr
 date: 2016-01-15
 updated:
 tags:
-    - Git
-    - GitHub
-    - CI
+  - Git
+  - GitHub
+  - CI
 description: "git pushなどの出力は標準エラー(stderr)であることを最近知りました。。"
 ---
 
@@ -20,8 +20,8 @@ CIツール(Travis CIなど)で、プログラムをビルドして、Githubにp
 
 CIツールがTokenを使ってpushするためには、以下のように、remoteのURLにTokenを埋め込む必要があります(XXXXXXXXのところ)。
 
-* レポジトリのURL： `https://github.com/IMOKURI/IMOKURI.github.io.git`
-* Token付きのURL： `https://XXXXXXXXXXXXXXXXXXXX@github.com/IMOKURI/IMOKURI.github.io.git`
+- レポジトリのURL： `https://github.com/IMOKURI/IMOKURI.github.io.git`
+- Token付きのURL： `https://XXXXXXXXXXXXXXXXXXXX@github.com/IMOKURI/IMOKURI.github.io.git`
 
 実際に、CIツールがpushすると、その出力は、以下のようになります。
 

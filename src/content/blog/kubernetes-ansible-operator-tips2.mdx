@@ -4,8 +4,8 @@ slug: kubernetes-ansible-operator-tips2
 date: 2020-02-12
 updated: 2020-02-26
 tags:
-    - Ansible
-    - Kubernetes
+  - Ansible
+  - Kubernetes
 description: ""
 ---
 
@@ -19,15 +19,40 @@ operator-sdkでkuebrnetesのoperatorを開発するときのTipsです。
 
 0.15.1 ではまだ未リリース。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">operator-sdk の次のリリース早く出ないかなぁ。black list の機能早く使いたい。 <a href="https://twitter.com/hashtag/kubernetes?src=hash&amp;ref_src=twsrc%5Etfw">#kubernetes</a> <a href="https://twitter.com/hashtag/operatorsdk?src=hash&amp;ref_src=twsrc%5Etfw">#operatorsdk</a><br/><br/>I&#39;m looking forward to the next release of operator-sdk. I&#39;d like to use the blacklist feature!<a href="https://t.co/ee6QYh2nqn">https://t.co/ee6QYh2nqn</a></p>&mdash; SUGIYAMA Yoshio (@imokurity) <a href="https://twitter.com/imokurity/status/1226674129379610625?ref_src=twsrc%5Etfw">February 10, 2020</a></blockquote>
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">
+    operator-sdk の次のリリース早く出ないかなぁ。black list の機能早く使いたい。{" "}
+    <a href="https://twitter.com/hashtag/kubernetes?src=hash&amp;ref_src=twsrc%5Etfw">#kubernetes</a>{" "}
+    <a href="https://twitter.com/hashtag/operatorsdk?src=hash&amp;ref_src=twsrc%5Etfw">#operatorsdk</a>
+    <br />
+    <br />
+    I&#39;m looking forward to the next release of operator-sdk. I&#39;d like to use the blacklist feature!
+    <a href="https://t.co/ee6QYh2nqn">https://t.co/ee6QYh2nqn</a>
+  </p>
+  &mdash; SUGIYAMA Yoshio (@imokurity){" "}
+  <a href="https://twitter.com/imokurity/status/1226674129379610625?ref_src=twsrc%5Etfw">February 10, 2020</a>
+</blockquote>
 
 ---
 
 ansibleのoperatorで環境変数を使いたい場合の指定の仕方。
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ansibleのplaybookはoperatorコンテナで動いていて、ansibleコンテナは、ansibleのログを出すだけのためにある。</p>&mdash; SUGIYAMA Yoshio (@imokurity) <a href="https://twitter.com/imokurity/status/1227395168493432834?ref_src=twsrc%5Etfw">February 12, 2020</a></blockquote>
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">
+    ansibleのplaybookはoperatorコンテナで動いていて、ansibleコンテナは、ansibleのログを出すだけのためにある。
+  </p>
+  &mdash; SUGIYAMA Yoshio (@imokurity){" "}
+  <a href="https://twitter.com/imokurity/status/1227395168493432834?ref_src=twsrc%5Etfw">February 12, 2020</a>
+</blockquote>
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ログを出すためだけのコンテナは廃止されて、operator自身がansibleのログも出すようになった。<a href="https://t.co/3zVwwPBWSA">https://t.co/3zVwwPBWSA</a></p>&mdash; SUGIYAMA Yoshio (@imokurity) <a href="https://twitter.com/imokurity/status/1232450714137268226?ref_src=twsrc%5Etfw">February 25, 2020</a></blockquote>
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">
+    ログを出すためだけのコンテナは廃止されて、operator自身がansibleのログも出すようになった。
+    <a href="https://t.co/3zVwwPBWSA">https://t.co/3zVwwPBWSA</a>
+  </p>
+  &mdash; SUGIYAMA Yoshio (@imokurity){" "}
+  <a href="https://twitter.com/imokurity/status/1232450714137268226?ref_src=twsrc%5Etfw">February 25, 2020</a>
+</blockquote>
 
 ---
 

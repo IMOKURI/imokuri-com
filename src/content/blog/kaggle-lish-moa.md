@@ -4,10 +4,10 @@ slug: kaggle-lish-moa
 date: 2020-12-02
 updated:
 tags:
-    - Compete
-    - Kaggle
-    - Machine Learning
-    - Deep Learning
+  - Compete
+  - Kaggle
+  - Machine Learning
+  - Deep Learning
 description: "Kaggle MoAコンペの振り返りです"
 ---
 
@@ -28,10 +28,10 @@ description: "Kaggle MoAコンペの振り返りです"
 それでは、(Public Notebookで公開されているものが中心になりますが、、)今回のコンペで
 私がトライしてみたことを中心に振り返ってみます。
 
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Overview](#overview)
   - [目的](#%E7%9B%AE%E7%9A%84)
@@ -63,7 +63,6 @@ description: "Kaggle MoAコンペの振り返りです"
 
 ## Overview
 
-
 ### 目的
 
 Mechanisms of Action (MoA) 作用機序(薬の働き)の予測します。
@@ -82,7 +81,6 @@ N個の `sig_id` 行とM個のMoAターゲットについて、N×Mの予測を�
 ### コード要件
 
 提出は、Jupyter Notebook形式で、実行時間が GPUなら2時間、CPUなら9時間 以内に実行できる必要があります。
-
 
 ### データ概観
 
@@ -109,7 +107,6 @@ N個の `sig_id` 行とM個のMoAターゲットについて、N×Mの予測を�
 - 学習サンプルの 40% がすべてのラベルで 陰性 (MoAを持たない)であり、 50% 以上が陽性ラベルを1つだけ持ちます。
   一方で、陽性ラベルを7つ持つサンプルもあります。
 
-
 ## Preprocessing
 
 ### Rank Gauss
@@ -126,20 +123,17 @@ RankGaussは数値変数を正規分布に変換する方法です。
 - 対象となる変数の値を順位付けし、その順位を -1 ~ 1 の範囲にスケーリングします。 （一様分布にします）
 - その結果を分位関数(累積分布関数CDFの逆関数)に適用し、正規分布を得ます。
 
-
 ### PCA
 
 - 今回のコンペでは、PCAの結果を既存の特徴量に「追加」することで
   [CV, LBが良くなる事象](https://www.kaggle.com/c/lish-moa/discussion/183166)が観測されています。
 - しかし、一般的に、PCAの結果を既存の特徴量に追加することは[望ましくないと考えられており](https://www.quora.com/Is-there-any-benefit-from-adding-the-original-features-along-with-the-reduced-ones-by-PCA)、この考えを覆す結果となっています。
 
-
 ### Variance Threshold
 
 - データの分散がしきい値以下のものを特徴量から除外します。
 - ただし、事前にRank Gauss が行われている場合、特徴量の多くは 1 に近くなるため、
   分散のしきい値を下回る特徴量は[多く現れないことが指摘](https://www.kaggle.com/c/lish-moa/discussion/194973#1067941)されています。
-
 
 ### Deep Insight
 
@@ -165,7 +159,6 @@ RankGaussは数値変数を正規分布に変換する方法です。
 
 ![Multi Input ResNet](/blog/2020-12-Multi-Input-ResNet.png)
 
-
 ### NODE (Neural Oblivious Decision Ensembles)
 
 [Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data](https://arxiv.org/abs/1909.06312)
@@ -174,7 +167,6 @@ RankGaussは数値変数を正規分布に変換する方法です。
 - 誤差逆伝播法によりエンドツーエンドで学習される微分可能な忘却決定木 (Oblivious Decision Tree: ODT) で構成されています。
 
 ![NODE](/blog/2020-12-NODE.png)
-
 
 ### TabNet
 
@@ -185,7 +177,6 @@ RankGaussは数値変数を正規分布に変換する方法です。
 - 表形式データに対する自己教師あり学習も可能です。
 
 ![TabNet](/blog/2020-12-TabNet.png)
-
 
 ## Training
 
@@ -200,7 +191,6 @@ Group KFold
 
 ![Group KFold](/blog/2020-12-Group-KFold.png)
 
-
 Stratified KFold
 
 - ラベルが不均衡であったため、交差検証の分割を行った際に、1つの分割に含まれるラベルの分布が、
@@ -209,7 +199,6 @@ Stratified KFold
 ![Stratified KFold](/blog/2020-12-Stratified-KFold.png)
 
 > [Cross-validation: evaluating estimator performance](https://scikit-learn.org/stable/modules/cross_validation.html)
-
 
 ### Pre Training
 
@@ -220,7 +209,6 @@ Stratified KFold
 
 ![Pre Training](/blog/2020-12-pre-training.png)
 
-
 ### Training
 
 - メインの学習はデータ量を増やすため、Publicテストデータも使用しました。
@@ -228,9 +216,7 @@ Stratified KFold
 
 ![Main Training](/blog/2020-12-main-training.png)
 
-
 ## その他
-
 
 ### Some tips to avoid overfitting
 
@@ -244,7 +230,6 @@ Stratified KFold
 
 などが提案されています。
 
-
 ### Kaggle on Google Colab
 
 私は今回のコンペにGoogle Colabも使用しました。Google Colabでコンペをやりやすくするために以下を行いました。
@@ -257,7 +242,6 @@ Stratified KFold
 
 Google Colab Pro 早く日本にも来てほしいですね。
 
-
 ### Notebook の構成
 
 - 私は学習用とハイパーパラメータチューニング用を共通化しました。
@@ -267,7 +251,6 @@ Google Colab Pro 早く日本にも来てほしいですね。
 - モデルごとの学習も、基本1つのNotebook内で、行いました。
   後に、[学習用と、推論用を分ける手法](https://www.kaggle.com/underwearfitting/make-final-submission-the-efficient-way)を知りました。
 
-
 ## 結果と感想
 
 結果は、539th でした。コンペの楽しさを感じるとともに、データ分析の難しさも感じました。
@@ -276,6 +259,5 @@ Google Colab Pro 早く日本にも来てほしいですね。
 - データの分割(train, test)などについて、もっと主催者の思いを汲めたら良かったなと思います。特に今回はKFoldの作り方を
   もう少し工夫すべきだったかと感じています。
 - 最終Sub選択の難しさを感じました。今回 Trust your CV で行ったのですが、もう少し Public LB を信用しても良かったかなと思いました。。
-
 
 今回はソロでチャレンジしたのですが、今後、チームでもやってみたいと思います。ありがとうございました。

@@ -4,10 +4,10 @@ slug: hpe-swarm-learning-v2.1
 date: 2023-10-25
 updated:
 tags:
-    - Blockchain
-    - Deep Learning
-    - Federated Learning
-    - HPE Swarm Learning
+  - Blockchain
+  - Deep Learning
+  - Federated Learning
+  - HPE Swarm Learning
 description: "HPE Swarm Learning v2.1 までの追加機能のハイライトです。"
 ---
 
@@ -30,7 +30,6 @@ description: "HPE Swarm Learning v2.1 までの追加機能のハイライトで
 - [参照](#%E5%8F%82%E7%85%A7)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 ## 管理 GUI ツール SLM-UI
 
@@ -98,7 +97,6 @@ Swarm Learning はリリース当初、Blockchain のネットワークを形成
 それが、改善され、Docker の volume を SNノードにマウントすることで、
 SNノードがすべてダウンしたとしても、Blockchainに記録されたデータを維持できるようになりました。
 
-
 ## Reverse Proxy アーキテクチャ
 
 Swarm Learning はコンポーネント間の通信のためにポートを開放する必要がありますが、
@@ -122,12 +120,10 @@ Swarm Learningはライセンス管理に APLS (AutoPass License Server)を使�
 それが、APLSがコンテナで提供されることとなり、Swarm Learningを動かせる環境があれば、
 その環境で、APLSも動かせるようになりました。
 
-
 ## まとめ
 
 最近の Swarm Learning 目玉機能をご紹介しました。
 Swarm Learning は引き続きアクティブな開発が続いていますので、今後のアップデートも乞うご期待です！
-
 
 今後も Swarm Learning の記事はこちら(に追加されていく予定)です。
 

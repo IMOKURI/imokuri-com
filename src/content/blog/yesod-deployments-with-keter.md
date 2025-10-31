@@ -4,8 +4,8 @@ slug: yesod-deployments-with-keter
 date: 2015-09-25
 updated:
 tags:
-    - Haskell
-    - Nginx
+  - Haskell
+  - Nginx
 description: "KeterとNginxを使って、Yesodをdaemonとして起動してみたので、まとめです。"
 ---
 
@@ -13,25 +13,23 @@ KeterとNginxを使って、Yesodをdaemonとして起動してみたので、�
 
 結果として、
 
-* Yesodはsandboxにインストールする。
-* 本番環境には、バイナリのみ配置する。(今回は便宜上同じ環境です・・)
+- Yesodはsandboxにインストールする。
+- 本番環境には、バイナリのみ配置する。(今回は便宜上同じ環境です・・)
 
 な感じで動作できそうな感じになりました。
 
 ただ、cabal hellが怖くない(？)本番環境などでは、sandboxが消えちゃった時のことを考えると(そんなこと考えるのはおかしいかもですが、、)globalな環境にインストールしちゃっても良いのかもしれません。
 
-
 <!--more-->
 
 今回の環境は、以下のとおりです。
 
-* Fedora 22
-* Haskell-Platform 2014.2
-* GHC 7.8.4
-* Nginx 1.8.0
+- Fedora 22
+- Haskell-Platform 2014.2
+- GHC 7.8.4
+- Nginx 1.8.0
 
 stackはまだ勉強中なので、、cabalを使っています。。
-
 
 ## Yesodをインストールする
 
@@ -48,7 +46,6 @@ $ cabal update
 $ cabal install yesod-bin keter
 ```
 
-
 インストールすると、 `./cabal-sandbox/bin` 配下にyesodなどのコマンドができています。  
 やり方としては、スマートではないかもしれませんが、このコマンドを(楽に)使いたいので、パスを通しておきます。
 
@@ -56,7 +53,6 @@ $ cabal install yesod-bin keter
 $ export PATH="＜ほげほげ＞/yesod/.cabal-sandbox/bin:$PATH"
 $ yesod init
 ```
-
 
 Yesodのプロジェクトのディレクトリに移動して、またもsandboxでインストールです。  
 ここはcabalファイルに、細かくバージョンの制限があったので、LTS Haskellはなしでやっちゃいました。
@@ -66,7 +62,6 @@ $ cd <プロジェクトのディレクトリ>
 $ cabal sandbox init
 $ cabal install --only-dependencies
 ```
-
 
 ## Keter用にYesodのプログラムを準備する
 
@@ -82,7 +77,6 @@ stanzas:
       - www.<かっこいいドメイン>.com    ## プロジェクトのドメインに変更
 ```
 
-
 設定ファイルを更新したら、本番環境に持っていくバイナリファイルを作ります。  
 バイナリファイルの実体は、Yesodのプログラムや設定ファイルをgzipで固めたものです。  
 出来上がった `＜プロジェクト名＞.keter` が持っていくバイナリになります。
@@ -90,7 +84,6 @@ stanzas:
 ```
 $ yesod keter
 ```
-
 
 ## Keterの起動準備
 
@@ -119,7 +112,6 @@ nginx:
     - nginx.service
 ```
 
-
 つづいて、Keterのsystemd用のファイル(/usr/lib/systemd/system/keter.service)を準備します。
 
 ```
@@ -134,7 +126,6 @@ ExecStart=/＜Keterをインストールしたディレクトリ＞/keter /＜Ke
 WantedBy=multi-user.target
 ```
 
-
 最後にnginxのProxyの設定(/etc/nginx/nginx.conf)を変更します。
 
 ```
@@ -148,7 +139,6 @@ http {
 }
 ```
 
-
 ## Keter起動！
 
 起動します。
@@ -157,9 +147,7 @@ http {
 # systemctl start keter.service
 ```
 
-
 うまく行っていれば、設定したドメインでアクセスできるかと思います。
-
 
 OS起動時に自動で起動するようにするのは、こちらです。
 
@@ -167,10 +155,7 @@ OS起動時に自動で起動するようにするのは、こちらです。
 # systemctl enable keter.service
 ```
 
-
 ### 参考
 
 [Yesod Deployments with Keter](https://pbrisbin.com/posts/yesod_deployments_with_keter/)  
 [Deploying your Webapp](http://www.yesodweb.com/book/deploying-your-webapp)
-
-

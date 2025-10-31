@@ -4,7 +4,7 @@ slug: line-number-interval-nvim
 date: 2021-12-29
 updated:
 tags:
-    - Neovim
+  - Neovim
 description: "カーソルライン付近の行番号をハイライトできたりします。"
 ---
 

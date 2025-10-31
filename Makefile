@@ -24,6 +24,10 @@ upgrade-sass: ## upgrade-sass
 dev: ## dev
 	yarn dev
 
+.PHONY: format
+format: ## format
+	yarn exec prettier . --write
+
 .PHONY: help
 help: ## Show this help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / \

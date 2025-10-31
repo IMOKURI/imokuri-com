@@ -4,7 +4,7 @@ slug: new-domain-imokuri-com
 date: 2023-02-14
 updated:
 tags:
-    - Poem
+  - Poem
 cover_image: /blog/new-imokuri-blog.png
 description: "ドメインが imokuri.com になりました。"
 ---
@@ -42,11 +42,11 @@ imokuri123.com というのを長年使っていました。
 これまでの Blog 経歴は、以下を経て、現在 4代目です。
 
 - [WordPress](https://ja.wordpress.org/) 2012.11-
-    - WordPress ってなんじゃろな、と思って始めたBlog
+  - WordPress ってなんじゃろな、と思って始めたBlog
 - [Hakyll](https://jaspervdj.be/hakyll/) 2015.4-
-    - Haskell になぜかハマっていたあの頃
+  - Haskell になぜかハマっていたあの頃
 - [Gridsome](https://gridsome.org/) 2019.12-
-    - Blog やるなら、やっぱフロントエンドやろと
+  - Blog やるなら、やっぱフロントエンドやろと
 
 だいたい、3,4年おきくらいに、やっているみたいですね。
 

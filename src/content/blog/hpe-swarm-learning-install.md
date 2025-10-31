@@ -4,10 +4,10 @@ slug: hpe-swarm-learning-install
 date: 2022-06-14
 updated: 2023-10-25
 tags:
-    - Blockchain
-    - Deep Learning
-    - Federated Learning
-    - HPE Swarm Learning
+  - Blockchain
+  - Deep Learning
+  - Federated Learning
+  - HPE Swarm Learning
 description: "HPE Swarm Learning のインストール方法のご紹介です。"
 ---
 
@@ -27,7 +27,6 @@ HPE Japanのメンバーへのコンタクトを希望する旨、ご連絡い�
 
 この記事に登場する略語(SN や APLS など)の説明は[前回](../hpe-swarm-learning-intro/)の記事をご参照ください。
 
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -45,7 +44,6 @@ HPE Japanのメンバーへのコンタクトを希望する旨、ご連絡い�
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Swarm Learning のライセンス
 
 Swarm Learning のコミュニティ版ライセンスでは、各コンポーネント 5ノードまで起動することができます。
@@ -55,7 +53,6 @@ Swarm Learning のコミュニティ版ライセンスでは、各コンポー�
 
 Swarm Learning のコンポーネントは基本的に、
 コンポーネント起動時にライセンスを確保し、停止時にライセンスを解放します。
-
 
 ## AutoPass License Server セットアップ
 
@@ -82,7 +79,6 @@ Swarm Learningのライセンスを登録します。
 7. `ダウンロード`をクリックします。
 
 ![MY HPE SOFTWARE CENTER - 4](/blog/20220615161157.png)
-
 
 ### APLS インストール
 
@@ -138,7 +134,6 @@ APLSは2台で、Active - Standby の冗長構成を組むこともできます�
 
 Swarm Learning のライセンス発行の際に必要となります。
 
-
 ### Swarm Learning ライセンスダウンロード
 
 1. [MY HPE SOFTWARE CENTER](https://myenterpriselicense.hpe.com/cwp-ui/auth/login) にアクセスします。
@@ -171,7 +166,6 @@ Swarm Learning のライセンス発行の際に必要となります。
 
 ![MY HPE SOFTWARE CENTER - 9](/blog/20220615164815.png)
 
-
 ### Swarm Learning ライセンス登録
 
 1. APLSにブラウザでアクセスし、`Install License` の画面を開きます。
@@ -187,20 +181,18 @@ Swarm Learning のライセンス発行の際に必要となります。
 
 ![Swarm Learning License - 3](/blog/20220615165421.png)
 
-
 ## Swarm Learning セットアップ
 
 Swarm Learning を各システムにセットアップします。
-
 
 ### Swarm Learning インストール
 
 1. ダウンロードした 以下のファイルをSwarm Learningの1システムにアップロードします。
 
-* `HPE_SWARM_LEARNING_DOCKER_HASH_DIGEST_Q2V41-11035.json`
-* `HPE_SWARM_LEARNING_DOCS_EXAMPLES_SCRIPTS_Q2V41-11033.tar.gz`
-* `HPE_SWARM_LEARNING_DOCS_EXAMPLES_SCRIPTS_Q2V41-11034.tar.gz.sig`
-* `HPE_SWARM_LEARNING_INSTALLER_LINUX_Q2V41-11036`
+- `HPE_SWARM_LEARNING_DOCKER_HASH_DIGEST_Q2V41-11035.json`
+- `HPE_SWARM_LEARNING_DOCS_EXAMPLES_SCRIPTS_Q2V41-11033.tar.gz`
+- `HPE_SWARM_LEARNING_DOCS_EXAMPLES_SCRIPTS_Q2V41-11034.tar.gz.sig`
+- `HPE_SWARM_LEARNING_INSTALLER_LINUX_Q2V41-11036`
 
 2. 以下のコマンドでインストーラーを起動します。
 
@@ -251,7 +243,6 @@ http://localhost:30302
 
 12. ターミナルで起動したインストーラーは `Ctrl-C` で終了します。
 
-
 ### Swarm Learning ライブラリダウンロード
 
 1. Swarm Learningの各システムのOSにログインし、Swarm Learning のパッケージをダウンロードします。
@@ -289,14 +280,12 @@ pwd
 
 各ディレクトリに含まれているファイルは以下のとおりです。
 
-* `lib`: Swarm Learning のライブラリです。このライブラリには、TensorflowやPyTorchのCallbackなどが入っています。
-* `scripts/bin`: Swarm Learning の各コンポーネントの起動スクリプトが入っています。
-* `examples`: Swarm Learning を使用した学習のチュートリアル用の設定ファイルやプログラムが入っています。
-* `docs`: Swarm Learning の各種マニュアルが入っています。
-
+- `lib`: Swarm Learning のライブラリです。このライブラリには、TensorflowやPyTorchのCallbackなどが入っています。
+- `scripts/bin`: Swarm Learning の各コンポーネントの起動スクリプトが入っています。
+- `examples`: Swarm Learning を使用した学習のチュートリアル用の設定ファイルやプログラムが入っています。
+- `docs`: Swarm Learning の各種マニュアルが入っています。
 
 以上で、Swarm Learning のセットアップが完了です。お疲れ様でした。
-
 
 ## 次回へ
 

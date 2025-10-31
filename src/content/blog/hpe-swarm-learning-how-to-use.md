@@ -4,10 +4,10 @@ slug: hpe-swarm-learning-how-to-use
 date: 2022-06-15
 updated: 2023-10-25
 tags:
-    - Blockchain
-    - Deep Learning
-    - Federated Learning
-    - HPE Swarm Learning
+  - Blockchain
+  - Deep Learning
+  - Federated Learning
+  - HPE Swarm Learning
 description: "HPE Swarm Learning の使い方です。"
 ---
 
@@ -55,7 +55,6 @@ HPE Japanのメンバーへのコンタクトを希望する旨、ご連絡い�
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## チュートリアル Keras MNIST
 
 このチュートリアルでは、MNIST をSwarm Learningで実行します。Deep LearningのライブラリとしてKerasを使用します。
@@ -97,11 +96,13 @@ cp -r examples/utils/gen-cert workspace/mnist/
 > 本番環境導入にあたっては、正規の情報に基づくTLS証明書を作成するのが良いと思われます。
 
 - host-1
+
 ```
 ./workspace/mnist/gen-cert -e mnist -i 1
 ```
 
 - host-2
+
 ```
 ./workspace/mnist/gen-cert -e mnist -i 2
 ```
@@ -109,12 +110,14 @@ cp -r examples/utils/gen-cert workspace/mnist/
 4. 作成したCA証明書を相互に交換します。
 
 - host-1
+
 ```
 scp <host-2>:<PATH>workspace/mnist/cert/ca/capath/ca-2-cert.pem \
 workspace/mnist/cert/ca/capath
 ```
 
 - host-2
+
 ```
 scp <host-1>:<PATH>workspace/mnist/cert/ca/capath/ca-1-cert.pem \
 workspace/mnist/cert/ca/capath
@@ -123,11 +126,13 @@ workspace/mnist/cert/ca/capath
 5. Swarm Learning のコンポーネントが使用するDockerネットワークを作成します。
 
 - host-1
+
 ```
 docker network create host-1-net
 ```
 
 - host-2
+
 ```
 docker network create host-2-net
 ```
@@ -144,7 +149,6 @@ docker cp -L lib/swarmlearning-client-py3-none-manylinux_2_24_x86_64.whl helper:
 docker rm helper
 ```
 
-
 ### SWOP Profile 設定
 
 SWOPのProfileを確認・設定します。SWOPはProfileの内容に沿って、タスクの実行やSLの起動などを行います。
@@ -154,36 +158,35 @@ SWOPのProfileを確認・設定します。SWOPはProfileの内容に沿って�
 
 SWOPのProfileにて、以下の点を更新します。
 
-* `<CURRENT-PATH>` をカレントディレクトリ(フルパス)に置換します。
-* APLS(`apls`)、SN(`apisrv`)、SL(`slhostip`) のIPアドレスが異なる場合は、更新します。
-* インターネット接続にあたりProxy設定が必要な場合は、 `envvars` に設定します。
+- `<CURRENT-PATH>` をカレントディレクトリ(フルパス)に置換します。
+- APLS(`apls`)、SN(`apisrv`)、SL(`slhostip`) のIPアドレスが異なる場合は、更新します。
+- インターネット接続にあたりProxy設定が必要な場合は、 `envvars` に設定します。
 
 主要な設定項目は以下となります。
 
-* `slnodedef` でSWOPが起動するSLの設定をします。起動したいSLの数だけ、 `slnodedef` を記載する必要があります。
-* `slnodedef.identity` に、SL間の通信で使用するTLS証明書を記載します。
-* `slnodedef.privatedata` に、学習で使用するデータが格納されているディレクトリもしくはボリュームを指定できます。マウント先のディレクトリは後述の `RUN_SWARM` task 内で指定します。（MLにマウントされます）
-* `slnodedef.userenvvars` に、学習で使用する環境変数を指定できます。以下は例です。
+- `slnodedef` でSWOPが起動するSLの設定をします。起動したいSLの数だけ、 `slnodedef` を記載する必要があります。
+- `slnodedef.identity` に、SL間の通信で使用するTLS証明書を記載します。
+- `slnodedef.privatedata` に、学習で使用するデータが格納されているディレクトリもしくはボリュームを指定できます。マウント先のディレクトリは後述の `RUN_SWARM` task 内で指定します。（MLにマウントされます）
+- `slnodedef.userenvvars` に、学習で使用する環境変数を指定できます。以下は例です。
 
-``` yaml
-      usrenvvars:
-        - NODE_WEIGHTAGE: 80
+```yaml
+usrenvvars:
+  - NODE_WEIGHTAGE: 80
 ```
 
-* `slnodedef.usercontaineropts` に、MLの起動オプションを指定できます。MLでGPUを使用する場合、ここにオプションを追加します。以下は例です。
+- `slnodedef.usercontaineropts` に、MLの起動オプションを指定できます。MLでGPUを使用する場合、ここにオプションを追加します。以下は例です。
 
-``` yaml
-      usrcontaineropts:
-        - gpus: "all"
+```yaml
+usrcontaineropts:
+  - gpus: "all"
 ```
 
-``` yaml
-      usrcontaineropts:
-        - gpus: "device=6,7"
+```yaml
+usrcontaineropts:
+  - gpus: "device=6,7"
 ```
 
 その他、SWOP Profileで設定できる項目 (Schema) は、 `docs/SWOP-profile-schema.yaml` に記載されています。
-
 
 ### SWOP Task 設定
 
@@ -206,7 +209,6 @@ Dockerコンテナのビルドを行うタスクの設定です。
 - `BuildContext` に記載したDockerボリュームをベースにコンテナイメージのビルドが行われます。このボリュームは事前にユーザーが手動で作成しておく必要があります。
 - `BuildType: INLINE` はビルドのステップを `BuildSteps` で記載することを意味しています
 
-
 #### 学習実行 Task
 
 ![SWOP Task RUN_SWARM](/blog/20220615212657.png)
@@ -216,7 +218,6 @@ Dockerコンテナのビルドを行うタスクの設定です。
 - `TaskType` は `RUN_SWARM` を指定します。
 - `PrivateContent` は、SWOP Profile で指定した `slnodedef.privatedata` のマウント先ディレクトリを指定します。
 - `SharedContent` は、各システム共通でマウントするディレクトリもしくはボリュームを指定します。学習済みモデルの保存先などを指定することが想定されています。
-
 
 #### Docker イメージプル Task
 
@@ -229,9 +230,8 @@ Docker イメージをプルするTaskです。
 - `RepoName` は Docker イメージを含む レポジトリの名前を指定します。
 - `Tag` はDocker イメージのタグを指定します。
 - `Auth` は プライベートなレジストリにアクセスする際に使用する認証情報を指定します。認証情報には以下の情報を使用できます。
-    * Docker の `config.json` のファイルパス
-    * レジストリへのログインユーザー名とパスワード
-
+  - Docker の `config.json` のファイルパス
+  - レジストリへのログインユーザー名とパスワード
 
 #### ファイルダウンロード Task
 
@@ -242,17 +242,15 @@ Dockerイメージのビルドや、学習に使用することを想定して�
 
 - `TaskType` は `MAKE_SWARM_USER_CONTENT` を指定します。
 - `ContentType` は `BUILDCONTENT` もしくは `SWARMCONTENT` を指定します。それぞれ以下のような動作となります。
-    * `BUILDCONTENT` は、Dockerのビルドを想定した `ContentType` で、各SWOPにつき1つ、Volume が作成されます。
-    * `SWARMCONTENT` は、学習に使用することを想定した `ContentType` で、各SLにつき1つ、Volume が作成されます。
+  - `BUILDCONTENT` は、Dockerのビルドを想定した `ContentType` で、各SWOPにつき1つ、Volume が作成されます。
+  - `SWARMCONTENT` は、学習に使用することを想定した `ContentType` で、各SLにつき1つ、Volume が作成されます。
 - `Outcome` に指定した名称の Volume が作成されます。 `ContentType` が `SWARMCONTENT` の場合は、末尾に、連番が追加で付与されます。
 - `OpsList` には、ダウンロード（解凍する）データの情報を記載します。
 - `Operation` は `DOWNLOAD` もしくは、 `EXTRACT` を指定します。それぞれ以下のような動作となります。
-    * `DOWNLOAD` はファイルをダウンロードするTaskです。
-    * `EXTRACT` はダウンロード済みのファイル（ tar アーカイブ）を解凍する Task です。
+  - `DOWNLOAD` はファイルをダウンロードするTaskです。
+  - `EXTRACT` はダウンロード済みのファイル（ tar アーカイブ）を解凍する Task です。
 - `Target` は、ダウンロード（解凍）する元となるファイルのURLもしくは、ファイルパスです。
 - `Options.Out` は、ファイルの出力先の（Docker Volume内の）ファイルパスです。
-
-
 
 ### SWCI 実行処理設定
 
@@ -288,11 +286,10 @@ SWCI コントラクトは、一度永続化されると、更新・削除する
 - `FINALIZE TASK`: タスクをブロックチェーン上で永続化します。永続化されたタスクは変更・削除できません。
 - `RESET TASKRUNNER`: タスクランナーの状態がリセットされ、初期化前の状態に戻ります。
 - `ASSIGN TASK`: タスクが指定されたタスクランナーに割り当てられ、実行されます。その際、期待する ピア の数を指定します。指定すべきピアの数はタスクの種類によって、以下の通りとなります。
-    * `RUN_SWARM` タスクの場合、起動するSLの数。
-    * その他のタスクの場合、起動するSWOP の数。
+  - `RUN_SWARM` タスクの場合、起動するSLの数。
+  - その他のタスクの場合、起動するSWOP の数。
 - `WAIT FOR TASKRUNNER`: 指定されたタスクランナーで実行されているタスクが完了するのを待ちます。
 - `RESET CONTRACT`: コントラクトの状態を初期化されていない状態にリセットします。学習が完了したコントラクトを再利用して、新しい学習を開始したい場合などに使用します。
-
 
 ### SN 起動
 
@@ -342,7 +339,6 @@ SN起動後、ログに以下の内容が出力されれば初期化完了とな
 Starting SWARM-API-SERVER on port: 30304
 ```
 
-
 ### SWOP 起動
 
 タスクの実行を管理するSWOPを起動します。起動時に、各システムそれぞれの状況に応じたSWOP Profileを指定します。
@@ -377,7 +373,6 @@ SWOPは起動に、ほとんど時間を必要としません。ログには、�
 ＜前略＞
 ![Start SWOP](/blog/20220615214130.png)
 
-
 ### SWCI 起動
 
 タスクの実行を指示するSWCIを起動します。これにより、指定されたタスクが順次実行されます。
@@ -398,7 +393,6 @@ SWOPは起動に、ほとんど時間を必要としません。ログには、�
 
 SWCIを実行すると、SWCIのプロンプトに対して、 `swci-init` ファイルの内容が順次実行されていく様子が確認できます。
 
-
 ### Swarm Learning 停止
 
 `swarm-learning/bin/stop-swarm` スクリプトを使用して、ホストシステム上で動作している
@@ -409,13 +403,12 @@ SWCIを実行すると、SWCIのプロンプトに対して、 `swci-init` フ�
 ./scripts/bin/stop-swarm
 ```
 
-* `--all`: SL、SN、SWCI、SWOPのすべてを停止します。 `stop-swarm` で引数が省略された場合もこの動作となります。
-* `--sl`: SL を停止します。
-* `--sn`: SN を停止します。
-* `--swci`: SWCI を停止します。
-* `--swop`: SWOP を停止します。
-* `--keep`: このパラメータを指定すると、停止したコンテナを保持します。デフォルトでは削除されます。
-
+- `--all`: SL、SN、SWCI、SWOPのすべてを停止します。 `stop-swarm` で引数が省略された場合もこの動作となります。
+- `--sl`: SL を停止します。
+- `--sn`: SN を停止します。
+- `--swci`: SWCI を停止します。
+- `--swop`: SWOP を停止します。
+- `--keep`: このパラメータを指定すると、停止したコンテナを保持します。デフォルトでは削除されます。
 
 ## Swarm Learning ライブラリ
 
@@ -423,7 +416,6 @@ SWCIを実行すると、SWCIのプロンプトに対して、 `swci-init` フ�
 
 Swarm Learning ライブラリには、`SwarmCallback` というカスタムコールバッククラスが実装されています。
 `SwarmCallback`は、同期間隔ごとに各SLとモデルパラメータを共有する操作を実行します。
-
 
 ### Tensorflow (Keras)
 
@@ -456,9 +448,9 @@ swarmCallback = SwarmCallback(
 - `adsValData`: `useAdaptiveSync` の調整に使用するデータを指定します。
 - `adsValBatchSize`: `adsValData` を評価する際のバッチサイズを指定します。
 - `checkinModelOnTrainEnd`: 学習が終了した時点でローカルに存在する最後のモデルの重みをマージするかどうかを指定します。
-    * `inactive`: ノードはマージ処理に重みを提供しませんが、マージ処理に非貢献ピアとして(`minPeers`を満たすために)参加します。
-    * `snapshot`:ノードは学習終了時点の重みを提供し、マージされた重みを受け入れません。(デフォルト値)
-    * `active`: ノードは学習終了時点の重みを提供し、マージされた重みを採用します。
+  - `inactive`: ノードはマージ処理に重みを提供しませんが、マージ処理に非貢献ピアとして(`minPeers`を満たすために)参加します。
+  - `snapshot`:ノードは学習終了時点の重みを提供し、マージされた重みを受け入れません。(デフォルト値)
+  - `active`: ノードは学習終了時点の重みを提供し、マージされた重みを採用します。
 - `nodeWeightage`: マージ処理において、このノードの相対的な重要度を示す1～100の数値です。デフォルト値は、すべてのノードが等しく、同じ重み付け1となっています。
 
 Keras学習コード内のコールバックのリストに`SwarmCallback`のインスタンスを渡します。クラスメソッドは自動的に呼び出されます。
@@ -466,7 +458,6 @@ Keras学習コード内のコールバックのリストに`SwarmCallback`のイ
 ```python
 model.fit(..., callbacks = [swarmCallback])
 ```
-
 
 ### PyTorch
 
@@ -499,32 +490,34 @@ swarmCallback = SwarmCallback(
 PyTorchの場合、クラスメソッドを学習の中で適宜、呼び出す必要があります。
 
 - モデルの学習を開始する前に `on_train_begin()` を呼び出す。
+
 ```python
 swarmCallback.on_train_begin()
 ```
 
 - 各バッチ学習終了後、 `on_batch_end()` を呼び出す。
+
 ```python
 swarmCallback.on_batch_end()
 ```
 
 - 各エポック学習終了後に `on_epoch_end()` を呼び出す。
+
 ```python
 swarmCallback.on_epoch_end(epoch)
 ```
 
 - モデル学習終了後、 `on_train_end()` を呼び出す。
+
 ```python
 swarmCallback.on_train_end()
 ```
-
 
 ## まとめ
 
 以上で Swarm Learning 使ってみた、の記事完結です。
 
 その他の、Swarm Learning についての情報は、また別途、記事にしていけたらと思います。
-
 
 その他の Swarm Learning の記事はこちら(に追加されていく予定)です。
 

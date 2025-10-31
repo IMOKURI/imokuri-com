@@ -4,8 +4,8 @@ slug: kubernetes-ansible-operator-tips
 date: 2019-12-06
 updated: 2019-12-13
 tags:
-    - Ansible
-    - Kubernetes
+  - Ansible
+  - Kubernetes
 description: ""
 ---
 
@@ -70,8 +70,7 @@ index 872bf2f..cfee326 100644
 2. OperatorでJobを作成(完了したら削除)する。
 3. Operatorで(kubernetesのobjectを使わない)ansibleのplaybookを書く
 
-定期的なタスクと言っても、時には実行してほしくないことや、ある程度条件を整えてから実行したいなど、よくあるかなと思います。
-1.のCronJobを使うケースではそういった場合の処理もすべてCronJobの中で扱えるようにしておく必要があり、マイクロサービス的な考えからするとあまり感触がよくなさそうな感じがします。
+定期的なタスクと言っても、時には実行してほしくないことや、ある程度条件を整えてから実行したいなど、よくあるかなと思います。1.のCronJobを使うケースではそういった場合の処理もすべてCronJobの中で扱えるようにしておく必要があり、マイクロサービス的な考えからするとあまり感触がよくなさそうな感じがします。
 
 2.の場合は、Jobのデプロイ前後などで、operator側で状態の確認などの処理をしておくことができます。(この処理はansibleで書けます)
 
@@ -165,16 +164,16 @@ Events:  <none>
 Status:
   Conditions:
     Ansible Result:
-      Changed:             0
-      Completion:          2019-12-03T12:54:32.87886
-      Failures:            0
-      Ok:                  3
-      Skipped:             0
-    Last Transition Time:  2019-12-03T12:53:48Z
-    Message:               Awaiting next reconciliation
-    Reason:                Successful
-    Status:                True
-    Type:                  Running
+      Changed: 0
+      Completion: 2019-12-03T12:54:32.87886
+      Failures: 0
+      Ok: 3
+      Skipped: 0
+    Last Transition Time: 2019-12-03T12:53:48Z
+    Message: Awaiting next reconciliation
+    Reason: Successful
+    Status: True
+    Type: Running
 ```
 
 `k8s_status`モジュールでこの`Conditions`配下を変更することも可能ですが、いくつか条件があります。
@@ -227,7 +226,7 @@ metadata:
   namespace: "{{ meta.namespace }}"
 spec:
   # ↓ ダブルクォートで囲まないこと
-  replicas: {{ size | int }}
+  replicas: { { size | int } }
   selector:
     matchLabels:
       app: imo

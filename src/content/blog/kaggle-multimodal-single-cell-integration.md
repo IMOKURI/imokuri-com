@@ -4,10 +4,10 @@ slug: kaggle-multimodal-single-cell-integration
 date: 2022-11-16
 updated: 2022-11-24
 tags:
-    - Compete
-    - Kaggle
-    - Machine Learning
-    - Deep Learning
+  - Compete
+  - Kaggle
+  - Machine Learning
+  - Deep Learning
 cover_image: /blog/195366837-9048d24c-86ca-42d6-99a8-414a019a5048.png
 description: "Multimodal Single-Cell Integration コンペの振り返りです。"
 ---
@@ -32,7 +32,8 @@ Citeseq は 99% 分類が可能な状況で、この特徴量で学習をする�
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [✨ Result](#-result)
 - [🖼️ Solution](#-solution)
@@ -49,35 +50,29 @@ Citeseq は 99% 分類が可能な状況で、この特徴量で学習をする�
 
 ---
 
-
 ## ✨ Result
 
 - Private: 0.769808
 - Public: 0.813093
 
-
-
 ## 🖼️ Solution
-
 
 ### 🌱 Preprocess
 
 - Citeseq
-    - 元データ を PCA で 100次元に削減しました。
-    - 一方で、重要カラムのデータを温存しました。
-    - [ivis](https://bering-ivis.readthedocs.io/en/latest/index.html) の教師なし学習で 100次元の特徴量を生成しました。
-    - 合わせて、ミトコンドリアのRNA細胞ごとの和を特徴量に追加しました。
-    - Metadata の Cell type を特徴量に追加しました。
+  - 元データ を PCA で 100次元に削減しました。
+  - 一方で、重要カラムのデータを温存しました。
+  - [ivis](https://bering-ivis.readthedocs.io/en/latest/index.html) の教師なし学習で 100次元の特徴量を生成しました。
+  - 合わせて、ミトコンドリアのRNA細胞ごとの和を特徴量に追加しました。
+  - Metadata の Cell type を特徴量に追加しました。
 - Multiome
-    - 列名の接頭文字が同じグループごとに PCA で およそ 各 100 次元に削減しました。
-    - さらに ivis の教師なし学習で 100 次元の特徴量を生成しました。
-
+  - 列名の接頭文字が同じグループごとに PCA で およそ 各 100 次元に削減しました。
+  - さらに ivis の教師なし学習で 100 次元の特徴量を生成しました。
 
 ### 🤸 Pre Training
 
 - Adversarial training (学習データとテストデータを分類するタスク) を行い、誤判定された学習データを good validation データとします。
 - Multiome の Cell type の予測を行い、特徴量に追加しました。
-
 
 ### 🏃 Training
 
@@ -85,17 +80,16 @@ Citeseq は 99% 分類が可能な状況で、この特徴量で学習をする�
 - Loss 関数に Pearson 相関係数 を使用しました。 XGBoost は後述の方法で実装しました。
 - TabNet は Pre-training も行いました。 (このコンペでは、Pre-training を行ったほうが精度が良かったです)
 
-
 ### 🎨 Base Models
 
 - Citeseq
-    - TabNet
-    - Simple MLP
-    - ResNet
-    - 1D CNN
-    - XGBoost
+  - TabNet
+  - Simple MLP
+  - ResNet
+  - 1D CNN
+  - XGBoost
 - Multiome
-    - 1D CNN
+  - 1D CNN
 
 Citeseq はさまざまなモデルのアンサンブルでスコアがのびました。
 一方、 Multiome は 1D CNN が強く、他のモデルをアンサンブルしてもスコアが伸びず、1D CNN のみ使用しました。
@@ -106,16 +100,14 @@ Citeseq はさまざまなモデルのアンサンブルでスコアがのびま
 - Optuna でアンサンブルの重みを最適化しました。評価指標には good validation データを使用しました。
 - Public Notebook x2 と チームメイト の サブミッション ともアンサンブルしました。
 
-
 ## 💡 Tips
-
 
 ### Pearson Loss for XGBoost
 
 XGBoost は Pearson Loss Function が提供されていないので、以下のように実装しました。
 ただし、この実装は学習が遅く、もう少し、改善をしたい印象を持っています。。
 
-``` python
+```python
 from functools import partial
 from typing import Any, Callable
 
@@ -173,8 +165,6 @@ xgb_params = dict(
 clf = xgb.XGBRegressor(**xgb_params)
 ```
 
-
 ## 🏷️ Links
 
 - [My Solution](https://github.com/IMOKURI/kaggle-multimodal-single-cell-integration)
-

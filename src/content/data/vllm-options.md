@@ -15,7 +15,6 @@ vLLMのマニュアルは[こちら](https://docs.vllm.ai/en/stable/cli/serve.ht
 
 私はMakefileをタスクランナーとして使用しているため、以下の例ではMakefileの形式で記載していますが、ご了承ください。
 
-
 ## 基本的なオプション
 
 私はvLLMをdockerで起動しており、以下のコマンドがベースになります。
@@ -40,13 +39,11 @@ up-vllm: ## Start vllm.
 		--host 0.0.0.0 --port 8000
 ```
 
-
 ## Distribution
 
 ```make
 		--tensor-parallel-size 2 \
 ```
-
 
 ## Quantization
 
@@ -62,16 +59,13 @@ up-vllm: ## Start vllm.
 		--max-num-seqs 64 \
 ```
 
-
 ## Performance Tuning
 
 ```make
 		--async-scheduling \
 ```
 
-
 ## Function Calling
-
 
 ```make
 		--enable-auto-tool-choice \
@@ -79,14 +73,12 @@ up-vllm: ## Start vllm.
 		--chat-template <path to chat template file> \
 ```
 
-
 ## Multimodal
 
 ```make
 		--trust-remote-code \
 		--limit-mm-per-prompt.audio 3 \
 ```
-
 
 ## LoRA
 
@@ -97,14 +89,12 @@ up-vllm: ## Start vllm.
 		--lora-modules <path to lora module> \
 ```
 
-
 ## Offline Mode
 
 ```make
 		-e HF_HUB_OFFLINE=1 \
 		-e TRANSFORMERS_OFFLINE=1 \
 ```
-
 
 ## Developer Mode
 

@@ -1,58 +1,42 @@
 ---
-const {
-    title,
-    description,
-    image,
-    compe_url = null,
-    solution_url = null,
-    github_url = null,
-} = Astro.props;
+const { title, description, image, compe_url = null, solution_url = null, github_url = null } = Astro.props
 ---
 
 <div class="card card-border w-full bg-base-200 shadow-lg">
-    <figure>
-        <img src={image} alt={title} />
-    </figure>
-    <div class="card-body">
-        <h2 class="card-title">{title}</h2>
-        <p>{description}</p>
-        <div class="card-actions justify-end">
-            {
-                compe_url && (
-                    <a href={compe_url}>
-                        <button
-                            class="btn btn-primary"
-                            aria-label=`${title} - Competition`
-                        >
-                            Competition
-                        </button>
-                    </a>
-                )
-            }
-            {
-                solution_url && (
-                    <a href={solution_url}>
-                        <button
-                            class="btn btn-primary"
-                            aria-label=`${title} - Solution`
-                        >
-                            Solution
-                        </button>
-                    </a>
-                )
-            }
-            {
-                github_url && (
-                    <a href={github_url}>
-                        <button
-                            class="btn btn-primary"
-                            aria-label=`${title} - GitHub`
-                        >
-                            <i class="fa-brands fa-github text-lg"></i>
-                        </button>
-                    </a>
-                )
-            }
-        </div>
+  <figure>
+    <img src={image} alt={title} />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
+    <p>{description}</p>
+    <div class="card-actions justify-end">
+      {
+        compe_url && (
+          <a href={compe_url}>
+            <button class="btn btn-primary" aria-label={`${title} - Competition`}>
+              Competition
+            </button>
+          </a>
+        )
+      }
+      {
+        solution_url && (
+          <a href={solution_url}>
+            <button class="btn btn-primary" aria-label={`${title} - Solution`}>
+              Solution
+            </button>
+          </a>
+        )
+      }
+      {
+        github_url && (
+          <a href={github_url}>
+            <button class="btn btn-primary" aria-label={`${title} - GitHub`}>
+              <i class="fa-brands fa-github text-lg" />
+            </button>
+          </a>
+        )
+      }
     </div>
+  </div>
 </div>

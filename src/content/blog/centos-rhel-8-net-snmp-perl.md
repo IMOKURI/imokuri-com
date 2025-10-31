@@ -4,10 +4,10 @@ slug: centos-rhel-8-net-snmp-perl
 date: 2020-07-04
 updated: 2021-12-06
 tags:
-    - Linux
-    - Zabbix
-    - SNMP
-    - SNMPTT
+  - Linux
+  - Zabbix
+  - SNMP
+  - SNMPTT
 description: "CentOS/RHEL 8 で net-snmp-perl をビルドする方法です"
 ---
 
@@ -50,7 +50,6 @@ SNMPTTを `net_snmp_perl_enable` で利用することができます。
 - `net-snmp-libs-5.8-14.el8.x86_64.rpm`
 - `net-snmp-perl-5.8-14.el8.x86_64.rpm`
 - `net-snmp-utils-5.8-14.el8.x86_64.rpm`
-
 
 ---
 

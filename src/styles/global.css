@@ -11,20 +11,20 @@
 @import "rehype-callouts/theme/github";
 
 [data-callout="note"] {
-    --rc-color-light: var(--color-info);
-    --rc-color-dark: var(--color-info-content);
+  --rc-color-light: var(--color-info);
+  --rc-color-dark: var(--color-info-content);
 }
 [data-callout="tip"] {
-    --rc-color-light: var(--color-success);
-    --rc-color-dark: var(--color-success-content);
+  --rc-color-light: var(--color-success);
+  --rc-color-dark: var(--color-success-content);
 }
 [data-callout="warning"] {
-    --rc-color-light: var(--color-warning);
-    --rc-color-dark: var(--color-warning-content);
+  --rc-color-light: var(--color-warning);
+  --rc-color-dark: var(--color-warning-content);
 }
 [data-callout="caution"] {
-    --rc-color-light: var(--color-error);
-    --rc-color-dark: var(--color-error-content);
+  --rc-color-light: var(--color-error);
+  --rc-color-dark: var(--color-error-content);
 }
 
 @theme {

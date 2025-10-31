@@ -4,10 +4,10 @@ slug: hpe-swarm-learning-intro
 date: 2022-06-13
 updated:
 tags:
-    - Blockchain
-    - Deep Learning
-    - Federated Learning
-    - HPE Swarm Learning
+  - Blockchain
+  - Deep Learning
+  - Federated Learning
+  - HPE Swarm Learning
 description: "HPE Swarm Learning の概要についてご紹介します。"
 ---
 
@@ -17,7 +17,6 @@ description: "HPE Swarm Learning の概要についてご紹介します。"
 使い方が、少々ややこしいので、私がやってみた、をご紹介したいと思います。
 
 その前に、 Swarm Learning はどんなソフトウェアで、何が嬉しいのか、を簡単にご紹介します。
-
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -29,7 +28,6 @@ description: "HPE Swarm Learning の概要についてご紹介します。"
 - [参照](#%E5%8F%82%E7%85%A7)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 ## Swarm Learning とは
 
@@ -56,14 +54,12 @@ Swarm Learning は 連合学習 (Federated Learning) の一種です。
 
 このような懸念をなくし、プライバシーに配慮しつつ、分散されたデータでの学習を可能にしたのが Swarm Learning です。
 
-
 Swarm Learning ではエッジ間を、ブロックチェーン を使ったP2Pで接続し、リーダーを持ちません。
 
 学習結果のマージのたびに、一時的なリーダーが選出され、モデルのマージが行われます。
 (そのため、あるエッジの学習結果が、1箇所に集まり続けることがありません。)
 
 これにより、連合学習のメリットを享受しつつ、デメリットを排除することができました。
-
 
 ## Swarm Learning のアーキテクチャ
 
@@ -84,7 +80,6 @@ Swarm Learning には以下のコンポーネントがあります。
 
 ![Swarm Learning Architecture 2](/blog/20220615150111.png)
 
-
 ## Swarm Learning の通信
 
 Swarm Learning は各コンポーネント間での通信に使用するポートがあります。
@@ -97,7 +92,6 @@ Swarm Learning を起動するシステムでは、これらのポートが開�
 5. (オプション) SWCI がRESTベースのAPIサーバーを実行するために使用するポート。デフォルト設定では 30306 が使用されます。
 
 ![Swarm Learning Component Interactions](/blog/20220615151014.png)
-
 
 ## 次回へ
 

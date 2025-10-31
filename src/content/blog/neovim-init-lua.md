@@ -4,7 +4,7 @@ slug: neovim-init-lua
 date: 2020-12-07
 updated: 2021-09-20
 tags:
-    - Neovim
+  - Neovim
 description: "Neovim で init.lua をユーザーコンフィグとして使えるようになりました。"
 ---
 

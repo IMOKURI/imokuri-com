@@ -4,8 +4,8 @@ slug: github-copilot-with-http-proxy-on-neovim
 date: 2023-05-15
 updated:
 tags:
-    - GitHub
-    - Neovim
+  - GitHub
+  - Neovim
 description: "課金したぞ。"
 ---
 
@@ -16,7 +16,7 @@ GitHub Copilot を Neovim で HTTP Proxy 環境下でセットアップしまし
 オフィシャルのプラグインが [こちら](https://github.com/github/copilot.vim) です。
 ので、こちらをインストールしつつ、 `http_proxy` を使う場合は、[グローバル変数の設定](https://github.com/github/copilot.vim/blob/1358e8e45ecedc53daf971924a0541ddf6224faf/doc/copilot.txt#L78-L83)が必要です。
 
-``` lua
+```lua
     {
         "github/copilot.vim",
         event = {
@@ -56,5 +56,3 @@ GitHub Copilot を Neovim で HTTP Proxy 環境下でセットアップしまし
 
 が、 Copilot をうまく使うためのプロンプトのコツをまだ知らないので、
 それからかな。
-
-

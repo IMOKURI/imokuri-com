@@ -4,8 +4,8 @@ slug: send-snmptrap-using-haskell
 date: 2014-06-29
 updated:
 tags:
-    - Haskell
-    - SNMP
+  - Haskell
+  - SNMP
 description: "Haskellには、SNMP Trapを送信するライブラリがないですかね。ということで、簡単なものだけ作ってみました。"
 ---
 
@@ -15,17 +15,11 @@ Haskellには、SNMP Trapを送信するライブラリがないですかね。
 
 目指したものとしては、
 
+1. 送信したいSNMP Trapを複数定義した設定ファイルを読み込む
 
+2. SNMP Trapの定義ごとにSNMP Trapのパケットを組み立てる
 
-	
-  1. 送信したいSNMP Trapを複数定義した設定ファイルを読み込む
-
-	
-  2. SNMP Trapの定義ごとにSNMP Trapのパケットを組み立てる
-
-	
-  3. SNMP Trapの定義ごとにスレッドを立てて、SNMP Trapを送信する（指定した間隔で投げ続ける）
-
+3. SNMP Trapの定義ごとにスレッドを立てて、SNMP Trapを送信する（指定した間隔で投げ続ける）
 
 と言った感じです。
 
@@ -39,7 +33,6 @@ Haskellには、SNMP Trapを送信するライブラリがないですかね。
 
 ライブラリは [ConfigFile](https://hackage.haskell.org/package/ConfigFile) を使用していきます。
 
-
 ```haskell
 readConfig :: IO ConfigParser
 readConfig =
@@ -49,7 +42,6 @@ readConfig =
   >>= readfile emptyCP
   >>= return . either (const emptyCP) id
 ```
-
 
 ツールの実行ディレクトリと同じフォルダにある iniファイル を読み込んで、ConfigParserを返します。
 
@@ -188,9 +180,8 @@ SNMP Trapを送信するには、いろいろ決めないと行けないので�
 
 ただ、監視の仕組みを導入するときは、性能などを確認するために、負荷ツールが必要になってくるので、どうやったら、楽になるかなぁと考えつつ、改良してみようかなと思います。
 
-***
+---
 
-追記:  
+追記:
 
 ソースは[こちら](https://github.com/IMOKURI/snmptrapper)にあります。
-

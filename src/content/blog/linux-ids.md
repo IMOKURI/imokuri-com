@@ -4,7 +4,7 @@ slug: linux-ids
 date: 2016-01-18
 updated:
 tags:
-    - Linux
+  - Linux
 description: "LinuxのいろいろなIDについてまとめてみますー。"
 ---
 

@@ -4,7 +4,7 @@ slug: build-servers-by-alpine-linux
 date: 2016-09-08
 updated:
 tags:
-    - Linux
+  - Linux
 description: "デスクトップ上の仮想マシンで、ちょっと検証したいということが、よくありますよね。"
 ---
 
@@ -26,7 +26,6 @@ description: "デスクトップ上の仮想マシンで、ちょっと検証し
 
 Alpine Linuxのインストールについては、[こちら](http://qiita.com/syui/items/7851423ddc132b751fa3)や[こちら](http://blog.stormcat.io/entry/alpine-entry-setup)を参照いただくとして。
 
-
 ## NTP Server (chrony)
 
 NTPサーバはchronyを使います。デスクトップ環境ということで、頻繁に停止起動されることを想定し、時刻同期が断続的でもよく機能するchronyを使います。（参照：[ntpd と chronyd の違い](https://access.redhat.com/documentation/ja-JP/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/ch-Configuring_NTP_Using_the_chrony_Suite.html#sect-differences_between_ntpd_and_chronyd)）
@@ -44,7 +43,6 @@ allow yyy.yyy.yyy.yyy/zz
 ```
 
 xxx.xxx.xxx.xxxには同期先のサーバ、yyy.yyy.yyy.yyy/zzには同期元のサーバ群がいるローカルのネットワークを指定します。
-
 
 ## DNS Server (unbound)
 
@@ -70,7 +68,6 @@ forward-zone:
 
 serverセクションでは、ローカルの環境の名前解決の設定を、それ以外のものについては、forward-zoneに転送するように設定しています。
 
-
 ## LDAP Server (openldap)
 
 ユーザ管理にopenldapを使います。小規模環境なので、バックエンドも何も考えずにbdbを使います。インストールしたパッケージは、openldap, openldap-back-bdb, openldap-clientsです。
@@ -82,7 +79,6 @@ serverセクションでは、ローカルの環境の名前解決の設定を�
 ここまでできたらslapdを起動し、必要な情報をLDIFファイルを作成して、流し込んでいきます。
 
 > LDAPはまた元気なときに詳細をまとめよう。
-
 
 ## Forward Proxy Server (tinyproxy)
 
@@ -102,5 +98,3 @@ Allow 192.168.183.0/24
 これで、何か検証のため、サーバを作るとなっても、ホスト名のドメインどうしよう、、とか迷わずに済みますね。
 
 他に、あれば、助かるものあるかなぁ。メールサーバとかかなぁ。
-
-

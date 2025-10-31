@@ -4,8 +4,8 @@ slug: mib-definition-file-syntax
 date: 2012-11-18
 updated:
 tags:
-    - SNMP
-    - MIB
+  - SNMP
+  - MIB
 description: "MIB定義ファイルのフォーマットについてまとめです。ここでは、SNMPv2をベースにしています。"
 ---
 
@@ -19,21 +19,11 @@ description: "MIB定義ファイルのフォーマットについてまとめで
 
 まず、MIB定義ファイルの中では、
 
-
-
-	
-  * 各行の「--」から行末まではコメント
-
-	
-  * 定義の開始は「<定義するMIBの名前> DEFINITIONS ::= BEGIN」
-
-	
-  * 定義の終わりは「END」
-
-	
-  * 1つのMIB定義ファイルに定義できるMIB(BEGIN～END)は1セット
-複数の場合はファイルを分割
-
+- 各行の「--」から行末まではコメント
+- 定義の開始は「<定義するMIBの名前> DEFINITIONS ::= BEGIN」
+- 定義の終わりは「END」
+- 1つのMIB定義ファイルに定義できるMIB(BEGIN～END)は1セット
+  複数の場合はファイルを分割
 
 次にIPV6-MIBでは、IMPORTS句(～セミコロン(;)まで)があり、いくつかの外部宣言された定義(カンマ区切り)とそれらがどのMIB定義ファイルに定義されているか(FROM SNMPv2-SMIとか)、が書かれています。
 
@@ -41,42 +31,22 @@ description: "MIB定義ファイルのフォーマットについてまとめで
 
 次にipv6MIBが定義されています。SMI-V2ではIMPORTS句のあと、MODULE-IDENTITY句の宣言が必要になります。この宣言の名前(ここではipv6MIB)は以下のルールがあります。
 
-	
-  * 小文字の英字で始まる
-
-	
-  * 英数字のみ可
-
-	
-  * 記号不可
-
-	
-  * 一意である
-
+- 小文字の英字で始まる
+- 英数字のみ可
+- 記号不可
+- 一意である
 
 このMODULE-IDENTITY句の中では以下の属性が、以下の順番で必須の記載内容になります。各属性の値はダブルクオーテーションで囲う必要があります。
 
-	
-  * LAST-UPDATED
-
-	
-  * ORGANIZATION
-
-	
-  * CONTACT-INFO
-
-	
-  * DESCRIPTION
-
+- LAST-UPDATED
+- ORGANIZATION
+- CONTACT-INFO
+- DESCRIPTION
 
 また、以下の属性のセットを任意で追加していくことができます。
 
-	
-  * REVISION
-
-	
-  * DESCRIPTION
-
+- REVISION
+- DESCRIPTION
 
 最後の「::= { mib-2 55 }」は、ipv6MIBの識別子が、「mib-2 55」であることを表します。
 
@@ -86,18 +56,10 @@ mib-2は「.1.3.6.1.2.1」ですので(SNMPv2-SMIより)、ipv6MIBは「.1.3.6.1
 
 次はipv6Forwardingです。OBJECT-TYPE句を使用して、オブジェクトを定義しています。OBJECT-TYPE句では、以下の属性が、以下の順で必須となります。
 
-	
-  * SYNTAX
-
-	
-  * MAX-ACCESS
-
-	
-  * STATUS
-
-	
-  * DESCRIPTION
-
+- SYNTAX
+- MAX-ACCESS
+- STATUS
+- DESCRIPTION
 
 まず、SYNTAXは、オブジェクトのデータ構造を表し、ここではINTEGER{ forwarding(1), notForwarding(2) }となっており、整数の列挙型を表しています。取りうる値はforwarding(値としては1)もしくはnotForwarding(値としては2)となります。
 
@@ -105,33 +67,17 @@ mib-2は「.1.3.6.1.2.1」ですので(SNMPv2-SMIより)、ipv6MIBは「.1.3.6.1
 
 MAX-ACCESSでは、オブジェクトのアクセス権を表し、以下の値を指定できます。
 
-	
-  * not-accessible
-
-	
-  * accessible-for-notify
-
-	
-  * read-only
-
-	
-  * read-write
-
-	
-  * read-create
-
+- not-accessible
+- accessible-for-notify
+- read-only
+- read-write
+- read-create
 
 STATUSはオブジェクトの状態を表します。以下の値を指定できます。
 
-	
-  * current
-
-	
-  * obsolete
-
-	
-  * deprecated
-
+- current
+- obsolete
+- deprecated
 
 DESCRIPTIONはダブルクオーテーションで囲みます。
 
@@ -159,15 +105,9 @@ OBJECTS属性は必須ではありませんが、OBJECTS属性で設定した値
 
 ipv6ComplianceがMODULE-COMPLIANCE句で定義されています。MODULE-COMPLIANCE句は、MIBモジュールを利用するときに最低限必要になる内容を定義しています。以下の属性が必須となります。
 
-	
-  * STATUS
-
-	
-  * DESCRIPTION
-
-	
-  * MODULE
-
+- STATUS
+- DESCRIPTION
+- MODULE
 
 実際に、MODULE属性の中で、対象となるグループ(MANDATORY-GROUPS)と最低限要求される内容(OBJECT配下)について定義されます。MANDATORY-GROUPSの値となっているグループは、後続にOBJECT-GROUP句とNOTIFICATION-GROUP句でそれぞれ定義されます。
 

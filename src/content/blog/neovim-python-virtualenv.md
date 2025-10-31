@@ -4,8 +4,8 @@ slug: neovim-python-virtualenv
 date: 2017-07-03
 updated:
 tags:
-    - Neovim
-    - Python
+  - Neovim
+  - Python
 description: "neovimでpythonのvirtualenvを使うときのpython_host_progの設定についてです。"
 ---
 
@@ -25,7 +25,7 @@ neovimで補完などを有効化する場合、pythonのneovimパッケージ�
 
 まず、追加したいパッケージをあるディレクトリにインストールします。この時、python2用とpython3用の両方を準備しておくのが良いと思います。
 
-``` bash
+```bash
 # python2用のディレクトリ作成
 mkdir -p ~/.virtualenvs/deps
 
@@ -41,7 +41,7 @@ pip3 install -U --target ~/.virtualenvs/deps3 <インストールしたいパッ
 
 次に、virtualenv作成時に、これらのパッケージも参照するように設定します。以下のように `~/.virtualenv/postmkvirtualenv` を編集します。
 
-``` bash
+```bash
 # find directory
 SITEDIR=$(virtualenvwrapper_get_site_packages_dir)
 PYVER=$(virtualenvwrapper_get_python_version)
@@ -61,7 +61,7 @@ fi
 
 続いて、neovimで、virtualenvが有効な場合は、virtualenvのpythonを参照するように指定します。
 
-``` vim
+```vim
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
