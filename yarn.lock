@@ -1348,7 +1348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/vite@npm:^4.1.14":
+"@tailwindcss/vite@npm:^4.1.16":
   version: 4.1.16
   resolution: "@tailwindcss/vite@npm:4.1.16"
   dependencies:
@@ -2005,10 +2005,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.3.0":
-  version: 5.3.10
-  resolution: "daisyui@npm:5.3.10"
-  checksum: 10c0/d60cc0dda23bcc82aa8470849538b7fffd4f80b817d2a1c4f59e8eb555be286388d9aef2224e9284f69894231186f7c8d265081632d63ee30e052431e54d36f4
+"daisyui@npm:^5.4.0":
+  version: 5.4.0
+  resolution: "daisyui@npm:5.4.0"
+  checksum: 10c0/cef6d050676da95175e8a9a582184a989754c2c0e07e952e6bfe9e52d1d97e5a50638b179a2c4e5968d36108dd7dffa058e90a5e9a9044cd0d9e49020bace172
   languageName: node
   linkType: hard
 
@@ -2891,10 +2891,10 @@ __metadata:
     "@astrojs/sitemap": "npm:3.6.0"
     "@catppuccin/daisyui": "npm:^2.1.1"
     "@tailwindcss/typography": "npm:^0.5.16"
-    "@tailwindcss/vite": "npm:^4.1.14"
+    "@tailwindcss/vite": "npm:^4.1.16"
     astro: "npm:5.15.3"
     astro-expressive-code: "npm:^0.41.3"
-    daisyui: "npm:^5.3.0"
+    daisyui: "npm:^5.4.0"
     mdast-util-to-string: "npm:^4.0.0"
     prettier: "npm:^3.6.2"
     prettier-plugin-astro: "npm:^0.14.1"
@@ -2903,7 +2903,7 @@ __metadata:
     rehype-external-links: "npm:^3.0.0"
     remark-toc: "npm:^9.0.0"
     sass: "npm:^1.93.2"
-    tailwindcss: "npm:^4.1.14"
+    tailwindcss: "npm:^4.1.16"
     theme-change: "npm:^2.5.0"
   languageName: unknown
   linkType: soft
@@ -5239,7 +5239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.1.16, tailwindcss@npm:^4.1.14":
+"tailwindcss@npm:4.1.16, tailwindcss@npm:^4.1.16":
   version: 4.1.16
   resolution: "tailwindcss@npm:4.1.16"
   checksum: 10c0/11beec3112686767292f43d602ffa26068be6b505adba7929ad17b2a3d8e262bdb2eb7c8d226325654ab8268ddd0ca7b7231df8ba59a77becbdae0df9f86268a
