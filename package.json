@@ -1,7 +1,7 @@
 {
   "name": "imokuri-com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -20,7 +20,7 @@
     "@tailwindcss/vite": "^4.1.16",
     "astro": "5.15.3",
     "astro-expressive-code": "^0.41.3",
-    "daisyui": "^5.4.0",
+    "daisyui": "^5.4.3",
     "mdast-util-to-string": "^4.0.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
@@ -28,8 +28,8 @@
     "rehype-callouts": "^2.1.2",
     "rehype-external-links": "^3.0.0",
     "remark-toc": "^9.0.0",
-    "sass": "^1.93.2",
+    "sass": "^1.93.3",
     "tailwindcss": "^4.1.16"
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "pnpm@10.20.0"
 }

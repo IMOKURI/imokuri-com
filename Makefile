@@ -5,28 +5,28 @@ NOW = $(shell date '+%Y%m%d-%H%M%S')
 
 .PHONY: install
 install: ## install packages
-	yarn install
+	pnpm install
 
 .PHONY: upgrade-astro
 upgrade-astro: ## upgrade-astro
-	yarn dlx @astrojs/upgrade
+	pnpm dlx @astrojs/upgrade
 
 .PHONY: upgrade-tailwind
 upgrade-tailwind: ## upgrade-tailwind
-	yarn dlx @tailwindcss/upgrade
-	yarn up daisyui
+	pnpm dlx @tailwindcss/upgrade
+	pnpm up daisyui
 
 .PHONY: upgrade-sass
 upgrade-sass: ## upgrade-sass
-	yarn up sass
+	pnpm up sass
 
 .PHONY: dev
 dev: ## dev
-	yarn dev
+	pnpm dev
 
 .PHONY: format
 format: ## format
-	yarn exec prettier . --write
+	pnpm exec prettier . --write
 
 .PHONY: help
 help: ## Show this help
