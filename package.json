@@ -12,13 +12,13 @@
     "theme-change": "^2.5.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.3.11",
-    "@astrojs/rss": "4.0.13",
+    "@astrojs/mdx": "4.3.12",
+    "@astrojs/rss": "4.0.14",
     "@astrojs/sitemap": "3.6.0",
     "@catppuccin/daisyui": "^2.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.16",
-    "astro": "5.15.9",
+    "astro": "5.16.0",
     "astro-expressive-code": "^0.41.3",
     "daisyui": "^5.4.3",
     "mdast-util-to-string": "^4.0.0",
