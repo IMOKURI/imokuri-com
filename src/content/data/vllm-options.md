@@ -39,10 +39,22 @@ up-vllm: ## Start vllm.
 		--host 0.0.0.0 --port 8000
 ```
 
+## KV Cache Offloading
+
+from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
+
+```make
+		--kv_offloading_backend native \
+		--kv_offloading_size <size_in_GB> \
+```
+
+[Inside vLLM’s New Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput](https://blog.vllm.ai/2025/12/29/offloading-connector.html)
+
 ## Distribution
 
 ```make
 		--tensor-parallel-size 2 \
+		--pipeline-parallel-size 2 \
 ```
 
 ## Quantization
