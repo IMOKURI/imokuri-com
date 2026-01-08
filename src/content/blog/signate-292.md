@@ -4,7 +4,7 @@ slug: signate-292
 date: 2020-09-01
 updated:
 tags:
-  - Compete
+  - Competition
   - Machine Learning
   - Deep Learning
 description: "SIGNATEのBeginner限定コンペでチャレンジしたことのまとめです。"

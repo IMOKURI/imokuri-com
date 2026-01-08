@@ -4,7 +4,7 @@ slug: kaggle-multimodal-single-cell-integration
 date: 2022-11-16
 updated: 2022-11-24
 tags:
-  - Compete
+  - Competition
   - Kaggle
   - Machine Learning
   - Deep Learning

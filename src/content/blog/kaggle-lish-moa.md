@@ -4,7 +4,7 @@ slug: kaggle-lish-moa
 date: 2020-12-02
 updated:
 tags:
-  - Compete
+  - Competition
   - Kaggle
   - Machine Learning
   - Deep Learning
