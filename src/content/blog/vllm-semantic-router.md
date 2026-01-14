@@ -4,8 +4,8 @@ slug: vllm-semantic-router
 date: 2026-01-13
 updated:
 tags:
-    - LLM
-    - Deep Learning
+  - LLM
+  - Deep Learning
 cover_image: /blog/iris-0.png
 description: "vLLMのSemantic Routerがはじまりました"
 ---
@@ -37,18 +37,18 @@ v0.1 では、以下などのシグナルをユーザーのクエリから抽出
 これらのシグナルを抽出するモデルとして以下などのモデルが[公開されています](https://huggingface.co/llm-semantic-router)。
 
 1. Classification Models
-    - Domain/Intent Classifier
-    - PII Detector
-    - Jailbreak Detector
-    - Feedback Detector
+   - Domain/Intent Classifier
+   - PII Detector
+   - Jailbreak Detector
+   - Feedback Detector
 2. Embedding Models
-    - Embedding Pro (High Quality)
-    - Embedding Flash (Balanced)
-    - Embedding Light (Fast)
+   - Embedding Pro (High Quality)
+   - Embedding Flash (Balanced)
+   - Embedding Light (Fast)
 3. Hallucination Detection Models
-    - Halugate Sentinel: 事実検証が必要なクエリを判定する二値分類（創作文章やコードは事実確認不要）
-    - Halugate Detector: 提供された文脈で裏付けられない応答内のトークンを特定するトークンレベル検出
-    - Halugate Explainer: フラグが立てられた各スパンが問題となる理由を説明するNLIベースの分類（矛盾 vs 中立）
+   - Halugate Sentinel: 事実検証が必要なクエリを判定する二値分類（創作文章やコードは事実確認不要）
+   - Halugate Detector: 提供された文脈で裏付けられない応答内のトークンを特定するトークンレベル検出
+   - Halugate Explainer: フラグが立てられた各スパンが問題となる理由を説明するNLIベースの分類（矛盾 vs 中立）
 
 [What is MoM Model Family?](https://vllm-semantic-router.com/docs/v0.1/overview/mom-model-family)
 
