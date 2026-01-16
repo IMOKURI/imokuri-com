@@ -2,7 +2,7 @@
 title: vLLM on Kubernetes
 slug: vllm-on-kubernetes
 date: 2025-06-24
-updated: 2025-07-10
+updated: 2026-01-16
 tags:
   - Deep Learning
   - Kubernetes
@@ -24,7 +24,6 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
   - [High Performance and Easy Deployment of vLLM in K8S with “vLLM production-stack” - January 21, 2025](https://blog.lmcache.ai/2025-01-21-stack-release/)
 - [llm-d](https://llm-d.ai/)
   - [Red Hat Launches the llm-d Community, Powering Distributed Gen AI Inference at Scale - May 20, 2025](https://llm-d.ai/blog/llm-d-press-release)
-- [LeaderWorkerSet](lws.sigs.k8s.io)
 - [NVIDIA Dynamo](https://docs.nvidia.com/dynamo/latest/)
   - [Introducing NVIDIA Dynamo, A Low-Latency Distributed Inference Framework for Scaling Reasoning AI Models - Mar 18, 2025](https://developer.nvidia.com/blog/introducing-nvidia-dynamo-a-low-latency-distributed-inference-framework-for-scaling-reasoning-ai-models/)
 
@@ -32,22 +31,22 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 
 それぞれいくつかの観点で比較してみます。(それぞれの情報は、執筆時点のものです。)
 
-| 項目           | AIBrix    | Production Stack | llm-d           | LeaderWorkerSet | Dynamo   |
-| -------------- | --------- | ---------------- | --------------- | --------------- | -------- |
-| 開発主体       | ByteDance | LMCache Lab      | Red Hat         | Kubernetes SIGs | NVIDIA   |
-| GitHub Stars   | 3.8k      | 1.4k             | 1.2k            | 0.5k            | 4.3k     |
-| 最新バージョン | 0.3.0     | 0.1.5            | 0.0.8           | 0.6.2           | 0.3.0    |
-| デプロイ方法   | Manifest  | Helm             | Installer (.sh) | Helm            | Operator |
+| 項目           | AIBrix    | Production Stack | llm-d           | Dynamo   |
+| -------------- | --------- | ---------------- | --------------- | -------- |
+| 開発主体       | ByteDance | LMCache Lab      | Red Hat         | NVIDIA   |
+| GitHub Stars   | 3.8k      | 1.4k             | 1.2k            | 4.3k     |
+| 最新バージョン | 0.3.0     | 0.1.5            | 0.0.8           | 0.3.0    |
+| デプロイ方法   | Manifest  | Helm             | Installer (.sh) | Operator |
 
 ## 気になるサービス機能
 
-| 項目                   | AIBrix | Production Stack | llm-d | LeaderWorkerSet | Dynamo |
-| ---------------------- | ------ | ---------------- | ----- | --------------- | ------ |
-| Prefill/Decode Disag.  |        |                  |       |                 |        |
-| KV Cache Offloading    |        |                  |       |                 |        |
-| KV Cache Aware Routing |        |                  |       |                 |        |
-| Multi LoRA Serving     |        |                  |       |                 |        |
-| Benchmarking           |        |                  |       |                 |        |
+| 項目                   | AIBrix | Production Stack | llm-d | Dynamo |
+| ---------------------- | ------ | ---------------- | ----- | ------ |
+| Prefill/Decode Disag.  |        |                  |       |        |
+| KV Cache Offloading    |        |                  |       |        |
+| KV Cache Aware Routing |        |                  |       |        |
+| Multi LoRA Serving     |        |                  |       |        |
+| Benchmarking           |        |                  |       |        |
 
 (うんぬん)
 
@@ -62,10 +61,10 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
 
 ## 気になる管理機能
 
-| 項目                   | AIBrix | Production Stack | llm-d | LeaderWorkerSet | Dynamo |
-| ---------------------- | ------ | ---------------- | ----- | --------------- | ------ |
-| Security Consideration |        |                  |       |                 |        |
-| Observability          |        |                  |       |                 |        |
+| 項目                   | AIBrix | Production Stack | llm-d | Dynamo |
+| ---------------------- | ------ | ---------------- | ----- | ------ |
+| Security Consideration |        |                  |       |        |
+| Observability          |        |                  |       |        |
 
 (うんぬん)
 
@@ -77,8 +76,6 @@ vLLM を Kubernetes で使いたいとき、production を意識して高スル�
   ![vLLM Production Stack Architecture](/blog/stack-overview-2.png)
 - llm-d
   ![llm-d Architecture](/blog/llm-d-arch-simplified-d41875ab8b1fcf94a1a42df44940ceae.svg)
-- LeaderWorkerSet
-  ![LeaderWorkerSet Architecture](/blog/LeaderWorkerSet.png)
 - Dynamo
   ![Dynamo Architecture](/blog/inference-nvidia-dynamo-architecture-diagram-r2-2048x1152.png)
 
