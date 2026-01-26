@@ -56,7 +56,7 @@ docker exec -it docker-api-1 flask remove-orphaned-files-on-storage
 
 以下は、 dify v1.11.4 での設定例です。
 
-```ini
+```ini title=".env"
 WORKFLOW_LOG_CLEANUP_ENABLED=true
 
 # Celery schedule tasks configuration
