@@ -23,7 +23,7 @@ vLLMのマニュアルは[こちら](https://docs.vllm.ai/en/stable/cli/serve.ht
 
 ```make title="Makefile"
 VLLM_IMAGE_NAME = vllm/vllm-openai
-VLLM_IMAGE_TAG = v0.11.0
+VLLM_IMAGE_TAG = v0.14.0
 
 up-vllm: ## Start vllm.
 	docker run -d --name vllm -p 8000:8000 \
