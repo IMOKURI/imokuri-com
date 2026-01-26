@@ -1,7 +1,7 @@
 ---
 title: vLLM Options
 slug: vllm-options
-updated: 2025-10-23
+updated: 2026-01-26
 description: "私がよく使うvLLMのオプション設定をまとめました。"
 ---
 
@@ -14,6 +14,8 @@ vLLMは高性能なLLM推論エンジンで、多くのオプションを提供�
 vLLMのマニュアルは[こちら](https://docs.vllm.ai/en/stable/cli/serve.html)にあるので、詳細はそちらも参照してください。
 
 私はMakefileをタスクランナーとして使用しているため、以下の例ではMakefileの形式で記載していますが、ご了承ください。
+
+確認対象のvLLMのバージョン: v0.14.1
 
 ## 基本的なオプション
 
@@ -66,16 +68,12 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 ## Request Size, Rate
 
 ```make
-		--max-model-len 32768 \
+		--max-model-len auto \
 		--max-num-batched-tokens 4096 \
 		--max-num-seqs 64 \
 ```
 
-## Performance Tuning
-
-```make
-		--async-scheduling \
-```
+- [Add --max-model-len auto to auto-fit context to available memory](https://github.com/vllm-project/vllm/pull/29431)
 
 ## Function Calling
 
