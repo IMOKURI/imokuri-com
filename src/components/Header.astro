@@ -50,17 +50,6 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/ffdf4e680a.js" crossorigin="anonymous"></script>
 
-<!-- Toggle Theme -->
-<script is:inline>
-  if (localStorage.getItem("theme") === null) {
-    document.documentElement.setAttribute("data-theme", "latte")
-  } else document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"))
-</script>
-<script>
-  import { themeChange } from "theme-change"
-  themeChange()
-</script>
-
 <!-- Font -->
 <Font cssVariable="--font-mplus2" preload />
 <Font cssVariable="--font-mplus1-code" preload />

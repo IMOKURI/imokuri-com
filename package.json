@@ -8,9 +8,6 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "theme-change": "^2.5.0"
-  },
   "devDependencies": {
     "@astrojs/mdx": "4.3.13",
     "@astrojs/rss": "4.0.15",
