@@ -52,6 +52,10 @@ export default defineConfig({
     layout: "constrained"
   },
 
+  devToolbar: {
+    placement: "bottom-left"
+  },
+
   experimental: {
     fonts: [
       {
