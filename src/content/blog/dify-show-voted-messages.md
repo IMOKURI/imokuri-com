@@ -5,6 +5,7 @@ date: 2025-10-02
 updated:
 tags:
   - AI Agent
+  - Dify
   - LLM
 description: "Difyで「いいね」や「よくないね」がついたメッセージを確認する方法です。"
 ---
