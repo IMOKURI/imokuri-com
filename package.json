@@ -26,7 +26,8 @@
     "rehype-external-links": "^3.0.0",
     "remark-toc": "^9.0.0",
     "sass": "^1.97.2",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "wrangler": "^4.65.0"
   },
   "packageManager": "pnpm@10.20.0"
 }
