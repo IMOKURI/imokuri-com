@@ -1,7 +1,7 @@
 ---
 title: vLLM Options
 slug: vllm-options
-updated: 2026-01-26
+updated: 2026-02-26
 description: "私がよく使うvLLMのオプション設定をまとめました。"
 ---
 
@@ -15,15 +15,13 @@ vLLMのマニュアルは[こちら](https://docs.vllm.ai/en/stable/cli/serve.ht
 
 私はMakefileをタスクランナーとして使用しているため、以下の例ではMakefileの形式で記載していますが、ご了承ください。
 
-確認対象のvLLMのバージョン: v0.14.1
-
 ## 基本的なオプション
 
 私はvLLMをdockerで起動しており、以下のコマンドがベースになります。
 
 ```make title="Makefile"
 VLLM_IMAGE_NAME = vllm/vllm-openai
-VLLM_IMAGE_TAG = v0.14.0
+VLLM_IMAGE_TAG = v0.16.0
 
 up-vllm: ## Start vllm.
 	docker run -d --name vllm -p 8000:8000 \
@@ -38,6 +36,7 @@ up-vllm: ## Start vllm.
 		--served-model-name google/gemma-3-27b-it \
 		--gpu-memory-utilization 0.9 \
 		--disable-uvicorn-access-log \
+		--disable-access-log-for-endpoints /health,/metrics,/ping \
 		--host 0.0.0.0 --port 8000
 ```
 
@@ -88,6 +87,12 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 ```make
 		--trust-remote-code \
 		--limit-mm-per-prompt.audio 3 \
+```
+
+### Multimodal Embedding
+
+```make
+		--enable-mm-embeds \
 ```
 
 ## LoRA
