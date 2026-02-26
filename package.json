@@ -15,7 +15,7 @@
     "@catppuccin/daisyui": "^2.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "5.17.1",
+    "astro": "5.18.0",
     "astro-expressive-code": "^0.41.3",
     "daisyui": "^5.5.14",
     "mdast-util-to-string": "^4.0.0",
