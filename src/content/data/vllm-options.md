@@ -89,12 +89,6 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 		--limit-mm-per-prompt.audio 3 \
 ```
 
-### Multimodal Embedding
-
-```make
-		--enable-mm-embeds \
-```
-
 ## LoRA
 
 ```make
