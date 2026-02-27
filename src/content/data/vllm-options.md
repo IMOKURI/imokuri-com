@@ -49,7 +49,7 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 		--kv_offloading_size <size_in_GB> \
 ```
 
-[Inside vLLM’s New Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput](https://blog.vllm.ai/2025/12/29/offloading-connector.html)
+[Inside vLLM’s New Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput](https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html)
 
 ## Distribution
 
