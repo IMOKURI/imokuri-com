@@ -50,17 +50,6 @@ up-vllm: ## Start vllm.
 		--disable-access-log-for-endpoints /health,/metrics,/ping \
 ```
 
-## KV Cache Offloading
-
-from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
-
-```make
-		--kv_offloading_backend native \
-		--kv_offloading_size <size_in_GB> \
-```
-
-[Inside vLLM’s New Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput](https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html)
-
 ## Distribution
 
 ```make
@@ -126,6 +115,17 @@ vLLM で対応していない独自コードを利用するためのオプショ
 		--max-loras 1 \
 		--lora-modules <path to lora module> \
 ```
+
+## KV Cache Offloading
+
+from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
+
+```make
+		--kv_offloading_backend native \
+		--kv_offloading_size <size_in_GB> \
+```
+
+[Inside vLLM’s New Offloading Connector: Smarter Memory Transfer for Maximizing Inference Throughput](https://blog.vllm.ai/2026/01/08/kv-offloading-connector.html)
 
 ## Offline Mode
 
