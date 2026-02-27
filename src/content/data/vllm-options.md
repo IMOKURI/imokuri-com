@@ -34,10 +34,20 @@ up-vllm: ## Start vllm.
 		$(VLLM_IMAGE_NAME):$(VLLM_IMAGE_TAG) \
 		--model RedHatAI/gemma-3-27b-it-FP8-dynamic \
 		--served-model-name google/gemma-3-27b-it \
+		--host 0.0.0.0 --port 8000
+```
+
+## GPU Memory Utilization
+
+```make
 		--gpu-memory-utilization 0.9 \
+```
+
+## Disable Some Loggings
+
+```make
 		--disable-uvicorn-access-log \
 		--disable-access-log-for-endpoints /health,/metrics,/ping \
-		--host 0.0.0.0 --port 8000
 ```
 
 ## KV Cache Offloading
@@ -74,6 +84,26 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 
 - [Add --max-model-len auto to auto-fit context to available memory](https://github.com/vllm-project/vllm/pull/29431)
 
+## Custom Code
+
+vLLM で対応していない独自コードを利用するためのオプション
+
+```make
+		--trust-remote-code \
+```
+
+## Embedding
+
+```make
+		--runner pooling \
+```
+
+## Reasoning
+
+```make
+		--reasoning-parser <parser_name> \
+```
+
 ## Function Calling
 
 ```make
@@ -85,7 +115,6 @@ from v0.11.0, vLLM supports KV Cache Offloading to CPU memory.
 ## Multimodal
 
 ```make
-		--trust-remote-code \
 		--limit-mm-per-prompt.audio 3 \
 ```
 
