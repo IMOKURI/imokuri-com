@@ -103,10 +103,14 @@ GDM_g = Dry_Total_g - Dry_Dead_g
 
 異なる重み付けの損失関数で学習したモデルでアンサンブルを行いました。
 
+<div style="overflow-x: auto">
+
 | Model                          | Loss Weighting | Local CV | Public LB | Private LB |
 | ------------------------------ | -------------- | -------- | --------- | ---------- |
 | tf_efficientnet_b4.ns_jft_in1k | Weighted       | 0.642    | 0.63      | 0.54       |
 | tf_efficientnet_b4.ns_jft_in1k | Unweighted     | 0.654    | 0.63      | 0.53       |
+
+</div>
 
 ### Conclusion
 
