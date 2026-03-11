@@ -15,7 +15,7 @@ export async function getStaticPaths() {
   const posts = await getCollection("blog")
   return posts.map(post => ({
     params: {
-      year: post.data.date.getFullYear(),
+      year: post.data.date.getFullYear().toString(),
       month: (post.data.date.getMonth() + 1).toString().padStart(2, "0"),
       slug: post.id
     },

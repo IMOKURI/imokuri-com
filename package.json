@@ -9,13 +9,13 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.3.13",
-    "@astrojs/rss": "4.0.15",
-    "@astrojs/sitemap": "3.7.0",
+    "@astrojs/mdx": "5.0.0",
+    "@astrojs/rss": "4.0.17",
+    "@astrojs/sitemap": "3.7.1",
     "@catppuccin/daisyui": "^2.1.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "5.18.0",
+    "astro": "6.0.2",
     "astro-expressive-code": "^0.41.3",
     "daisyui": "^5.5.19",
     "mdast-util-to-string": "^4.0.0",

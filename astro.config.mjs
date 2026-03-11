@@ -11,6 +11,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs"
 // https://astro.build/config
 export default defineConfig({
   site: "https://imokuri.com",
+
   integrations: [
     sitemap(),
     astroExpressiveCode({
@@ -52,22 +53,16 @@ export default defineConfig({
     layout: "constrained"
   },
 
-  devToolbar: {
-    placement: "bottom-left"
-  },
-
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "M PLUS 2",
-        cssVariable: "--font-mplus2"
-      },
-      {
-        provider: fontProviders.google(),
-        name: "M PLUS 1 Code",
-        cssVariable: "--font-mplus1-code"
-      }
-    ]
-  }
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "M PLUS 2",
+      cssVariable: "--font-mplus2"
+    },
+    {
+      provider: fontProviders.google(),
+      name: "M PLUS 1 Code",
+      cssVariable: "--font-mplus1-code"
+    }
+  ]
 })
