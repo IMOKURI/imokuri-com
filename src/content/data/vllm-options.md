@@ -1,7 +1,7 @@
 ---
 title: vLLM Options
 slug: vllm-options
-updated: 2026-02-26
+updated: 2026-03-12
 description: "私がよく使うvLLMのオプション設定をまとめました。"
 ---
 
@@ -81,7 +81,9 @@ vLLM で対応していない独自コードを利用するためのオプショ
 		--trust-remote-code \
 ```
 
-## Embedding
+## Pooling (Embedding, Reranking)
+
+[vLLM also supports pooling models](https://docs.vllm.ai/en/latest/models/pooling_models/)
 
 ```make
 		--runner pooling \
