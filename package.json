@@ -25,7 +25,7 @@
     "rehype-callouts": "^2.1.2",
     "rehype-external-links": "^3.0.0",
     "remark-toc": "^9.0.0",
-    "sass": "^1.97.3",
+    "sass": "^1.98.0",
     "tailwindcss": "^4.2.2",
     "wrangler": "^4.65.0"
   }
