@@ -1,6 +1,6 @@
 import type { Links } from "./types/config"
 
-export const SITE_TITLE = "IMOKURING"
+export const SITE_TITLE = "IMOKURI's Lab"
 export const SITE_DESCRIPTION = "Personal website by Yoshio Sugiyama who is Applied AI Engineer / AI Platform Engineer"
 
 export const navBarLinks: Links = [
