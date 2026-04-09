@@ -40,6 +40,16 @@ import TwitterFollow from "../components/TwitterFollow.astro"
 
       <div class="card card-border shadow-lg my-10 bg-base-100/80">
         <div class="card-body">
+          <h2 class="card-title text-2xl mb-3">Resume & Priority</h2>
+          <div class="time-line-container">
+            <TimeLine title="経歴や職務の紹介" link_url="/activity/resume/" />
+            <TimeLine title="大切にしている言葉や考え方" link_url="/activity/priority/" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-border shadow-lg my-10 bg-base-100/80">
+        <div class="card-body">
           <h2 class="card-title text-2xl mb-3">Skill</h2>
           <div class="time-line-container">
             <TimeLine title="Machine Learning, Deep Learning, Generative AI" />
@@ -48,15 +58,6 @@ import TwitterFollow from "../components/TwitterFollow.astro"
             <TimeLine title="Python" />
             <TimeLine title="Git" />
             <TimeLine title="Neovim" />
-          </div>
-        </div>
-      </div>
-
-      <div class="card card-border shadow-lg my-10 bg-base-100/80">
-        <div class="card-body">
-          <h2 class="card-title text-2xl mb-3">Resume</h2>
-          <div class="time-line-container">
-            <TimeLine title="経歴紹介" link_title="経歴や職務の紹介です" link_url="/activity/resume/" />
           </div>
         </div>
       </div>
