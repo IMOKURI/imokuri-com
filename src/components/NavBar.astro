@@ -1,5 +1,6 @@
 ---
 import { SITE_TITLE, navBarLinks, socialLinks } from "../config"
+import Icon from "./Icon.astro"
 
 const navs = navBarLinks
 const socials = socialLinks
@@ -9,7 +10,7 @@ const socials = socialLinks
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
-        <i class="fa-solid fa-bars text-lg"></i>
+        <Icon name="fa-bars" class="text-lg" />
       </label>
       <ul class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         {
@@ -17,7 +18,7 @@ const socials = socialLinks
             navs.map(link => (
               <li>
                 <a href={link.url}>
-                  <i class={`fa-solid ${link.icon}`} />
+                  <Icon name={link.icon} />
                   {link.name}
                 </a>
               </li>
@@ -34,7 +35,7 @@ const socials = socialLinks
           navs.map(link => (
             <li>
               <a href={link.url}>
-                <i class={`fa-solid ${link.icon}`} />
+                <Icon name={link.icon} />
                 {link.name}
               </a>
             </li>
@@ -53,7 +54,7 @@ const socials = socialLinks
             aria-label={link.name}
             title={link.name}
           >
-            <i class={`fa-brands ${link.icon}`} />
+            <Icon name={link.icon} />
           </a>
         ))
     }

@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro"
 import DimWallpaper from "../../../components/DimWallpaper.astro"
 import Footer from "../../../components/Footer.astro"
+import Icon from "../../../components/Icon.astro"
 import NavBar from "../../../components/NavBar.astro"
 import ToggleTheme from "../../../components/ToggleTheme.astro"
 import { getCollection, render } from "astro:content"
@@ -32,7 +33,7 @@ const { title } = post.data
       <article class="prose max-w-none">
         <h1>{title}</h1>
         <p class="text-sm">
-          <i class="fa-solid fa-file-lines"></i>
+          <Icon name="fa-file-lines" />
           Updated on {post.data.updated.toLocaleDateString()}
         </p>
         <hr />

@@ -3,6 +3,7 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro"
 import DimWallpaper from "../../../../components/DimWallpaper.astro"
 import Disclaimer from "../../../../components/Disclaimer.astro"
 import Footer from "../../../../components/Footer.astro"
+import Icon from "../../../../components/Icon.astro"
 import NavBar from "../../../../components/NavBar.astro"
 import ToggleTheme from "../../../../components/ToggleTheme.astro"
 import Tweet from "../../../../components/Tweet.astro"
@@ -50,7 +51,7 @@ const { remarkPluginFrontmatter } = await render(post)
         {
           date && (
             <div class="mb-1">
-              <i class="fa-regular fa-file-lines" />
+              <Icon name="fa-file-lines-regular" />
               Posted on <time>{date.toLocaleDateString()}</time>
             </div>
           )
@@ -58,16 +59,16 @@ const { remarkPluginFrontmatter } = await render(post)
         {
           updated && updated > date && (
             <div class="mb-1">
-              <i class="fa-solid fa-file-lines" />
+              <Icon name="fa-file-lines" />
               Updated on <time>{updated.toLocaleDateString()}</time>
             </div>
           )
         }
         <div class="mb-1">
-          <i class="fa-solid fa-align-left"></i>
+          <Icon name="fa-align-left" />
           {remarkPluginFrontmatter.words}
           {remarkPluginFrontmatter.words === 1 ? "word" : "words"},
-          <i class="fa-regular fa-clock"></i>
+          <Icon name="fa-clock-regular" />
           {remarkPluginFrontmatter.minutes}
           {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
         </div>

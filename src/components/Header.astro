@@ -36,19 +36,6 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/ffdf4e680a.js" crossorigin="anonymous"></script>
-<style is:global>
-  @font-face {
-    font-family: "Font Awesome 6 Free";
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Font Awesome 6 Brands";
-    font-display: swap;
-  }
-</style>
-
 <!-- Font -->
 <Font cssVariable="--font-mplus2" preload />
 <Font cssVariable="--font-mplus1-code" preload />

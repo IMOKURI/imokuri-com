@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro"
 import BaseWallpaper from "../../components/BaseWallpaper.astro"
 import BlogPost from "../../components/BlogPost.astro"
 import Footer from "../../components/Footer.astro"
+import Icon from "../../components/Icon.astro"
 import NavBar from "../../components/NavBar.astro"
 import ToggleTheme from "../../components/ToggleTheme.astro"
 import { getCollection } from "astro:content"
@@ -24,7 +25,7 @@ const { page } = Astro.props
       <AllTags />
       <h1 class="my-5 text-4xl font-bold">
         <a href="/blog">Blog</a>
-        <a href="/rss.xml"><i class="fa-solid fa-rss mx-2 text-xl"></i></a>
+        <a href="/rss.xml"><Icon name="fa-rss" class="mx-2 text-xl" /></a>
       </h1>
 
       {page.data.map(post => <BlogPost post={post} />)}

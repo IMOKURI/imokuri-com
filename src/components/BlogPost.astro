@@ -1,6 +1,7 @@
 ---
 import { render } from "astro:content"
 import type { CollectionEntry } from "astro:content"
+import Icon from "./Icon.astro"
 
 export interface Props {
   post: CollectionEntry<"blog">
@@ -20,22 +21,22 @@ const { remarkPluginFrontmatter } = await render(post)
     <div class="card-body">
       <h2 class="card-title mb-2">{post.data.title}</h2>
       <p class="text-sm mb-1">
-        <i class="fa-regular fa-file-lines"></i>
+        <Icon name="fa-file-lines-regular" />
         Posted on {post.data.date.toLocaleDateString()}
       </p>
       {
         post.data.updated && post.data.updated > post.data.date ? (
           <p class="text-sm mb-1">
-            <i class="fa-solid fa-file-lines" />
+            <Icon name="fa-file-lines" />
             Updated on {post.data.updated.toLocaleDateString()}
           </p>
         ) : null
       }
       <div class="text-sm mb-1">
-        <i class="fa-solid fa-align-left"></i>
+        <Icon name="fa-align-left" />
         {remarkPluginFrontmatter.words}
         {remarkPluginFrontmatter.words === 1 ? "word" : "words"},
-        <i class="fa-regular fa-clock"></i>
+        <Icon name="fa-clock-regular" />
         {remarkPluginFrontmatter.minutes}
         {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
       </div>

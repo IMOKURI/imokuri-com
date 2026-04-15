@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content"
+import Icon from "./Icon.astro"
 
 export interface Props {
   post: CollectionEntry<"data">
@@ -13,7 +14,7 @@ const { post } = Astro.props
     <div class="card-body">
       <h2 class="card-title">{post.data.title}</h2>
       <p class="text-sm">
-        <i class="fa-solid fa-file-lines"></i>
+        <Icon name="fa-file-lines" />
         Updated on {post.data.updated.toLocaleDateString()}
       </p>
       <p>{post.data.description}</p>

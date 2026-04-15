@@ -1,4 +1,5 @@
 ---
+import Icon from "./Icon.astro"
 const { title, description, image, compe_url = null, solution_url = null, github_url = null } = Astro.props
 ---
 
@@ -32,7 +33,7 @@ const { title, description, image, compe_url = null, solution_url = null, github
         github_url && (
           <a href={github_url}>
             <button class="btn btn-primary" aria-label={`${title} - GitHub`}>
-              <i class="fa-brands fa-github text-lg" />
+              <Icon name="fa-github" class="text-lg" />
             </button>
           </a>
         )
