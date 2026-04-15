@@ -35,18 +35,6 @@ const { title, description, image = "/blog/new-imokuri-blog.png" } = Astro.props
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPK72YV3NB"></script>
-<script>
-  window.dataLayer = window.dataLayer || []
-  function gtag() {
-    dataLayer.push(arguments)
-  }
-  gtag("js", new Date())
-
-  gtag("config", "G-KPK72YV3NB")
-</script>
-
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/ffdf4e680a.js" crossorigin="anonymous"></script>
 
