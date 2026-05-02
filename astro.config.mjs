@@ -1,4 +1,4 @@
-import { defineConfig, fontProviders } from "astro/config"
+import { defineConfig, fontProviders, svgoOptimizer } from "astro/config"
 import sitemap from "@astrojs/sitemap"
 import astroExpressiveCode from "astro-expressive-code"
 import mdx from "@astrojs/mdx"
@@ -64,5 +64,9 @@ export default defineConfig({
       name: "M PLUS 1 Code",
       cssVariable: "--font-mplus1-code"
     }
-  ]
+  ],
+
+  experimental: {
+    svgOptimizer: svgoOptimizer()
+  }
 })
