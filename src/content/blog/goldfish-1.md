@@ -4,8 +4,8 @@ slug: goldfish-1
 date: 2026-05-08
 updated:
 tags:
-    - Poem
-    - Goldfish
+  - Poem
+  - Goldfish
 description: "ひょんなことから琉金を３匹ほど。"
 ---
 
