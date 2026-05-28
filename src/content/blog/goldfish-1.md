@@ -5,7 +5,6 @@ date: 2026-05-08
 updated:
 tags:
   - Poem
-  - Goldfish
 description: "ひょんなことから琉金を３匹ほど。"
 ---
 
