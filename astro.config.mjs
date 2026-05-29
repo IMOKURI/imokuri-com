@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders, svgoOptimizer } from "astro/config"
+import { unified } from "@astrojs/markdown-remark"
 import sitemap from "@astrojs/sitemap"
 import astroExpressiveCode from "astro-expressive-code"
 import mdx from "@astrojs/mdx"
@@ -37,11 +38,13 @@ export default defineConfig({
   ],
 
   markdown: {
-    remarkPlugins: [remarkReadingTime, [remarkToc, { maxDepth: 3 }]],
-    rehypePlugins: [
-      [rehypeCallouts, { theme: "github" }],
-      [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]
-    ]
+    processor: unified({
+      remarkPlugins: [remarkReadingTime, [remarkToc, { maxDepth: 3 }]],
+      rehypePlugins: [
+        [rehypeCallouts, { theme: "github" }],
+        [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]
+      ]
+    })
   },
 
   vite: {
