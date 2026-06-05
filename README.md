@@ -1,6 +1,6 @@
 <div align="center">
 
-![Blog top page](https://github.com/IMOKURI/imokuri-com/blob/main/public/blog/new-imokuri-blog.png?raw=true)
+![Blog top page](public/readme.png)
 
 </div>
 
