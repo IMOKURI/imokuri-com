@@ -96,14 +96,6 @@ const { html } = markdownToHtml("# Hello, *world*");
 
 # GPUメモリ After Sleep Level 1
 |    0   N/A  N/A         1979459      C   VLLM::Worker                           2066MiB |
-
-# CPUメモリ Before Sleep
-               total        used        free      shared  buff/cache   available
-Mem:             125          26           2           0          97          99
-
-# CPUメモリ After Sleep Level 1
-               total        used        free      shared  buff/cache   available
-Mem:             125         102          11          77          90          22
 ```
 
 ### highlight lines
