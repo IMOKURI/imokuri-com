@@ -17,19 +17,22 @@ converts to HTML. It has since splintered into dozens of dialects.
 ## Headers
 
 # This is a Heading h1
+
 ## This is a Heading h2
+
 ### This is a Heading h3
+
 #### This is a Heading h4
+
 ##### This is a Heading h5
+
 ###### This is a Heading h6
 
 ## Emphasis
 
-*This text will be italic*  
-_This will also be italic_
+_This text will be italic_
 
-**This text will be bold**  
-__This will also be bold__
+**This text will be bold**
 
 _You **can** combine them_
 
@@ -37,20 +40,20 @@ _You **can** combine them_
 
 ### Unordered
 
-* Item 1
-* Item 2
-    * Item 2a
-    * Item 2b
-        * Item 3a
-        * Item 3b
+- Item 1
+- Item 2
+  - Item 2a
+  - Item 2b
+    - Item 3a
+    - Item 3b
 
 ### Ordered
 
 1. Item 1
 2. Item 2
 3. Item 3
-    1. Item 3a
-    2. Item 3b
+   1. Item 3a
+   2. Item 3b
 
 ## Links
 
@@ -60,7 +63,7 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
 > Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
 >
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+> > Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
 ## Callouts
 
@@ -83,9 +86,9 @@ echo "This terminal frame has no title"
 ### title
 
 ```ts title="markdown-rendering-test.ts"
-import { markdownToHtml } from "satteri";
+import { markdownToHtml } from "satteri"
 
-const { html } = markdownToHtml("# Hello, *world*");
+const { html } = markdownToHtml("# Hello, *world*")
 ```
 
 ### highlight keywords
@@ -117,15 +120,17 @@ This web site is using `markedjs/marked`.
 
 ## Tables
 
-| 項目             | 開発主体    | GitHub Stars  | 最新バージョン | デプロイ方法    |
-| --------------   | ---------   | ------------: | -----------    | --------        |
-| AIBrix           | ByteDance   | 3.8k          | 0.3.0          | Manifest        |
-| Production Stack | LMCache Lab | 1.4k          | 0.1.5          | Helm            |
-| llm-d            | Red Hat     | 1.2k          | 0.0.8          | Installer (.sh) |
-| Dynamo           | NVIDIA      | 4.3k          | 0.3.0          | Operator        |
-
+| 項目             | 開発主体    | GitHub Stars | 最新バージョン | デプロイ方法    |
+| ---------------- | ----------- | -----------: | -------------- | --------------- |
+| AIBrix           | ByteDance   |         3.8k | 0.3.0          | Manifest        |
+| Production Stack | LMCache Lab |         1.4k | 0.1.5          | Helm            |
+| llm-d            | Red Hat     |         1.2k | 0.0.8          | Installer (.sh) |
+| Dynamo           | NVIDIA      |         4.3k | 0.3.0          | Operator        |
 
 ## Images
 
 ![Dynamo Architecture](/blog/inference-nvidia-dynamo-architecture-diagram-r2-2048x1152.png)
 
+## X
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">主に就活・転職の方向けのサイトに、取材いただいた内容が掲載されましたー😄<br><br>データ&amp;AIスペシャリストの道を切り開く──最先端技術の追求を支えるHPEの魅力 <a href="https://t.co/huuEpMMF67">https://t.co/huuEpMMF67</a> <a href="https://x.com/talentbook_jp?ref_src=twsrc%5Etfw">@talentbook_jp</a>より</p>&mdash; Yoshio Sugiyama (@imokurity) <a href="https://x.com/imokurity/status/1827884079997747262?ref_src=twsrc%5Etfw">August 26, 2024</a></blockquote>

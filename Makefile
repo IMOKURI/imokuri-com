@@ -11,14 +11,9 @@ install: ## install packages
 upgrade-astro: ## upgrade-astro
 	pnpm dlx @astrojs/upgrade
 
-.PHONY: upgrade-tailwind
-upgrade-tailwind: ## upgrade-tailwind
-	pnpm dlx @tailwindcss/upgrade
-	pnpm up daisyui
-
-.PHONY: upgrade-sass
-upgrade-sass: ## upgrade-sass
-	pnpm up sass
+.PHONY: upgrade-packages
+upgrade-packages: ## upgrade-packages
+	pnpm up
 
 .PHONY: dev
 dev: ## dev
