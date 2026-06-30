@@ -19,6 +19,10 @@ upgrade-packages: ## upgrade-packages
 dev: ## dev
 	pnpm dev
 
+.PHONY: clean
+clean: ## clean
+	rm -rf .astro node_modules/.vite dist
+
 .PHONY: format
 format: ## format
 	pnpm exec prettier . --write

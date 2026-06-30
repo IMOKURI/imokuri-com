@@ -1,13 +1,12 @@
 import { defineConfig, fontProviders, svgoOptimizer } from "astro/config"
-import { unified } from "@astrojs/markdown-remark"
+import { satteri, satteriHeadingIdsPlugin } from "@astrojs/markdown-satteri"
 import sitemap from "@astrojs/sitemap"
 import astroExpressiveCode from "astro-expressive-code"
 import mdx from "@astrojs/mdx"
 import tailwindcss from "@tailwindcss/vite"
-import remarkToc from "remark-toc"
-import rehypeCallouts from "rehype-callouts"
-import rehypeExternalLinks from "rehype-external-links"
-import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs"
+import { satteriToc } from "./src/plugins/satteri-toc.mjs"
+import { satteriCallouts } from "./src/plugins/satteri-callouts.mjs"
+import { satteriExternalLinks } from "./src/plugins/satteri-external-links.mjs"
 
 // https://astro.build/config
 export default defineConfig({
@@ -38,12 +37,9 @@ export default defineConfig({
   ],
 
   markdown: {
-    processor: unified({
-      remarkPlugins: [remarkReadingTime, [remarkToc, { maxDepth: 3 }]],
-      rehypePlugins: [
-        [rehypeCallouts, { theme: "github" }],
-        [rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]
-      ]
+    processor: satteri({
+      mdastPlugins: [satteriToc()],
+      hastPlugins: [satteriHeadingIdsPlugin(), satteriCallouts, satteriExternalLinks]
     })
   },
 

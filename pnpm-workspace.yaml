@@ -5,7 +5,7 @@ allowBuilds:
   workerd: true
 minimumReleaseAgeExclude:
   - astro@6.4.6
-  - '@astrojs/markdown-satteri@0.3.2'
+  - "@astrojs/markdown-satteri@0.3.2"
   - astro@7.0.2
 onlyBuiltDependencies:
   - "@parcel/watcher"

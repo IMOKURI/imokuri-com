@@ -69,11 +69,17 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
 <!-- Callout type names are case-insensitive: 'Note', 'NOTE', and 'note' are equivalent. -->
 
+> [!tip] This is tip callout
+> This is useful for some tips.
+
 > [!note] This is a _non-collapsible_ callout
 > Some content is displayed directly!
 
 > [!WARNING]- This is a **collapsible** callout
 > Some content shown after opening!
+
+> [!caution]
+> This is caution alert callout.
 
 ## Codes
 

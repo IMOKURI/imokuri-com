@@ -1,5 +1,4 @@
 ---
-import { render } from "astro:content"
 import type { CollectionEntry } from "astro:content"
 import Icon from "./Icon.astro"
 
@@ -8,8 +7,6 @@ export interface Props {
 }
 
 const { post } = Astro.props
-
-const { remarkPluginFrontmatter } = await render(post)
 ---
 
 <a
@@ -32,14 +29,6 @@ const { remarkPluginFrontmatter } = await render(post)
           </p>
         ) : null
       }
-      <div class="text-sm mb-1">
-        <Icon name="fa-align-left" />
-        {remarkPluginFrontmatter.words}
-        {remarkPluginFrontmatter.words === 1 ? "word" : "words"},
-        <Icon name="fa-clock-regular" />
-        {remarkPluginFrontmatter.minutes}
-        {remarkPluginFrontmatter.minutes === 1 ? "minute" : "minutes"} to read
-      </div>
       {
         post.data.tags ? (
           <div class="inline mb-1">

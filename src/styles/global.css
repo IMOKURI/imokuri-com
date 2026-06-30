@@ -8,7 +8,39 @@
 @plugin "./catppuccinTheme.latte.ts";
 @plugin "./catppuccinTheme.frappe.ts";
 
-@import "rehype-callouts/theme/github";
+.callout {
+  --rc-color-default: #888;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-left: 0.25em solid var(--rc-color-light, var(--rc-color-default));
+  margin-bottom: 1rem;
+}
+.dark .callout {
+  border-left-color: var(--rc-color-dark, var(--rc-color-default));
+}
+.callout-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--rc-color-light, var(--rc-color-default));
+  font-weight: 500;
+  line-height: 1;
+}
+.dark .callout-title {
+  color: var(--rc-color-dark, var(--rc-color-default));
+}
+.callout-title::-webkit-details-marker {
+  display: none;
+}
+.callout[data-collapsible="true"] .callout-title {
+  cursor: pointer;
+}
+.callout-content > :first-child {
+  margin-top: 1rem;
+}
+.callout-content > :last-child {
+  margin-bottom: 0;
+}
 
 [data-callout="note"] {
   --rc-color-light: var(--color-info);
