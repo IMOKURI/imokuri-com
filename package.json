@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astroanimate/core": "^0.1.2",
     "@astrojs/markdown-satteri": "^0.3.2",
     "@astrojs/mdx": "7.0.0",
     "@astrojs/rss": "4.0.18",
