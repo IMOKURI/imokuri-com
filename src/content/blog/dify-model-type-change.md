@@ -1,5 +1,5 @@
 ---
-title: Dify 1.14.0 で model_type が変更された
+title: Dify 1.14.0 での model_type の変更
 slug: dify-model-type-change
 date: 2026-07-06
 updated:
