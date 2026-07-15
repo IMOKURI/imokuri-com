@@ -55,6 +55,13 @@ _You **can** combine them_
    1. Item 3a
    2. Item 3b
 
+### Checkbox
+
+- [ ] Todo 1
+- [x] Todo 2
+  - [ ] Todo 3
+  - [x] Todo 4
+
 ## Links
 
 You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
