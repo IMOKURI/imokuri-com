@@ -4,7 +4,6 @@ import HomeWallpaper from "../components/HomeWallpaper.astro"
 import Icon from "../components/Icon.astro"
 import ToggleTheme from "../components/ToggleTheme.astro"
 import { SITE_TITLE, navBarLinks } from "../config"
-import TypewriterText from "@astroanimate/core/TypewriterText"
 
 const links = navBarLinks
 ---
@@ -14,15 +13,8 @@ const links = navBarLinks
     <ToggleTheme />
     <main>
       <h1 class="mb-5 text-4xl font-bold">{SITE_TITLE}</h1>
-      <p class="mb-2 text-lg whitespace-pre-line">
-        <TypewriterText
-          texts={["Hi, I'm Yoshio Sugiyama (杉山 禎夫).\nApplied AI Engineer / AI Platform Engineer at HPE Japan."]}
-          enhance
-          typeSpeed={50}
-          showCursor={false}
-          loop={false}
-          erase={false}
-        />
+      <p class="mb-2 text-lg">
+        Hi, I'm Yoshio Sugiyama (杉山 禎夫).<br />Applied AI Engineer / AI Platform Engineer at HPE Japan.
       </p>
 
       {
