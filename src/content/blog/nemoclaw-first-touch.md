@@ -2,7 +2,7 @@
 title: NemoClawをさわってみた
 slug: nemoclaw-first-touch
 date: 2026-07-15
-updated:2026-07-17
+updated: 2026-07-17
 tags:
   - AI Agent
   - LLM
