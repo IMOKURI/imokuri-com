@@ -2,7 +2,7 @@
 title: NemoClawをさわってみた
 slug: nemoclaw-first-touch
 date: 2026-07-15
-updated:
+updated:2026-07-17
 tags:
   - AI Agent
   - LLM
@@ -360,4 +360,8 @@ Gateway inference configured:
 
 ## Next Actions
 
-- [ ] Onboardingでは、コンテナイメージのビルドが走っているが、Air-Gapped環境ではどのように利用できるのだろうか。
+- [x] Onboardingでは、コンテナイメージのビルドが走っているが、Air-Gapped環境ではどのように利用できるのだろうか。
+
+> [!note]
+> Air-Gapped環境は、現在、Out of Scope であることが[ドキュメントに書かれていた](https://docs.nvidia.com/nemoclaw/user-guide/openclaw/reference/platform-support#out-of-scope-and-not-supported)。
+> Onboard assumes network reachability for package fetches, container pulls, and provider validation. See open issues #4872 and #2218 (production-deployment epic covering air-gapped support, China network guidance, multi-host topology).
