@@ -5,18 +5,17 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/markdown-satteri": "^0.3.4",
-    "@astrojs/mdx": "7.0.3",
+    "@astrojs/markdown-satteri": "^0.3.5",
+    "@astrojs/mdx": "7.0.5",
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
     "@catppuccin/daisyui": "^2.1.1",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.2",
-    "astro": "7.1.0",
+    "astro": "7.2.1",
     "astro-expressive-code": "^0.44.0",
     "daisyui": "^5.6.18",
     "github-slugger": "^2.0.0",

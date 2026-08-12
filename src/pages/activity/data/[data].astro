@@ -12,7 +12,8 @@ export async function getStaticPaths() {
   const posts = (await getCollection("data")).sort((a, b) => b.data.updated.valueOf() - a.data.updated.valueOf())
   return posts.map(post => ({
     params: { data: post.id },
-    props: { post }
+    props: { post },
+    cacheKey: post.digest
   }))
 }
 
