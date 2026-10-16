@@ -4,8 +4,12 @@ allowBuilds:
   sharp: true
   workerd: true
 minimumReleaseAgeExclude:
-  - "@astrojs/markdown-satteri@0.3.2"
-  - astro@7.2.1
+  - "@astrojs/markdown-satteri@0.3.2 || 0.4.4"
+  - astro@7.2.1 || 7.4.0
+  - "@astrojs/internal-helpers@0.13.0"
+  - "@astrojs/mdx@8.1.0"
+  - "@astrojs/prism@4.1.0"
+  - "@astrojs/telemetry@3.4.0"
 onlyBuiltDependencies:
   - "@parcel/watcher"
   - esbuild

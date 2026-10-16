@@ -67,6 +67,7 @@ export default defineConfig({
 
   experimental: {
     svgOptimizer: svgoOptimizer(),
-    incrementalBuild: true
+    incrementalBuild: true,
+    parallelPrerender: true
   }
 })
